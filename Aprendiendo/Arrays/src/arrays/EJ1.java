@@ -16,7 +16,8 @@ public class EJ1 {
         System.out.println("");
         for (int i=0; i<=999; i++) {
             //array[0] = (int)Math.Random()*100;
-            array[1] = rd.nextInt(100);
+            //array[1] = rd.nextInt(100);
+            //prueba
         }
         
     }
