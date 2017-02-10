@@ -53,6 +53,20 @@ public class EJ6 {
     }
     
     public static void ordenar() {
+        Double x;
+        String z;
         
+        for (int i= 0; i<=(nombres.length-1); i++) { //Ordenar Array
+            for (int k=(i+1); k<=(notas.length-1); k++) {
+                if (notas[k] < notas[i]) {
+                    x = notas[i];
+                    z = nombres[i];
+                    notas[i] = notas[k];
+                    nombres[i] = nombres[k];
+                    notas[k] = x;
+                    nombres[k] = z;
+                } 
+            }
+        }
     }
 }
