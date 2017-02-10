@@ -7,42 +7,43 @@ package arrays;
 import java.util.*;
 public class EJ5 {
     static Random rd = new Random();
-    static int[] arrayB = new int[10];
+    static int[] arrayA = new int[100];
+    static int[] arrayB = new int[100];
     
     public static void main(String[] args) {
-        int[] arrayA = new int[10];
-        frecuencias(arrayA);
-        
+        int n = 100;
+        frecuencias(n);
+
         System.out.println("Números aleatorios:");
         for (int i = 0; i<arrayA.length; i++) {
             System.out.print(arrayA[i] + ", ");
         }
         
-        System.out.println("Veces repetidos");
-        for (int i = 0; i<arrayA.length; i++) {
+        System.out.println("\nVeces repetidos");
+        for (int i = 0; i<arrayB.length; i++) {
             System.out.print(arrayB[i] + ", ");
         }
     }
     
-    public static void frecuencias(int x[]) {
-        int n = 100;
-        for (int i = 0; i<x.length; i++) {//asigna números aleatorios
+    public static int[] frecuencias(int n) {
+        for (int i = 0; i<arrayA.length; i++) {//asigna números aleatorios
             int z = rd.nextInt(n); //numero máximo 100
-            x[i] = z;
+            arrayA[i] = z;
         }
         
-        int tmp=0;
-        int w = 0;
+        int tmp=0; //Contador temporal
+        int w = 0; //Posición que se compara con todo el array
         
-        while (w<x.length) {
-            for (int i = 0; i<x.length; i++) {
-                if (x[w] == x[i]) {
+        while (w<arrayA.length) {
+            for (int i = 0; i<arrayA.length; i++) {
+                if (arrayA[w] == arrayA[i]) {
                     tmp++;
                 }
             }
             arrayB[w] = tmp;
-            tmp = 0;
-            w++;
+            tmp = 0; //Contador temporal de la posición actual del array
+            w++; //Sumar 1 a la posición del array que se compara con el for
         }
+        return arrayB;
     }
 }
