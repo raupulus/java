@@ -19,7 +19,9 @@ public class EJ6 {
     static Double[] notas = new Double[10];
 
     public static void main(String[] args) {
-        menu();
+        menu(); //Pide nombres y luego notas para cada nombre, van a los array
+        ordenar(); //Ordena de menor a mayor las notas
+        mostrar(); //Pinta por pantalla el resultado
     }
     
     public static void menu() {
@@ -34,10 +36,10 @@ public class EJ6 {
         for (int i = 0; i < nombres.length; i++) {
             System.out.println(nombres[i] + ": ");
             notas[i] = sc.nextDouble();
-        }
-        
-        ordenar();
-        
+        }    
+    }
+
+    public static void mostrar(){ //Muestra los alumnos aprobados y suspensos
         System.out.println("******ALUMNOS SUSPENSOS******");
         for (int i = 0; i < nombres.length; i++) {
             if (notas[i] < 5) {
@@ -53,13 +55,13 @@ public class EJ6 {
     }
     
     public static void ordenar() {
-        Double x;
-        String z;
+        Double x; //Temporal para array notas
+        String z; //Temporal para array nombres
         
         for (int i= 0; i<=(nombres.length-1); i++) { //Ordenar Array
             for (int k=(i+1); k<=(notas.length-1); k++) {
                 if (notas[k] < notas[i]) {
-                    x = notas[i];
+                    x = notas[i]; //Se asigna a la variable
                     z = nombres[i];
                     notas[i] = notas[k];
                     nombres[i] = nombres[k];
