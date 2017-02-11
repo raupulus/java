@@ -39,7 +39,7 @@ public class EJ8 {
         }
     }
     
-    public static void ordenarArray() { //Ordena el array de mayor a menor
+    public static void ordenarArray() { //Ordena el array de menor a mayor
         for (int i=0; i<array.length; i++) {
             for (int j=0; j<array.length; j++) {
                 if (array[i] < array[j]) {
@@ -57,14 +57,14 @@ public class EJ8 {
     }
     
     public static void sacarMedia() { //Obtiene la media
-        for (int i=0; i<array.length; i++) {
+        for (int i=0; i<array.length; i++) { //Recorre el array sumando valores
             media += array[i];
         }
-        media /= array.length;
+        media /= array.length; //Divide el sumatorio de valores entre los campos
     }
     
     public static void sacarFrecuencia() { //Sacar mayor, menor...
-        
+        int[] frecuencia = new int[array.length];
     }
     
     
