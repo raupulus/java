@@ -13,7 +13,7 @@ public class EJ8 {
     
     public static void main(String[] args) {
         llenarArray();
-        sacarValores();
+        ordenarArray();
         
         for (int i=0; i<array.length; i++) {
             System.out.println(array[i]);
@@ -31,7 +31,23 @@ public class EJ8 {
         }
     }
     
-    public static void sacarValores() { //Sacar mayor, menor...
+    public static void ordenarArray() { //Ordena el array de mayor a menor
+        for (int i=0; i<array.length; i++) {
+            for (int j=0; j<array.length; j++) {
+                if (array[i] < array[j]) {
+                    tmp = array[j];
+                    array[j] = array[i];
+                    array[i] = tmp;
+                }
+            }
+        }
+    }
+    
+    public static void sacarMedia() { //Obtiene la media
+        
+    }
+    
+    public static void sacarFrecuencia() { //Sacar mayor, menor...
         
     }
     
