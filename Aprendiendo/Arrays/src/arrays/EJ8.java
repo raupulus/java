@@ -14,15 +14,21 @@ public class EJ8 {
     public static void main(String[] args) {
         llenarArray();
         ordenarArray();
+        sacarExtremos();
         
+        System.out.print("Números Aleatorios:");
         for (int i=0; i<array.length; i++) {
-            System.out.println(array[i]);
+            System.out.print(+ array[i] + ", ");
         }
+        System.out.println("\nNúmero menor --> " + menor);
+        System.out.println("\nNúmero mayor --> " + mayor);
+        System.out.println("\nNúmero/s Más repetido/s --> " + repetido);
+        System.out.println("\nMedia de todos los números --> " + media);
     }
     
     public static void llenarArray() { //Generar números aleatorios
         for (int i=0; i<array.length; i++) {
-            tmp = rd.nextInt(80);
+            tmp = rd.nextInt(81);
             if ((tmp>=10) && (tmp<=80)) {
                 array[i] = tmp;
             } else {
@@ -41,6 +47,11 @@ public class EJ8 {
                 }
             }
         }
+    }
+    
+    public static void sacarExtremos() { //Mete en variable el mayor y menor
+        menor = array[0];
+        mayor = array[(array.length - 1)];
     }
     
     public static void sacarMedia() { //Obtiene la media
