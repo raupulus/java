@@ -30,13 +30,18 @@ public class EJ7 {
            } else {
                arrayC[i] = a[i];
            }
-            System.out.println(i);
         }
         
-        
-        
-        
-        
+        for (int i=0; i<arrayC.length; i++) { //Método que ordena arrayC
+            for (int j=0; j<arrayC.length; j++) {
+                if (arrayC[j] > arrayC[i]) {
+                    tmp = arrayC[i];
+                    arrayC[i] = arrayC[j];
+                    arrayC[j] = tmp;
+                }
+            }
+        }
+
         return arrayC;
     }
 }
