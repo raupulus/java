@@ -15,6 +15,8 @@ public class EJ8 {
         llenarArray();
         ordenarArray();
         sacarExtremos();
+        sacarMedia();
+        sacarFrecuencia();
         
         System.out.print("Números Aleatorios:");
         for (int i=0; i<array.length; i++) {
@@ -55,7 +57,10 @@ public class EJ8 {
     }
     
     public static void sacarMedia() { //Obtiene la media
-        
+        for (int i=0; i<array.length; i++) {
+            media += array[i];
+        }
+        media /= array.length;
     }
     
     public static void sacarFrecuencia() { //Sacar mayor, menor...
