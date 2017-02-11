@@ -65,6 +65,10 @@ public class EJ8 {
     
     public static void sacarFrecuencia() { //Sacar mayor, menor...
         int[] frecuencia = new int[array.length];
+        //Calcular veces que se repite cada número en el array "frecuencia"
+        //el array frecuencia tiene que mantener las mismas posiciones que el array principal
+        //Una vez calculado ordenaré los dos array a la vez dejando el mayor al principio
+        //En frecuencia[0] miraré el valor que tiene y avanzaré esa cantidad de posiciones para saber si el segundo valor se repite con la misma frecuencia, en ese caso muestro los dos
     }
     
     
