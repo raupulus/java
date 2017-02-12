@@ -31,7 +31,20 @@ public class EJ9 {
     }
     
     public static void ordenar() { //Ordenar el array de menor a mayor
+        for(int i=0; i<array.length; i++) {
+            for(int j=0; j<array.length; j++) {
+                if (array[i]<array[j]){
+                    tmp = array[i];
+                    array[i] = array[j];
+                    array[j] = tmp;
+                }
+            }
+        }
         
+        System.out.println("Array ordenado:");
+        for(int i=0; i<array.length; i++) {
+            System.out.print(array[i] + ", ");
+        }
     }
     
     public static void mostrar() { //Dibuja el array por pantalla
@@ -47,7 +60,7 @@ public class EJ9 {
                 
             }
             
-            System.out.print(tmp + ", ");
+            //System.out.print(array[i] + ", ");
         }
     }
 }
