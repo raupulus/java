@@ -16,6 +16,7 @@ public class EJ9 {
     public static void main(String[] args) {
         generarNumeros();
         ordenar();
+        frecuencia();
         mostrar();
     }
     
@@ -26,20 +27,6 @@ public class EJ9 {
                 array[i] = tmp;
             } else {
                 i--;
-            }
-        }
-    }
-    
-    public static void frecuencia() { //Comprueba la frecuencia de cada valor
-        for(int i=1; i<=100; i++) {
-            for(int j=0; j<array.length; j++) {
-                if (i == array[j]) {
-                    break;
-                } else if (array[j] != tmp) {
-                    tmp = i;
-                    //SIN TERMINAR
-                }
-                
             }
         }
     }
@@ -56,6 +43,16 @@ public class EJ9 {
         }
     }
     
+    public static void frecuencia() { //Comprueba la frecuencia de cada valor
+        for(int i=0; i<array.length; i++) {
+            for(int j=0; j<array.length; j++) {
+                if (array[i] == array[j]) {
+                    frecuencia[i]++;
+                }
+            }
+        }
+    }
+    
     public static void mostrar() { //Dibuja el array por pantalla
         //Muestra el array ordenado
         System.out.println("Array ordenado:");
@@ -64,25 +61,16 @@ public class EJ9 {
         }
         
         //Muestra la frecuencia
-        System.out.println("Array ordenado:");
+        System.out.println("\nFrecuencia:");
         for(int i=0; i<frecuencia.length; i++) {
             System.out.print(frecuencia[i] + ", ");
         }
         
         System.out.println("\nLos números no almacenados son:");
-        for(int i=1; i<=100; i++) {
-            for(int j=0; j<array.length; j++) {
-                if (i == array[j]) {
-                    break;
-                } else if (array[j] != tmp) {
-                    tmp = i;
-                    //SIN TERMINAR
-                }
-                
+        for(int i=0; i<frecuencia.length; i++) {
+            if (frecuencia[i] < 0){
+                System.out.print(i + ", ");
             }
-            
-            
-            System.out.print(tmp + ", ");
         }
     }
 }
