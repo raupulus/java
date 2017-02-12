@@ -9,8 +9,8 @@ import java.util.*; //Añado todas las librerías
 
 public class EJ9 {
     static Random rd = new Random();
-//x = rd.nextInt(1000); //numero máximo 1000
     static int[] array = new int[100]; //Creo array de 100 posiciones
+    static int[] frecuencia = new int[array.length]; //Array con la frecuencia
     static int tmp;
     
     public static void main(String[] args) {
@@ -30,6 +30,20 @@ public class EJ9 {
         }
     }
     
+    public static void frecuencia() { //Comprueba la frecuencia de cada valor
+        for(int i=1; i<=100; i++) {
+            for(int j=0; j<array.length; j++) {
+                if (i == array[j]) {
+                    break;
+                } else if (array[j] != tmp) {
+                    tmp = i;
+                    //SIN TERMINAR
+                }
+                
+            }
+        }
+    }
+    
     public static void ordenar() { //Ordenar el array de menor a mayor
         for(int i=0; i<array.length; i++) {
             for(int j=0; j<array.length; j++) {
@@ -40,27 +54,35 @@ public class EJ9 {
                 }
             }
         }
-        
+    }
+    
+    public static void mostrar() { //Dibuja el array por pantalla
+        //Muestra el array ordenado
         System.out.println("Array ordenado:");
         for(int i=0; i<array.length; i++) {
             System.out.print(array[i] + ", ");
         }
-    }
-    
-    public static void mostrar() { //Dibuja el array por pantalla
+        
+        //Muestra la frecuencia
+        System.out.println("Array ordenado:");
+        for(int i=0; i<frecuencia.length; i++) {
+            System.out.print(frecuencia[i] + ", ");
+        }
+        
         System.out.println("\nLos números no almacenados son:");
         for(int i=1; i<=100; i++) {
             for(int j=0; j<array.length; j++) {
-                if (array[j] != i) {
+                if (i == array[j]) {
+                    break;
+                } else if (array[j] != tmp) {
                     tmp = i;
                     //SIN TERMINAR
-                } else {
-                    
                 }
                 
             }
             
-            //System.out.print(array[i] + ", ");
+            
+            System.out.print(tmp + ", ");
         }
     }
 }
