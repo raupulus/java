@@ -9,23 +9,33 @@ import java.util.*; //Importo todas las librerías
 public class EJ8 {
     static int[] array = new int[100]; //Declaración del array con 100 posiciones
     static Random rd = new Random();
-    public static int mayor,menor,repetido,vecesRepetido,media,tmp,tmp1;
+    public static int mayor,menor,repetido,repetido2,repetido3,repetido4,vecesRepetido,media,tmp,tmp1;
     
     public static void main(String[] args) {
-        llenarArray();
-        ordenarArray();
-        sacarExtremos();
-        sacarMedia();
-        sacarFrecuencia();
+        llenarArray(); //Método que llena de números aleatorios el array
+        ordenarArray(); //Método que ordena de menor a mayor los números del array
+        sacarExtremos(); //Método que saca el número menor y el número mayor
+        sacarMedia(); //Método que hace la media de todos los números
+        sacarFrecuencia(); //Método que saca la frecuencia con la que se repite cada número
         
-        System.out.println("\n\nNúmeros Aleatorios:");
+        System.out.println("\nNúmeros Aleatorios:"); //Dibuja el array con números aleatorios
         for (int i=0; i<array.length; i++) {
             System.out.print(+ array[i] + ", ");
         }
-        System.out.println("\nNúmero menor --> " + menor);
-        System.out.println("\nNúmero mayor --> " + mayor);
-        System.out.println("\nNúmero/s Más repetido/s --> " + repetido + " se ha repetido " + vecesRepetido + " veces");
-        System.out.println("\nMedia de todos los números --> " + media);
+        System.out.println("\nNúmero menor --> " + menor); //Dibuja el número menor
+        System.out.println("\nNúmero mayor --> " + mayor); //Dibuja el número mayor
+        
+        if (repetido4 > 0) { //Dibuja la Frecuencia según la cantidad de números que tengan esa misma frecuencia (máximo 4)
+            System.out.println("\nLos cuatro números más repetidos son --> " + repetido + ", " + repetido2 + ", " + repetido3 + " y " + repetido4 + " se han repetido " + vecesRepetido + " veces");
+        } else if (repetido3 > 0) {
+            System.out.println("\nLos tres números más repetidos son --> " + repetido + ", " + repetido2 + " y " + repetido3 + " se han repetido " + vecesRepetido + " veces");
+        } else if (repetido2 > 0) {
+            System.out.println("\nLos dos números más repetidos son --> " + repetido + " y " + repetido2 + " se han repetido " + vecesRepetido + " veces");
+        } else {
+            System.out.println("\nNúmero más repetido --> " + repetido + " se ha repetido " + vecesRepetido + " veces");
+        }
+        
+        System.out.println("\nMedia de todos los números --> " + media); //Dibuja la media de todos los valores
     }
     
     public static void llenarArray() { //Generar números aleatorios
@@ -65,6 +75,7 @@ public class EJ8 {
     
     public static void sacarFrecuencia() { //Sacar número más repetido
         int[] frecuencia = new int[array.length];
+        
         //Calcular veces que se repite cada número en el array "frecuencia"
         for (int i=0; i<array.length; i++) {
             for (int j=0; j<array.length; j++) {
@@ -81,12 +92,21 @@ public class EJ8 {
             if (frecuencia[i] > vecesRepetido) {
                 repetido = arrayTMP1[i];
                 vecesRepetido = frecuencia[i];
+                tmp = i; //Almacena la posición del más repetido
             }
         }
         
         //Comparar las veces que se ha repetido para ver si otro número se ha repetido las mismas veces
-        
+        for (int i=0; i<frecuencia.length; i++) {
+            if ((frecuencia[i] == frecuencia[tmp]) && (arrayTMP1[i] != arrayTMP1[tmp])){
+                if (repetido2 == 0) {
+                    repetido2 = arrayTMP1[i];
+                } else if ((repetido3 == 0) && (arrayTMP1[i] != repetido2)) {
+                    repetido3 = arrayTMP1[i];
+                } else if ((repetido4 == 0) && (arrayTMP1[i] != repetido2) && (arrayTMP1[i] != repetido3) ) {
+                    repetido4 = arrayTMP1[i];
+                }
+            }
+        }
     }
-    
-    
 }
