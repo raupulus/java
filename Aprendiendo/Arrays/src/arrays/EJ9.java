@@ -35,6 +35,19 @@ public class EJ9 {
     }
     
     public static void mostrar() { //Dibuja el array por pantalla
-        
+        System.out.println("\nLos números no almacenados son:");
+        for(int i=1; i<=100; i++) {
+            for(int j=0; j<array.length; j++) {
+                if (array[j] != i) {
+                    tmp = i;
+                    //SIN TERMINAR
+                } else {
+                    
+                }
+                
+            }
+            
+            System.out.print(tmp + ", ");
+        }
     }
 }
