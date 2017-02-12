@@ -9,7 +9,7 @@ import java.util.*; //Importo todas las librerías
 public class EJ8 {
     static int[] array = new int[100]; //Declaración del array con 100 posiciones
     static Random rd = new Random();
-    public static int mayor,menor,repetido,media,tmp;
+    public static int mayor,menor,repetido,vecesRepetido,media,tmp,tmp1;
     
     public static void main(String[] args) {
         llenarArray();
@@ -24,7 +24,7 @@ public class EJ8 {
         }
         System.out.println("\nNúmero menor --> " + menor);
         System.out.println("\nNúmero mayor --> " + mayor);
-        System.out.println("\nNúmero/s Más repetido/s --> " + repetido);
+        System.out.println("\nNúmero/s Más repetido/s --> " + repetido + " se ha repetido " + vecesRepetido + " veces");
         System.out.println("\nMedia de todos los números --> " + media);
     }
     
@@ -63,29 +63,29 @@ public class EJ8 {
         media /= array.length; //Divide el sumatorio de valores entre los campos
     }
     
-    public static void sacarFrecuencia() { //Sacar mayor, menor...
+    public static void sacarFrecuencia() { //Sacar número más repetido
         int[] frecuencia = new int[array.length];
         //Calcular veces que se repite cada número en el array "frecuencia"
-        //El array frecuencia tiene que mantener las mismas posiciones que el array principal
-        System.out.println("Frecuencia:");
         for (int i=0; i<array.length; i++) {
             for (int j=0; j<array.length; j++) {
                 if (array[i] == array[j]) {
                     frecuencia[i]++;
                 }
             }
-            System.out.print(frecuencia[i] + ", ");
         }
         
-        //Una vez calculado ordenaré los dos array a la vez dejando el mayor al principio
+        //Almacenar la Frecuencia y valor
+        int[] arrayTMP1 = array;
+ 
+        for (int i=0; i<frecuencia.length; i++) {
+            if (frecuencia[i] > vecesRepetido) {
+                repetido = arrayTMP1[i];
+                vecesRepetido = frecuencia[i];
+            }
+        }
         
+        //Comparar las veces que se ha repetido para ver si otro número se ha repetido las mismas veces
         
-        
-        
-        
-        
-        
-        //En frecuencia[0] miraré el valor que tiene y avanzaré esa cantidad de posiciones para saber si el segundo valor se repite con la misma frecuencia, en ese caso muestro los dos
     }
     
     
