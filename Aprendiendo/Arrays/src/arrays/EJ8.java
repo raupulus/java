@@ -18,7 +18,7 @@ public class EJ8 {
         sacarMedia();
         sacarFrecuencia();
         
-        System.out.print("Números Aleatorios:");
+        System.out.println("\n\nNúmeros Aleatorios:");
         for (int i=0; i<array.length; i++) {
             System.out.print(+ array[i] + ", ");
         }
@@ -66,8 +66,25 @@ public class EJ8 {
     public static void sacarFrecuencia() { //Sacar mayor, menor...
         int[] frecuencia = new int[array.length];
         //Calcular veces que se repite cada número en el array "frecuencia"
-        //el array frecuencia tiene que mantener las mismas posiciones que el array principal
+        //El array frecuencia tiene que mantener las mismas posiciones que el array principal
+        System.out.println("Frecuencia:");
+        for (int i=0; i<array.length; i++) {
+            for (int j=0; j<array.length; j++) {
+                if (array[i] == array[j]) {
+                    frecuencia[i]++;
+                }
+            }
+            System.out.print(frecuencia[i] + ", ");
+        }
+        
         //Una vez calculado ordenaré los dos array a la vez dejando el mayor al principio
+        
+        
+        
+        
+        
+        
+        
         //En frecuencia[0] miraré el valor que tiene y avanzaré esa cantidad de posiciones para saber si el segundo valor se repite con la misma frecuencia, en ese caso muestro los dos
     }
     
