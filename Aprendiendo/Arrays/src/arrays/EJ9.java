@@ -68,8 +68,14 @@ public class EJ9 {
         
         System.out.println("\nLos números no almacenados son:");
         for(int i=0; i<frecuencia.length; i++) {
-            if (frecuencia[i] == 0){
-                System.out.print(i + ", ");
+            for(int j=0; j<frecuencia.length; j++) {
+                if (array[j] == i){
+                    tmp = i; //meto el valor de "i" en la variable si está en el array
+                }
+            }
+            if (tmp != i) {
+                //Si no está en el array, el valor de "tmp" será distinto a "i"
+                System.out.print(i + ", "); //Dibujo "i" si es distinta a i
             }
         }
     }
