@@ -68,7 +68,7 @@ public class EJ9 {
         
         System.out.println("\nLos números no almacenados son:");
         for(int i=0; i<frecuencia.length; i++) {
-            if (frecuencia[i] < 0){
+            if (frecuencia[i] == 0){
                 System.out.print(i + ", ");
             }
         }
