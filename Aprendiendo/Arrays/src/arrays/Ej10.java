@@ -8,17 +8,29 @@ package arrays;
  */
 import java.util.*; //Importo todas las librerías
 public class Ej10 {
-    int[] numeros,cuadrados,cubos = new int[20]; //Arrays
-    int tmp; //Variables
+    static int[] numeros = new int[20];
+    static int[] cuadrados = new int[20];
+    static int[] cubos = new int[20];
+    static int tmp; //Variables
     static Random rd = new Random();
 
-    
     public static void main(String[] args) {
-        
+        llenarNumeros();
+        llenarCuadrados();
+        llenarCubos();
+        mostrar();
     }
     
     public static void llenarNumeros() {
         //int tmp = rd.nextInt(100); //numero máximo 100
+        for (int i=0; i<numeros.length; i++) {
+            tmp = rd.nextInt(101);
+            if ((numeros[i]<0) | (numeros[i]>100)) {
+                i--;
+                //continue;
+            }
+            //numeros[i] = tmp;
+        }
     }
     
     public static void llenarCuadrados() {
@@ -27,5 +39,22 @@ public class Ej10 {
     
     public static void llenarCubos() {
         
+    }
+    
+    public static void mostrar() {
+        System.out.println("\nArray números:");
+        for (int i=0; i<numeros.length;i++) {
+            System.out.print(numeros[i] + ", ");
+        }
+        
+        System.out.println("\nArray Cuadrados:");
+        for (int i=0; i<cuadrados.length;i++) {
+            System.out.print(cuadrados[i] + ", ");
+        }
+        
+        System.out.println("\nArray Cubos:");
+        for (int i=0; i<cubos.length;i++) {
+            System.out.print(cubos[i] + ", ");
+        }
     }
 }
