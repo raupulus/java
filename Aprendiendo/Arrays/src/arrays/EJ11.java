@@ -29,7 +29,7 @@ public class EJ11 {
     public static void suma() {
         System.out.println("\nSuma:");
         for(int i=0;i<array.length;i++) {
-            suma += array[i];
+            suma =  suma + array[i];
             System.out.print(suma);
         }
     }
@@ -37,16 +37,24 @@ public class EJ11 {
     public static void resta() {
         System.out.println("\nResta:");
         for(int i=0;i<array.length;i++) {
-            resta -= array[i];
+            resta = resta - array[i];
             System.out.print(resta);
         }
     }
     
     public static void multiplicacion() {
-        
+        System.out.println("\nMultiplicación:");
+        for(int i=0;i<array.length;i++) {
+            multiplicacion = multiplicacion * array[i];
+            System.out.print(multiplicacion);
+        }
     }
     
     public static void division() {
-        
+        System.out.println("\nDivisión:");
+        for(int i=0;i<array.length;i++) {
+            division = division / array[i];
+            System.out.print(division);
+        }
     }
 }
