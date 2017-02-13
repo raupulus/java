@@ -18,30 +18,33 @@ public class Ej10 {
         llenarNumeros();
         llenarCuadrados();
         llenarCubos();
-        mostrar();
+        mostrar(); //Muestra todos los arrays
     }
     
-    public static void llenarNumeros() {
+    public static void llenarNumeros() {//Llena el array números
         //int tmp = rd.nextInt(100); //numero máximo 100
         for (int i=0; i<numeros.length; i++) {
-            tmp = rd.nextInt(101);
+            numeros[i] = rd.nextInt(101);
             if ((numeros[i]<0) | (numeros[i]>100)) {
                 i--;
-                //continue;
+                continue;
             }
-            //numeros[i] = tmp;
         }
     }
     
-    public static void llenarCuadrados() {
-        
+    public static void llenarCuadrados() { //Llena el array cuadrados
+        for (int i=0; i<cuadrados.length; i++) {
+            cuadrados[i] = (int) Math.pow(numeros[i], 2);
+        }
     }
     
-    public static void llenarCubos() {
-        
+    public static void llenarCubos() { //Llena el array cubos
+        for (int i=0; i<cuadrados.length; i++) {
+            cubos[i] = (int) Math.pow(numeros[i], 3);
+        }
     }
     
-    public static void mostrar() {
+    public static void mostrar() { //Muestra todos los arrays
         System.out.println("\nArray números:");
         for (int i=0; i<numeros.length;i++) {
             System.out.print(numeros[i] + ", ");
