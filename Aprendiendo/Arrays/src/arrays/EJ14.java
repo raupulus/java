@@ -1,6 +1,6 @@
 package arrays;
 /**
- *En españa cada persona está identificada con un DNI, en el que figura un número y letra (56999545W
+ * En España cada persona está identificada con un DNI, en el que figura un número y letra (56999545W
  * La letra que sigue al número se calcula siguiendo esta metodología:
  * Tomando el resto de dividir el número del DNI entre 23 (resultado es entre 0 y 22 siempre)
  * Crear programa que  calcule la letra de un DNI a partir del que introduzca el usuario
@@ -11,6 +11,23 @@ package arrays;
  * Ejemplo: Para el DNI 20267079 el resto entre 23 es 8, sería la letra P
  * @author fryntiz
  */
+import java.util.*; //Importo todas las librerías
 public class EJ14 {
+    private static final Scanner sc = new Scanner(System.in);
+    private static int input;
+
     
+    public static void main(String[] args) {
+        entrada();
+        obtenerLetra();
+    }
+    
+    public static void entrada() {
+        //input = sc.nextInt();
+    }
+    
+    public static void obtenerLetra(int numeroDNI) {
+        
+        
+    }
 }
