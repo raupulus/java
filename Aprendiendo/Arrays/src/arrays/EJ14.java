@@ -16,17 +16,17 @@ import java.util.*; //Importo todas las librerías
 public class EJ14 {
     private static final Scanner sc = new Scanner(System.in);
     private static int tmp;
-
+    private static String dniFINAL;
     
     public static void main(String[] args) {
         String[] array = {"T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"};
-        entrada();
-        obtenerLetra(array);
+        entrada(); //Entrada de DNI
+        obtenerLetra(array); //Calcula la letra que le corresponde a partir del array
         
-        System.out.println("El DNI completo es: " + tmp);
+        System.out.println("El DNI completo es: " + dniFINAL);
     }
     
-    public static void entrada() {
+    public static void entrada() { //Entrada de DNI
         System.out.println("Introduce los dígitos del DNI (son 8)");
         tmp = sc.nextInt();
         if ((tmp<9999999)&&(tmp>99999999)) {
@@ -34,10 +34,8 @@ public class EJ14 {
         }
     }
     
-    public static int obtenerLetra(String[] numeroDNI) {
-        
-        
-        
-        return tmp;
+    public static String obtenerLetra(String[] numeroDNI) {//Calcular letra correspondiente
+        dniFINAL = Integer.toString(tmp) + "-" + numeroDNI[tmp%23];
+        return dniFINAL;
     }
 }
