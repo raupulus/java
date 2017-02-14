@@ -8,7 +8,7 @@ import java.util.*;
 public class EJ15 {
     static Random rd = new Random();
     private static final Scanner sc = new Scanner(System.in);
-    private static int input;
+    private static int input,tmp;
     static int[] array = new int[20];
     
     public static void main(String[] args) {
@@ -23,8 +23,20 @@ public class EJ15 {
     }
     
     public static void pedirNumeroBuscar() {
-        System.out.println("Introduce el número a buscar:");
-        //input = sc.nextInt();
+        System.out.println("Introduce el número a buscar (0-20):");
+        input = sc.nextInt();
         
+        for (int i=0;i<array.length;i++) {
+            if(array[i] == input){
+                tmp = array[i];
+            }
+        }
+        
+        if(tmp == input){
+            System.out.println("El número se encuentra en el array");
+        } else {
+            System.out.println("El número no existe en el array");
+            pedirNumeroBuscar();
+        }
     }
 }
