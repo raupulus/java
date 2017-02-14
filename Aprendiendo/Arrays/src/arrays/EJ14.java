@@ -6,8 +6,9 @@ package arrays;
  * Crear programa que  calcule la letra de un DNI a partir del que introduzca el usuario
  * El programa devolverá el DNI completo (con letra)
  * Crear un método obtenerLetra(int numeroDNI) donde según el resultado de la anterior
- * fórmula busque en un array de caracteres la posición que corresponda con la letra
- * La letra T equivale a 0, letra R a 1 y así hasta la letra E que equivale a 22
+ * fórmula busque en un array de caracteres la posición que corresponda con la letra:
+ * 0,1,2,3,4,5,6,7,8,9.......22
+ * T,R,W,A,G,M,Y,F,P,D,X,B,N,J,Z,S,Q,V,H,L,C,K,E
  * Ejemplo: Para el DNI 20267079 el resto entre 23 es 8, sería la letra P
  * @author fryntiz
  */
@@ -18,7 +19,7 @@ public class EJ14 {
 
     
     public static void main(String[] args) {
-        int[] array = new int[8];
+        String[] array = {"T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"};
         entrada();
         obtenerLetra(array);
         
@@ -33,7 +34,7 @@ public class EJ14 {
         }
     }
     
-    public static int obtenerLetra(int[] numeroDNI) {
+    public static int obtenerLetra(String[] numeroDNI) {
         
         
         
