@@ -14,20 +14,29 @@ package arrays;
 import java.util.*; //Importo todas las librerías
 public class EJ14 {
     private static final Scanner sc = new Scanner(System.in);
-    private static int input;
+    private static int tmp;
 
     
     public static void main(String[] args) {
+        int[] array = new int[8];
         entrada();
-        obtenerLetra();
+        obtenerLetra(array);
+        
+        System.out.println("El DNI completo es: " + tmp);
     }
     
     public static void entrada() {
-        //input = sc.nextInt();
+        System.out.println("Introduce los dígitos del DNI (son 8)");
+        tmp = sc.nextInt();
+        if ((tmp<9999999)&&(tmp>99999999)) {
+            entrada();
+        }
     }
     
-    public static void obtenerLetra(int numeroDNI) {
+    public static int obtenerLetra(int[] numeroDNI) {
         
         
+        
+        return tmp;
     }
 }
