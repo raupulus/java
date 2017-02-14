@@ -6,4 +6,16 @@ package arrays;
  */
 public class EJ15 {
     
+    public static void main(String[] args) {
+        llenarArray();
+        pedirNumeroBuscar();
+    }
+    
+    public static void llenarArray() {
+        
+    }
+    
+    public static void pedirNumeroBuscar() {
+        
+    }
 }
