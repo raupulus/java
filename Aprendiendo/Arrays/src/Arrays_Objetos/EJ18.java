@@ -13,23 +13,26 @@ package Arrays_Objetos;
  */
 import java.util.*;
 public class EJ18 {
-    private static int a,b;
+    private static String a,b;
+    private static int[] notas = new int[5];
     private static final Scanner sc = new Scanner(System.in);
+    private static alumno nombreAlumno = new alumno();
 
     public static void main(String[] args) {
-        a = sc.nextInt();
-        b = sc.nextInt();
+        System.out.println("Introduce el nombre del alumno:");
+        a = sc.nextLine();
+        
+        for(int i=0;i<notas.length;i++) {
+            System.out.println("Introduce la nota --> " + (i+1));
+            notas[i] = sc.nextInt();
+        }
+        
+        String c;
+        c = nombreAlumno(String a,int[] notas);
+        //nombreAlumno(a,notas);
+        //b = nombreAlumno(String a,int[] notas);
+        //private static String alumnos = new alumno(String a, int[] notas);
     }
     
-    public static void mayor() { //Método que devuelve la mejor nota
-        
-    }
     
-    public static void menor() { //Método que devuelve la menor nota
-        
-    }
-    
-    public static void mostrar() { //Muestra nombre de alumno en mayus y nota media
-        
-    }
 }
