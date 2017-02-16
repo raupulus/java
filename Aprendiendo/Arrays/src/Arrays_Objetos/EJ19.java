@@ -10,6 +10,37 @@ package Arrays_Objetos;
  * 5 - Salir del programa
  * @author fryntiz
  */
+import java.util.*; //Añadidas librerías
 public class EJ19 {
+    public static boolean salir;
+    private static final Scanner sc = new Scanner(System.in);
+    private static int input;
     
+    public static void main(String[] args) {
+        menu();
+    }
+    
+    public static void menu() {
+        while(salir) {
+            System.out.println("1 - Dar de alta un producto nuevo");
+            System.out.println("2 - Buscar producto por ID");
+            System.out.println("3 - Modificar el stock de un producto");
+            System.out.println("4 - Eliminar producto");
+            System.out.println("5 - Salir del programa");
+            
+            input = sc.nextInt();
+            
+            if(input==5) {
+                break;
+            } else if(input==4) {
+                
+            } else if(input==3) {
+                
+            } else if(input==2) {
+                
+            } else if(input==1) {
+                
+            }
+        }
+    }
 }
