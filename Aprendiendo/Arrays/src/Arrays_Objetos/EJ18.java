@@ -16,7 +16,6 @@ public class EJ18 {
     private static String a,b;
     private static int[] notas = new int[5];
     private static final Scanner sc = new Scanner(System.in);
-    private static alumno nombreAlumno = new alumno();
 
     public static void main(String[] args) {
         System.out.println("Introduce el nombre del alumno:");
@@ -26,12 +25,10 @@ public class EJ18 {
             System.out.println("Introduce la nota --> " + (i+1));
             notas[i] = sc.nextInt();
         }
-        
-        String c;
-        c = nombreAlumno(String a,int[] notas);
-        //nombreAlumno(a,notas);
-        //b = nombreAlumno(String a,int[] notas);
-        //private static String alumnos = new alumno(String a, int[] notas);
+        alumno nombreAlumno = new alumno(a,notas);
+        nombreAlumno.mayor();
+        nombreAlumno.menor();
+        nombreAlumno.mostrar();
     }
     
     
