@@ -11,6 +11,25 @@ package Arrays_Objetos;
  * 
  * @author fryntiz
  */
+import java.util.*;
 public class EJ18 {
+    private static int a,b;
+    private static final Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        a = sc.nextInt();
+        b = sc.nextInt();
+    }
     
+    public static void mayor() { //Método que devuelve la mejor nota
+        
+    }
+    
+    public static void menor() { //Método que devuelve la menor nota
+        
+    }
+    
+    public static void mostrar() { //Muestra nombre de alumno en mayus y nota media
+        
+    }
 }
