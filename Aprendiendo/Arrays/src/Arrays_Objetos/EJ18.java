@@ -30,6 +30,4 @@ public class EJ18 {
         nombreAlumno.menor();
         nombreAlumno.mostrar();
     }
-    
-    
 }
