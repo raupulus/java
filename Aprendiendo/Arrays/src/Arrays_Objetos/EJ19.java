@@ -15,9 +15,12 @@ package Arrays_Objetos;
  */
 import java.util.*; //Añadidas librerías
 public class EJ19 {
+    public static Producto claseTienda = new Producto();
     public static boolean salir;
     private static final Scanner sc = new Scanner(System.in);
-    private static int input;
+    private static int input,tmp1;
+    private static int tmp;
+    private static String[] productos = new String[10]; //Nombre del producto, el ID es el prefijo "prod_" más la posición
     
     public static void main(String[] args) {
         menu();
@@ -51,6 +54,11 @@ public class EJ19 {
                     break;
                 case 1:
                     //Crear un objeto y almacenarlo como string en el array "productos"
+                    String nombre;
+                    
+                    System.out.println("Nombre del producto: ");
+                    nombre = sc.toString();
+                    Producto producto = new Producto();
                     break;
                 default:
                     System.out.println("\n¿Tienes un catálogo de salchichas en las manos? pulsa solo una tecla numérica entre 1 y 5\n");
