@@ -1,1 +1,7 @@
-/Aprendiendo/Arrays/nbproject/private/private.properties
+#Por extensión:
+*.class
+
+
+#nombres de archivos:
+private.xml
+
