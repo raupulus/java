@@ -8,6 +8,9 @@ package Arrays_Objetos;
  * 3 - Modificar el stock de un producto
  * 4 - Eliminar producto
  * 5 - Salir del programa
+ * 
+ * Este ejercicio se complementa con la clase "Tienda" para crear productos
+ * 
  * @author fryntiz
  */
 import java.util.*; //Añadidas librerías
@@ -29,16 +32,20 @@ public class EJ19 {
             System.out.println("5 - Salir del programa");
             input = sc.nextInt();
             
-            if(input==5) {
-                salir = true;
-            } else if(input==4) {
-                
-            } else if(input==3) {
-                
-            } else if(input==2) {
-                
-            } else if(input==1) {
-                
+            switch (input) {
+                case 5:
+                    salir = true;
+                    break;
+                case 4:
+                    break;
+                case 3:
+                    break;
+                case 2:
+                    break;
+                case 1:
+                    break;
+                default:
+                    break;
             }
         }
     }
