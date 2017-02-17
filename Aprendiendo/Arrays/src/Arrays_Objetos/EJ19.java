@@ -25,6 +25,7 @@ public class EJ19 {
     
     public static void menu() { //Menú principal
         while(!salir) {
+            System.out.println("\n***** Tienda --> \"El Glotón\" *****");
             System.out.println("1 - Dar de alta un producto nuevo");
             System.out.println("2 - Buscar producto por ID");
             System.out.println("3 - Modificar el stock de un producto");
