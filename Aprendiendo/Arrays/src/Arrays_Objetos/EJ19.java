@@ -15,9 +15,9 @@ package Arrays_Objetos;
  */
 import java.util.*; //Añadidas librerías
 public class EJ19 {
-    public static Producto claseTienda = new Producto();
+    //public static Producto newProducto = new Producto();
     public static boolean salir;
-    private static final Scanner sc = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
     private static int input,tmp1;
     private static int tmp;
     private static String[] productos = new String[10]; //Nombre del producto, el ID es el prefijo "prod_" más la posición
@@ -52,18 +52,39 @@ public class EJ19 {
                 case 2:
                     //Método "buscar" en clase "Tienda" pasándole el valor de entrada
                     break;
-                case 1:
-                    //Crear un objeto y almacenarlo como string en el array "productos"
-                    String nombre;
-                    
-                    System.out.println("Nombre del producto: ");
-                    nombre = sc.toString();
-                    Producto producto = new Producto();
+                case 1://Crear un objeto y almacenarlo como string en el array "productos"
+                    crearObjeto();
                     break;
                 default:
                     System.out.println("\n¿Tienes un catálogo de salchichas en las manos? pulsa solo una tecla numérica entre 1 y 5\n");
                     break;
             }
         }
+    }
+    
+    
+    public static void crearObjeto() {//Crear un objeto y almacenarlo como string en el array "productos"
+        String nombre = "";
+        while (nombre == "") {
+            System.out.println("\nIntroduce el nombre del producto:");
+            nombre = sc.next();
+        }
+        
+        int precio = 0;
+        while (precio == 0) {
+            System.out.println("\nIntroduce el precio del producto");
+            precio = sc.nextInt();
+        }
+        
+        int stock = 0;
+        while (stock == 0) {
+            System.out.println("\nStock inicial del producto:");
+            stock = sc.nextInt();
+        }
+        
+        //id del producto, nombre del producto, precio, cantidad en stock.
+        
+        Producto prod1 = new Producto(nombre,precio,stock);
+        prod1.mostrarProducto();
     }
 }
