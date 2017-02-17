@@ -30,6 +30,9 @@ public class EJ19 {
             System.out.println("3 - Modificar el stock de un producto");
             System.out.println("4 - Eliminar producto");
             System.out.println("5 - Salir del programa");
+            //Plantear subMenú para elimiminar producto (muestra todos y su stock) e introducir el que se borra
+            //Plantear método para eliminar producto
+            
             input = sc.nextInt();
             
             switch (input) {
@@ -37,14 +40,19 @@ public class EJ19 {
                     salir = true;
                     break;
                 case 4:
+                    //Eliminar producto y stock del mismo (la misma posición asociada)
                     break;
                 case 3:
+                    //Modificar el array "stock" en la posición del producto elegido
                     break;
                 case 2:
+                    //Método "buscar" en clase "Tienda" pasándole el valor de entrada
                     break;
                 case 1:
+                    //Crear un objeto y almacenarlo como string en el array "productos"
                     break;
                 default:
+                    System.out.println("\n¿Tienes un catálogo de salchichas en las manos? pulsa solo una tecla numérica entre 1 y 5\n");
                     break;
             }
         }
