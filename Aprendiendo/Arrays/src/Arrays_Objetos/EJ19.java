@@ -53,7 +53,7 @@ public class EJ19 {
                     //Método "buscar" en clase "Tienda" pasándole el valor de entrada
                     break;
                 case 1://Crear un objeto y almacenarlo como string en el array "productos"
-                    crearObjeto();
+                    añadirProducto();
                     break;
                 default:
                     System.out.println("\n¿Tienes un catálogo de salchichas en las manos? pulsa solo una tecla numérica entre 1 y 5\n");
@@ -63,7 +63,9 @@ public class EJ19 {
     }
     
     
-    public static void crearObjeto() {//Crear un objeto y almacenarlo como string en el array "productos"
+    public static void añadirProducto() {//Crear un objeto y almacenarlo como string en el array "productos"
+        //COMPROBAR QUE CABEN MÁS PRODUCTOS EN EL ARRAY Y SUGERIR ELIMINAR
+        
         String nombre = "";
         while (nombre == "") {
             System.out.println("\nIntroduce el nombre del producto:");
@@ -81,9 +83,7 @@ public class EJ19 {
             System.out.println("\nStock inicial del producto:");
             stock = sc.nextInt();
         }
-        
-        //id del producto, nombre del producto, precio, cantidad en stock.
-        
+                
         Producto prod1 = new Producto(nombre,precio,stock);
         prod1.mostrarProducto();
     }
