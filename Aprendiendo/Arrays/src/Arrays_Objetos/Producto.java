@@ -19,4 +19,8 @@ public class Producto {
         System.out.println("\nNombre producto creado: " + nombre + " y su precio es " + precio + " Euros");
         System.out.println("Su stock es de " + stock + " unidades/kilos");
     }
+    
+    public void nombreProducto() {
+        System.out.println();
+    }
 }
