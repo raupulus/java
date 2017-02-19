@@ -20,11 +20,7 @@ public class EJ1 {
 //input = sc.nextInt();
     
     public static void main(String[] args) {
-        
-    }
-    
-    public static void entrada() {
-        System.out.println("");
+        entrada();
     }
     
     public static void menu() {
@@ -47,18 +43,22 @@ public class EJ1 {
                     break;
                 case 2:
                     System.out.println("El país elegido por el sorteo es: ");
-                    
+                    //Llamar a la clase, exactamente al método que sortea el array
                     break;
                 case 1:
-                    System.out.println("Introduce los países");
-                    for (int i=1;1<3;i++) {
-                        System.out.println("Introduce el país " + i);
-                    }
-                    //break;
+                    entrada();
+                    break;
                 default:
                     System.out.println("No entiendo lo que escribes, inserta un valor válido");
                     break;
             }
         }
+    }
+    
+    public static void entrada() {
+        System.out.println("Introduce los países");
+            for (int i=1;1<3;i++) {
+                System.out.println("Introduce el país " + i);
+            }
     }
 }
