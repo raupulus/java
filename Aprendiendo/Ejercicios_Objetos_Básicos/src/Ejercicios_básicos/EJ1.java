@@ -10,14 +10,13 @@ package Ejercicios_básicos;
  * 
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
-import java.util.Scanner;
+import java.util.Scanner; //Importo librería scanner
 public class EJ1 {
-    
     private static final Scanner sc = new Scanner(System.in);
     private static int input;
     private static String pais;
+    private static String[] paises;
     private static boolean salir;
-//input = sc.nextInt();
     
     public static void main(String[] args) {
         entrada();
@@ -37,16 +36,13 @@ public class EJ1 {
                     salir = true;
                     break;
                 case 3:
-                    System.out.println("Introduce el país que desea conocer la posición:");
-                    pais = sc.nextLine();
-                    //Llamar a la clase en este punto pasandole como parámetro el pais
+                    posicion(); //Muestra la posición del país
                     break;
                 case 2:
-                    System.out.println("El país elegido por el sorteo es: ");
-                    //Llamar a la clase, exactamente al método que sortea el array
+                    sorteo(); //Elige un país al azar
                     break;
                 case 1:
-                    entrada();
+                    entrada(); //Pide los datos de entrada
                     break;
                 default:
                     System.out.println("No entiendo lo que escribes, inserta un valor válido");
@@ -60,9 +56,24 @@ public class EJ1 {
         
         for (int i=1;i<3;i++) {
             System.out.println("Introduce el país " + i);
+            paises[i] = sc.next();
             //añadir método de la clase pais para pasar array de paises y crear objeto
         }
         
         System.out.println("Los paises introducidos son:");
+        for (int i=0;i<paises.length;i++) {
+            System.out.print(paises[i] + ", ");
+        }
+    }
+    
+    public static void posicion() {
+        System.out.println("Introduce el país que desea conocer la posición:");
+        pais = sc.nextLine();
+        //Llamar a la clase en este punto pasandole como parámetro el pais
+    }
+    
+    public static void sorteo() {
+        System.out.println("El país elegido por el sorteo es: ");
+        //Llamar a la clase, exactamente al método que sortea el array
     }
 }
