@@ -57,8 +57,12 @@ public class EJ1 {
     
     public static void entrada() {
         System.out.println("Introduce los países");
-            for (int i=1;1<3;i++) {
-                System.out.println("Introduce el país " + i);
-            }
+        
+        for (int i=1;i<3;i++) {
+            System.out.println("Introduce el país " + i);
+            //añadir método de la clase pais para pasar array de paises y crear objeto
+        }
+        
+        System.out.println("Los paises introducidos son:");
     }
 }
