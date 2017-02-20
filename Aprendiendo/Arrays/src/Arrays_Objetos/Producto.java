@@ -6,7 +6,7 @@ package Arrays_Objetos;
  */
 public class Producto {
     private static int contador = 0,tmp,precio,stock;
-    private static String nombre;
+    private String nombre;
     
     
     public Producto(String nombreInput, int precioInput, int stockInput) {
