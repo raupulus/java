@@ -18,14 +18,14 @@ public class EJ19 {
     //public static Producto newProducto = new Producto();
     public static boolean salir;
     private static Scanner sc = new Scanner(System.in);
-    private static int input,tmp1;
+    private static int input,tmp1,contador = 0;
     private static int tmp;
-    private static String[] productos = new String[10]; //Nombre del producto, el ID es el prefijo "prod_" más la posición
+    private static Producto[] productos = new Producto[10]; //Nombre del producto, el ID es el prefijo "prod_" más la posición
     
     public static void main(String[] args) {
         menu();
     }
-    
+
     public static void menu() { //Menú principal
         while(!salir) {
             System.out.println("\n***** Tienda --> \"El Glotón\" *****");
@@ -84,7 +84,8 @@ public class EJ19 {
             stock = sc.nextInt();
         }
                 
-        Producto prod1 = new Producto(nombre,precio,stock);
-        prod1.mostrarProducto();
+        productos[contador] = new Producto(nombre,precio,stock);
+        productos[contador].mostrarProducto();
+        contador++;
     }
 }
