@@ -72,11 +72,12 @@ public class EJ1 {
         System.out.println("Introduce el país que desea conocer la posición:");
         pais = sc.nextLine();
         //Llamar a la clase en este punto pasandole como parámetro el pais
-        System.out.println(paisesObjeto.sorteo(pais));
+        //System.out.println(paisesObjeto.buscar(pais));
     }
     
     public static void sorteo() {
         System.out.println("El país elegido por el sorteo es: ");
         //Llamar a la clase, exactamente al método que sortea el array
+        //System.out.println(paisesObjeto.sorteo());
     }
 }
