@@ -21,6 +21,13 @@ public class Producto {
     }
     
     public void nombreProducto() {
-        System.out.println();
+        System.out.println("Nombre --> " + nombre);
+        System.out.println("Precio --> " + precio + " Euros");
+        System.out.println("Stock  --> " + stock);
+    }
+    
+    public void buscarID() {
+        //for (int i=0;i<)
+        System.out.println("");
     }
 }
