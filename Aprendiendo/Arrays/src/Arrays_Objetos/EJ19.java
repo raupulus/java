@@ -101,6 +101,15 @@ public class EJ19 {
     }
     
     public static void modificarStock() {
-        
+        for(int i=0;i<productos.length;i++) {
+            productos[i].mostrarProducto();
+        }
+        System.out.println("Selecciona el ID del producto para modificar stock");
+        tmp = sc.nextInt();
+        System.out.println("Introduce el nuevo stock");
+        //nombre = productos[tmp].nombre;
+        //precio
+        //stock
+        //id
     }
 }
