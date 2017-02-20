@@ -48,6 +48,7 @@ public class EJ19 {
                     break;
                 case 3:
                     //Modificar el array "stock" en la posición del producto elegido
+                    modificarStock();
                     break;
                 case 2:
                     //Método "buscar" en clase "Tienda" pasándole el valor de entrada
@@ -95,6 +96,11 @@ public class EJ19 {
         System.out.println("Introduce el ID que deseas buscar (el ID es la posición en el array");
         tmp = sc.nextInt();
         
+        //Utilizo la variable tmp para almacenar entrada de teclado y buscar esa posición
         productos[tmp].nombreProducto();
+    }
+    
+    public static void modificarStock() {
+        
     }
 }
