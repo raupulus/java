@@ -18,7 +18,7 @@ public class Pais {
         //Número aleatorio de los valores posibles en el array
         System.out.println(paises[rd.nextInt(paises.length)]);
     }
-    
+
     public void buscar(String posicion) {
         for(int i=0;i<paises.length;i++) {
             if(paises[i] == posicion) { //Comprueba si existe el pais pasado
