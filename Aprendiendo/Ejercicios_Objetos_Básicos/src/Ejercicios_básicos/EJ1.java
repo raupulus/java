@@ -15,8 +15,9 @@ public class EJ1 {
     private static final Scanner sc = new Scanner(System.in);
     private static int input;
     private static String pais;
-    private static String[] paises;
+    private static String[] paises = new String[3];
     private static boolean salir;
+    private static Pais paisesObjeto;
     
     public static void main(String[] args) {
         entrada();
@@ -51,16 +52,17 @@ public class EJ1 {
         }
     }
     
-    public static void entrada() {
+    public static void entrada() { //Pide los paises y crea el array Objeto
         System.out.println("Introduce los países");
         
-        for (int i=1;i<3;i++) {
+        for (int i=0;i<paises.length;i++) {
             System.out.println("Introduce el país " + i);
             paises[i] = sc.next();
-            //añadir método de la clase pais para pasar array de paises y crear objeto
+            //Constructor de la clase "Pais" para pasar array de paises y crear objeto
+            paisesObjeto = new Pais(paises);
         }
         
-        System.out.println("Los paises introducidos son:");
+        System.out.println("Los paises introducidos son:"); //Muestra valores introducidos
         for (int i=0;i<paises.length;i++) {
             System.out.print(paises[i] + ", ");
         }
@@ -70,6 +72,7 @@ public class EJ1 {
         System.out.println("Introduce el país que desea conocer la posición:");
         pais = sc.nextLine();
         //Llamar a la clase en este punto pasandole como parámetro el pais
+        System.out.println(paisesObjeto.sorteo(pais));
     }
     
     public static void sorteo() {
