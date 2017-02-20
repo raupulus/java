@@ -51,8 +51,10 @@ public class EJ19 {
                     break;
                 case 2:
                     //Método "buscar" en clase "Tienda" pasándole el valor de entrada
+                    buscarID();
                     break;
-                case 1://Crear un objeto y almacenarlo como string en el array "productos"
+                case 1:
+                    //Crear un objeto y almacenarlo como string en el array "productos"
                     añadirProducto();
                     break;
                 default:
@@ -87,5 +89,12 @@ public class EJ19 {
         productos[contador] = new Producto(nombre,precio,stock);
         productos[contador].mostrarProducto();
         contador++;
+    }
+    
+    public static void buscarID() {
+        System.out.println("Introduce el ID que deseas buscar (el ID es la posición en el array");
+        tmp = sc.nextInt();
+        
+        productos[tmp].nombreProducto();
     }
 }
