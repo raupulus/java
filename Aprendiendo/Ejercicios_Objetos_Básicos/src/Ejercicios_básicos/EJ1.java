@@ -20,13 +20,13 @@ public class EJ1 {
     private static Pais paisesObjeto;
     
     public static void main(String[] args) {
-        entrada();
+        menu();
     }
     
     public static void menu() {
         salir=false;
         while (!salir) {
-            System.out.println("***** MENÚ *****");
+            System.out.println("\n***** MENÚ *****");
             System.out.println("1 - Introducir países");
             System.out.println("2 - Realizar sorteo");
             System.out.println("3 - Posición del país");
@@ -70,14 +70,13 @@ public class EJ1 {
     
     public static void posicion() {
         System.out.println("Introduce el país que desea conocer la posición:");
-        pais = sc.nextLine();
-        //Llamar a la clase en este punto pasandole como parámetro el pais
-        //System.out.println(paisesObjeto.buscar(pais));
+        pais = (String)sc.next();
+        //Pasar al método de la clase la variable pais
+        paisesObjeto.buscar(pais);
     }
     
     public static void sorteo() {
-        System.out.println("El país elegido por el sorteo es: ");
-        //Llamar a la clase, exactamente al método que sortea el array
-        //System.out.println(paisesObjeto.sorteo());
+        //Llamar al método que sortea el array
+        paisesObjeto.sorteo();
     }
 }
