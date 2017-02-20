@@ -20,6 +20,10 @@ public class Pais {
     }
     
     public void buscar(String posicion) {
-        
+        for(int i=0;i<paises.length;i++) {
+            if(paises[i] == posicion) { //Comprueba si existe el pais pasado
+                System.out.println("La posición de este país es: " + i + "Dentro del array");
+            }
+        }
     }
 }
