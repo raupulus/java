@@ -19,6 +19,7 @@ public class EJ19 {
     public static boolean salir;
     private static Scanner sc = new Scanner(System.in);
     private static int input,tmp,tmp1,contador = 0;
+    private static String aux;
     private static Producto[] productos = new Producto[10]; //Nombre del producto, el ID es el prefijo "prod_" más la posición
     
     public static void main(String[] args) {
@@ -58,7 +59,7 @@ public class EJ19 {
                     break;
                 case 1:
                     //Crear un objeto y almacenarlo como string en el array "productos"
-                    añadirProducto();
+                    comprobarAntesDeAñadir();
                     break;
                 default:
                     System.out.println("\n¿Tienes un catálogo de salchichas en las manos? pulsa solo una tecla numérica entre 1 y 5\n");
@@ -67,10 +68,20 @@ public class EJ19 {
         }
     }
     
+    public static void comprobarAntesDeAñadir() {
+        if (contador>=productos.length) {
+            System.out.println("La capacidad de la tienda es de 10 productos");
+            System.out.println("¿Quiere reemplazar un producto? (si/no | Si/No | SI/NO");
+            aux = sc.next();
+            if ((aux == "si") | (aux == "Si") | (aux == "SI")) {
+                
+            }
+        } else {
+            
+        }
+    }
     
     public static void añadirProducto() {//Crear un objeto y almacenarlo como string en el array "productos"
-        //COMPROBAR QUE CABEN MÁS PRODUCTOS EN EL ARRAY Y SUGERIR ELIMINAR
-        
         String nombre = "";
         while (nombre == "") {
             System.out.println("\nIntroduce el nombre del producto:");
