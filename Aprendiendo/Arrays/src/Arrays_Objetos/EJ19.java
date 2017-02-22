@@ -11,7 +11,7 @@ package Arrays_Objetos;
  * 
  * Este ejercicio se complementa con la clase "Tienda" para crear productos
  * 
- * @author fryntiz
+ * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 import java.util.*; //Añadidas librerías
 public class EJ19 {
