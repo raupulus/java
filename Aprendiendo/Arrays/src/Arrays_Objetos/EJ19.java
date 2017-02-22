@@ -32,18 +32,21 @@ public class EJ19 {
             System.out.println("2 - Buscar producto por ID");
             System.out.println("3 - Modificar el stock de un producto");
             System.out.println("4 - Eliminar producto");
-            System.out.println("5 - Salir del programa");
-            //Plantear subMenú para elimiminar producto (muestra todos y su stock) e introducir el que se borra
-            //Plantear método para eliminar producto
+            System.out.println("5 - Mostrar Productos almacenados");
+            System.out.println("6 - Salir del programa");
             
             input = sc.nextInt();
             
             switch (input) {
-                case 5:
+                case 6:
                     salir = true;
+                    break;
+                case 5:
+                    mostrarProductos();
                     break;
                 case 4:
                     //Eliminar producto y stock del mismo (la misma posición asociada)
+                    eliminarProductos();
                     break;
                 case 3:
                     //Modificar el array "stock" en la posición del producto elegido
@@ -120,6 +123,8 @@ public class EJ19 {
     }
     
     public static void eliminarProductos() {
-        
+        System.out.println("Selecciona el ID del producto para eliminar");
+        tmp = sc.nextInt();
+        productos[tmp] = null;
     }
 }
