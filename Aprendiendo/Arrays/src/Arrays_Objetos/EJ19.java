@@ -112,4 +112,11 @@ public class EJ19 {
         //stock
         //id
     }
+    
+    public static void mostrarProductos() {
+         for(int i=0;i<productos.length;i++) {
+            productos[i].mostrarProducto();
+        }
+    }
+
 }
