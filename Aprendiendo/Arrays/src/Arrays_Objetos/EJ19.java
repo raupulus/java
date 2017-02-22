@@ -103,8 +103,14 @@ public class EJ19 {
     }
     
     public static void modificarStock() {
-        System.out.println("Selecciona el ID del producto para modificar stock");
+        //Entrada del "id" para modificar stock
+        System.out.println("\nSelecciona el ID del producto para modificar stock");
         tmp = sc.nextInt();
+        
+        //Muestro el stock actual del producto elegido
+        System.out.println(productos[tmp].stock);
+        
+        //Entrada del nuevo stock
         System.out.println("Introduce el nuevo stock");
         if (productos[tmp] != null) {
             tmp1 = sc.nextInt();
@@ -117,6 +123,7 @@ public class EJ19 {
     
     public static void mostrarProductos() {
          for(int i=0;i<productos.length;i++) {
+             //Primero compruebo que no está vacio ese producto
              if (productos[i] != null) {
                  productos[i].nombreProducto();
                  System.out.println("ID  --> " + i);
@@ -127,6 +134,7 @@ public class EJ19 {
     public static void eliminarProductos() {
         System.out.println("Selecciona el ID del producto para eliminar");
         tmp = sc.nextInt();
+        //Pongo ese producto como "null" cuando es eliminado
         productos[tmp] = null;
     }
 }
