@@ -144,8 +144,8 @@ public class EJ19 {
          for(int i=0;i<productos.length;i++) {
              //Primero compruebo que no está vacio ese producto
              if (productos[i] != null) {
-                 productos[i].nombreProducto();
                  System.out.println("ID  --> " + i);
+                 productos[i].nombreProducto();
              }
         }
     }
@@ -154,7 +154,7 @@ public class EJ19 {
         System.out.println("Selecciona el ID del producto para eliminar");
         tmp = sc.nextInt();
         //Pongo ese producto como "null" cuando es eliminado
-        if (productos[tmp] != null) {
+        if ((productos[tmp] != null) | (tmp >= productos.length)) {
             productos[tmp] = null;
             System.out.println("Se ha eliminado correctamente el producto");
         } else {
