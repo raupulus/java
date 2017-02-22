@@ -5,14 +5,18 @@ package Arrays_Objetos;
  * @author fryntiz
  */
 public class Producto {
-    private static int contador = 0,tmp,precio,stock;
-    private String nombre;
+    public static int contador = 0,tmp,precio,stock;
+    public String nombre;
     
     
     public Producto(String nombreInput, int precioInput, int stockInput) {
         nombre = nombreInput;
         precio = precioInput;
         stock = stockInput;
+    }
+    
+    public void cambiarStock() {
+    
     }
     
     public void mostrarProducto() {
@@ -25,4 +29,6 @@ public class Producto {
         System.out.println("Precio --> " + precio + " Euros");
         System.out.println("Stock  --> " + stock);
     }
+    
+    
 }
