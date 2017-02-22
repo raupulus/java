@@ -106,19 +106,21 @@ public class EJ19 {
         System.out.println("Selecciona el ID del producto para modificar stock");
         tmp = sc.nextInt();
         System.out.println("Introduce el nuevo stock");
-        tmp1 = sc.nextInt();
-        productos[tmp].cambiarStock(tmp1);
-
-        //nombre = (String)productos[tmp].nombre;
-        //System.out.println(productos[tmp].nombre);
-        //precio
-        //stock
-        //id
+        if (productos[tmp] != null) {
+            tmp1 = sc.nextInt();
+            productos[tmp].cambiarStock(tmp1);
+        } else {
+            System.out.println("Ese producto no existe, prueba a Mostrar los productos");
+        }
+        
     }
     
     public static void mostrarProductos() {
          for(int i=0;i<productos.length;i++) {
-            productos[i].mostrarProducto();
+             if (productos[i] != null) {
+                 productos[i].nombreProducto();
+                 System.out.println("ID  --> " + i);
+             }
         }
     }
     
