@@ -98,8 +98,12 @@ public class EJ19 {
         System.out.println("Introduce el ID que deseas buscar (el ID es la posición en el array");
         tmp = sc.nextInt();
         
-        //Utilizo la variable tmp para almacenar entrada de teclado y buscar esa posición
-        productos[tmp].nombreProducto();
+        //Compruebo que existe ese producto
+        if (productos[tmp] != null) {
+             productos[tmp].nombreProducto(); //Muestra el producto
+        } else {
+            System.out.println("No existe ese producto");
+        }
     }
     
     public static void modificarStock() {
@@ -135,6 +139,11 @@ public class EJ19 {
         System.out.println("Selecciona el ID del producto para eliminar");
         tmp = sc.nextInt();
         //Pongo ese producto como "null" cuando es eliminado
-        productos[tmp] = null;
+        if (productos[tmp] != null) {
+            productos[tmp] = null;
+            System.out.println("Se ha eliminado correctamente el producto");
+        } else {
+            System.out.println("No se puede eliminar un producto que no existe");
+        }
     }
 }
