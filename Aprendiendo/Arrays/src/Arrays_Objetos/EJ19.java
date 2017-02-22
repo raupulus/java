@@ -18,8 +18,7 @@ public class EJ19 {
     //public static Producto newProducto = new Producto();
     public static boolean salir;
     private static Scanner sc = new Scanner(System.in);
-    private static int input,tmp1,contador = 0;
-    private static int tmp;
+    private static int input,tmp,tmp1,contador = 0;
     private static Producto[] productos = new Producto[10]; //Nombre del producto, el ID es el prefijo "prod_" más la posición
     
     public static void main(String[] args) {
@@ -101,13 +100,14 @@ public class EJ19 {
     }
     
     public static void modificarStock() {
-        for(int i=0;i<productos.length;i++) {
-            productos[i].mostrarProducto();
-        }
         System.out.println("Selecciona el ID del producto para modificar stock");
         tmp = sc.nextInt();
         System.out.println("Introduce el nuevo stock");
-        //nombre = productos[tmp].nombre;
+        tmp1 = sc.nextInt();
+        productos[tmp].cambiarStock(tmp1);
+
+        //nombre = (String)productos[tmp].nombre;
+        //System.out.println(productos[tmp].nombre);
         //precio
         //stock
         //id
