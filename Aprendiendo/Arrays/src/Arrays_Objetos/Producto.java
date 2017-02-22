@@ -15,8 +15,9 @@ public class Producto {
         stock = stockInput;
     }
     
-    public void cambiarStock() {
-    
+    public void cambiarStock(int stockInput) {
+        stock = stockInput;
+        mostrarProducto();
     }
     
     public void mostrarProducto() {
