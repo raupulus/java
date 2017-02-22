@@ -118,5 +118,8 @@ public class EJ19 {
             productos[i].mostrarProducto();
         }
     }
-
+    
+    public static void eliminarProductos() {
+        
+    }
 }
