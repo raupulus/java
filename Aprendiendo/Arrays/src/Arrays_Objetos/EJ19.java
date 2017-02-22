@@ -68,20 +68,25 @@ public class EJ19 {
         }
     }
     
-    public static void comprobarAntesDeAñadir() {
+    public static void comprobarAntesDeAñadir() { //Comprueba capacidad array antes de añadir producto
         if (contador>=productos.length) {
             System.out.println("La capacidad de la tienda es de 10 productos");
             System.out.println("¿Quiere reemplazar un producto? (si/no | Si/No | SI/NO");
             aux = sc.next();
             if ((aux == "si") | (aux == "Si") | (aux == "SI")) {
+                System.out.println("Selecciona el id del producto a reemplazar");
+                tmp = sc.nextInt();
                 
+                productos[tmp] = null;
+                añadirProducto(tmp);
             }
         } else {
-            
+            añadirProducto(contador);
+            contador++;
         }
     }
     
-    public static void añadirProducto() {//Crear un objeto y almacenarlo como string en el array "productos"
+    public static void añadirProducto(int InputContador) {//Crear un objeto y almacenarlo como string en el array "productos"
         String nombre = "";
         while (nombre == "") {
             System.out.println("\nIntroduce el nombre del producto:");
@@ -99,10 +104,9 @@ public class EJ19 {
             System.out.println("\nStock inicial del producto:");
             stock = sc.nextInt();
         }
-                
-        productos[contador] = new Producto(nombre,precio,stock);
-        productos[contador].mostrarProducto();
-        contador++;
+        
+        productos[InputContador] = new Producto(nombre,precio,stock);
+        productos[InputContador].mostrarProducto();
     }
     
     public static void buscarID() {
