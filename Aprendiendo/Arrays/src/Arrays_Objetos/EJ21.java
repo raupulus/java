@@ -62,7 +62,14 @@ public class EJ21 {
                     System.out.println("\nLa temperatura media es: " + (tmp1/2));
                     break;
                 case 3:
-                    
+                    //Modificar temperatura de un mes
+                    System.out.println("Selecciona el número de mes para establecer la nueva temperatura");
+                    tmp = sc.nextInt();
+                    if((tmp>=0) | (tmp<=12)) {
+                        System.out.println("Introduce la nueva temperatura");
+                        tmp1 = sc.nextDouble();
+                        array_temp[tmp] = new temperatura(meses[tmp], tmp1);
+                    } else {System.out.println("Mes no válido"); break;}
                     break;
                 case 4:
                     salir=true;
@@ -71,7 +78,6 @@ public class EJ21 {
                     System.out.println("No corresponde a una opción válida");
                     break;
             }
-                
         }
     }
 }
