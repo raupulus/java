@@ -13,9 +13,12 @@ package Arrays_Objetos;
  * 
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
+import java.util.Scanner;
 public class EJ21 {
+    private static final Scanner sc = new Scanner(System.in);
     private static int tmp;
     private static int[] array_temp = new int[12];
+    private static String[] meses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
     
     public static void main(String[] args) {
         entrada();
@@ -23,7 +26,10 @@ public class EJ21 {
     }
     
     public static void entrada() {
-        
+        for(int i=0;i<array_temp.length;i++) {
+            System.out.println("Introduce la temperatura para " + meses[i]);
+            array_temp[i] = sc.nextInt();
+        }
     }
     
     public static void menu() {
@@ -33,6 +39,8 @@ public class EJ21 {
             System.out.println("2-Mostrar la temperatura media del año");
             System.out.println("3-Introducir nuevas temperaturas");
             System.out.println("4-Salir");
+            
+            tmp = sc.nextInt();
             
             switch (tmp) {
                 case 1:
@@ -45,7 +53,7 @@ public class EJ21 {
                     
                     break;
                 case 4:
-                    
+                    salir=true;
                     break;
                 default:
                     System.out.println("No corresponde a una opción válida");
