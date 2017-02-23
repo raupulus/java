@@ -6,7 +6,6 @@ package Arrays_Objetos;
 public class temperatura {
     private String mes;
     private Double temp;
-    private double tmp_media_grado, tmp_media_fahrenheit;
     
     public temperatura(String mesInput, Double tempInput) { //Constructor de la clase
         mes = mesInput;
