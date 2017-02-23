@@ -34,13 +34,18 @@ public class EJ20 {
     public static void busquedaDicotomica() {
         //Ordenar el array
         for(int i=0;i<valores.length;i++){
-            contadorLineal++;
             for(int j=0;i<valores.length;j++){
-                if (valores[i] <= valorBuscado) {
-                    
+                contadorLineal++;
+                if (valores[i] <= valores[j]) {
+                    tmp = valores[i];
+                    valores[i] = valores[j];
+                    valores[j] = tmp;
                 }
             }
-            
+        }
+        System.out.println("Array Dicotomico ordenado: ");
+        for(int i=0;i<valores.length;i++){
+            System.out.print(valores[i] + ", ");
         }
     }
 }
