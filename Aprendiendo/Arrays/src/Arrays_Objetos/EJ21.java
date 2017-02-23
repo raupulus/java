@@ -18,13 +18,20 @@ public class EJ21 {
     
     public static void main(String[] args) {
         entrada();
+        menu();
     }
     
     public static void entrada() {
         
     }
     
-    public static void menú() {
-        
+    public static void menu() {
+        boolean salir = false;
+        while (!salir) {
+            System.out.println("1-Mostrar la temperatura de un mes en grados centígrados y Fahrenheit");
+            System.out.println("2-Mostrar la temperatura media del año");
+            System.out.println("3-Introducir nuevas temperaturas");
+            System.out.println("4-Sali");
+        }
     }
 }
