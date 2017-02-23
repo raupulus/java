@@ -12,6 +12,7 @@ package arrays;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ20 {
+    public int[] valores = {2,5,1,6,3,4,8,32};
     
     public static void main(String[] args) {
         
