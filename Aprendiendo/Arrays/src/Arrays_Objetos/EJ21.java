@@ -17,7 +17,8 @@ import java.util.Scanner;
 public class EJ21 {
     private static final Scanner sc = new Scanner(System.in);
     private static int tmp;
-    private static int[] array_temp = new int[12];
+    private static double tmp1;
+    private static temperatura[] array_temp = new temperatura[12];
     private static String[] meses = {"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
     
     public static void main(String[] args) {
@@ -28,7 +29,8 @@ public class EJ21 {
     public static void entrada() {
         for(int i=0;i<array_temp.length;i++) {
             System.out.println("Introduce la temperatura para " + meses[i]);
-            array_temp[i] = sc.nextInt();
+            tmp1 = sc.nextDouble();
+            array_temp[i] = new temperatura(meses[i], tmp1);
         }
     }
     
@@ -39,15 +41,24 @@ public class EJ21 {
             System.out.println("2-Mostrar la temperatura media del año");
             System.out.println("3-Introducir nuevas temperaturas");
             System.out.println("4-Salir");
-            
+
             tmp = sc.nextInt();
-            
+
             switch (tmp) {
                 case 1:
-                    
+                    //Preguntar mes
+                    System.out.println("Selecciona el número de mes que quieres ver la temperatura");
+                    tmp = sc.nextInt();
+                    if((tmp>=0) | (tmp<=12)) {
+                        array_temp[tmp].temperatura();
+                    } else {System.out.println("Mes no válido"); break;}
                     break;
                 case 2:
-                    
+                    //Calcula temp media
+                    for(int i=0;i<array_temp.length;i++) {
+                        tmp1 += array_temp[i].devolverTemperatura();
+                    }
+                    System.out.println("\nLa temperatura media es: " + tmp1);
                     break;
                 case 3:
                     
