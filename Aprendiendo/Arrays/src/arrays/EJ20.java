@@ -13,4 +13,15 @@ package arrays;
  */
 public class EJ20 {
     
+    public static void main(String[] args) {
+        
+    }
+    
+    public static void busquedaLineal() {
+        
+    }
+    
+    public static void busquedaDicotomica() {
+        
+    }
 }
