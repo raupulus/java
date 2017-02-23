@@ -18,7 +18,7 @@ public class EJ20 {
     public static void main(String[] args) {
         busquedaLineal();
         busquedaDicotomica();
-        System.out.println("\nEl método Lineal ha realizado \"" + contadorLineal + "\" iteraciones");
+        System.out.println("\n\nEl método Lineal ha realizado \"" + contadorLineal + "\" iteraciones");
         System.out.println("\nEl método Dicotómico ha realizado \"" + contadorDicotomica + "\" iteraciones");
     }
     
@@ -34,8 +34,8 @@ public class EJ20 {
     public static void busquedaDicotomica() {
         //Ordenar el array
         for(int i=0;i<valores.length;i++){
-            for(int j=0;i<valores.length;j++){
-                contadorLineal++;
+            for(int j=0;j<valores.length;j++){
+                contadorDicotomica++;
                 if (valores[i] <= valores[j]) {
                     tmp = valores[i];
                     valores[i] = valores[j];
@@ -43,7 +43,10 @@ public class EJ20 {
                 }
             }
         }
-        System.out.println("Array Dicotomico ordenado: ");
+        
+        //Mostrar Array Dicotómico ordenado
+        System.out.println("\nOrdenar el array para el método Dicotómico ha necesitado: " + contadorDicotomica + " iteraciones");
+        System.out.println("Array Dicotómico ordenado: ");
         for(int i=0;i<valores.length;i++){
             System.out.print(valores[i] + ", ");
         }
