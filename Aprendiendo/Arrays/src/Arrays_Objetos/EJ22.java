@@ -14,7 +14,7 @@ package Arrays_Objetos;
  * 
  * Desde la clase Main declara un array de objetos de tipo comercial para 5 comerciales y comprueba que funcionman los métodos, de la misma forma, comprueba cual
  * es el comercial que más vende, cual ha sido de todos los comerciales el que ha vendido más en un día y qué día.
- * @author fryntiz
+ * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ22 {
     
