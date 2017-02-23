@@ -5,7 +5,7 @@ package Arrays_Objetos;
  */
 public class Comercial {
     private static String nombre;
-    private static int[] array = new int[6];
+    private static int[] ventas = new int[6];
     
     public Comercial() {
         
