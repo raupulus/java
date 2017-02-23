@@ -12,7 +12,7 @@ package arrays;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ20 {
-    public static int[] valores = {2,5,1,6,3,4,8,32};
+    public static int[] valores = {2,5,1,6,3,4,8,32,21,62,23,73,21,46,28,98,423,49,23,71,51,422,638};
     public static int contadorLineal = 0, contadorDicotomica = 0, valorBuscado = 4, tmp;
     
     public static void main(String[] args) {
@@ -49,6 +49,25 @@ public class EJ20 {
         System.out.println("Array Dicotómico ordenado: ");
         for(int i=0;i<valores.length;i++){
             System.out.print(valores[i] + ", ");
+        }
+        
+        //Buscar valor en el array
+        boolean encontrado = false;
+        
+        int izquierda = 0;
+        int derecha = valores.length - 1;
+        int mitad = 0;
+        
+        contadorDicotomica = 0;
+        while (izquierda<=derecha && !encontrado){
+            contadorDicotomica++;
+            mitad = (izquierda + derecha) / 2;
+            if (valores[mitad] == valorBuscado)
+            encontrado = true;
+            else if (valores[mitad] > valorBuscado)
+            derecha = mitad - 1;
+            else
+            izquierda = mitad + 1;
         }
     }
 }
