@@ -12,10 +12,14 @@ package arrays;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ20 {
-    public int[] valores = {2,5,1,6,3,4,8,32};
+    public static int[] valores = {2,5,1,6,3,4,8,32};
+    public static int contadorLineal, contadorDicotomica;
     
     public static void main(String[] args) {
-        
+        busquedaLineal();
+        busquedaDicotomica();
+        System.out.println("\nEl método Lineal ha realizado \"" + contadorLineal + "\" iteraciones");
+        System.out.println("\nEl método Dicotómico ha realizado \"" + contadorDicotomica + "\" iteraciones");
     }
     
     public static void busquedaLineal() {
