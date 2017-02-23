@@ -14,7 +14,8 @@ package Arrays_Objetos;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ21 {
-    int[] array_temp = new int[12];
+    private static int tmp;
+    private static int[] array_temp = new int[12];
     
     public static void main(String[] args) {
         entrada();
@@ -31,7 +32,26 @@ public class EJ21 {
             System.out.println("1-Mostrar la temperatura de un mes en grados centígrados y Fahrenheit");
             System.out.println("2-Mostrar la temperatura media del año");
             System.out.println("3-Introducir nuevas temperaturas");
-            System.out.println("4-Sali");
+            System.out.println("4-Salir");
+            
+            switch (tmp) {
+                case 1:
+                    
+                    break;
+                case 2:
+                    
+                    break;
+                case 3:
+                    
+                    break;
+                case 4:
+                    
+                    break;
+                default:
+                    System.out.println("No corresponde a una opción válida");
+                    break;
+            }
+                
         }
     }
 }
