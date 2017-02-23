@@ -14,12 +14,17 @@ package Arrays_Objetos;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ21 {
+    int[] array_temp = new int[12];
     
     public static void main(String[] args) {
+        entrada();
+    }
+    
+    public static void entrada() {
         
     }
     
-    public static void NOMBRE() {
+    public static void menú() {
         
     }
 }
