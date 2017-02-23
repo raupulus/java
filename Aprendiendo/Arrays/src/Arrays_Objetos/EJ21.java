@@ -54,11 +54,12 @@ public class EJ21 {
                     } else {System.out.println("Mes no válido"); break;}
                     break;
                 case 2:
-                    //Calcula temp media
+                    //Calcular temp media
+                    tmp1=0;
                     for(int i=0;i<array_temp.length;i++) {
                         tmp1 += array_temp[i].devolverTemperatura();
                     }
-                    System.out.println("\nLa temperatura media es: " + tmp1);
+                    System.out.println("\nLa temperatura media es: " + (tmp1/2));
                     break;
                 case 3:
                     
