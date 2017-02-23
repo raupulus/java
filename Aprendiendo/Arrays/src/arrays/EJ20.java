@@ -13,7 +13,7 @@ package arrays;
  */
 public class EJ20 {
     public static int[] valores = {2,5,1,6,3,4,8,32};
-    public static int contadorLineal, contadorDicotomica;
+    public static int contadorLineal = 0, contadorDicotomica = 0, valorBuscado = 4, tmp;
     
     public static void main(String[] args) {
         busquedaLineal();
@@ -23,10 +23,24 @@ public class EJ20 {
     }
     
     public static void busquedaLineal() {
-        
+        for(int i=0;i<valores.length;i++){
+            contadorLineal++;
+            if (valores[i] == valorBuscado) {
+                break;
+            }
+        }
     }
     
     public static void busquedaDicotomica() {
-        
+        //Ordenar el array
+        for(int i=0;i<valores.length;i++){
+            contadorLineal++;
+            for(int j=0;i<valores.length;j++){
+                if (valores[i] <= valorBuscado) {
+                    
+                }
+            }
+            
+        }
     }
 }
