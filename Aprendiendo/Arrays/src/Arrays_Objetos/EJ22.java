@@ -25,6 +25,7 @@ public class EJ22 {
     public static void main(String[] args) {
         Comercial[] comerciales = new Comercial[cantidadComerciales];
         inicio(comerciales);
+        mejorVendedor();
     }
     
     public static void inicio(Comercial[] comerciales) {
