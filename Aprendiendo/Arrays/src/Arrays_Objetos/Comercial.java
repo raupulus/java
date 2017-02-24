@@ -11,6 +11,10 @@ public class Comercial {
         
     }
     
+    public static void mostrar() {
+        
+    }
+    
     public static void comisiones() {
         //Comisiones días pares 10% de las ventas (0,2,4)
         //Comisiones días impares 15% de las ventas
