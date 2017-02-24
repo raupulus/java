@@ -25,7 +25,7 @@ public class EJ22 {
     public static void main(String[] args) {
         Comercial[] comerciales = new Comercial[cantidadComerciales];
         inicio(comerciales);
-        mejorVendedor();
+        mejorVendedor(comerciales);
     }
     
     public static void inicio(Comercial[] comerciales) {
@@ -49,8 +49,21 @@ public class EJ22 {
         }
     }
 
-    public static void mejorVendedor() {
+    public static void mejorVendedor(Comercial[] comerciales) {
         //Compara la mejor venta de cada comercial y muestra el mejor
         //Mostrar también el día en el que más ha vendido
+        System.out.println("Mejor día de cada vendedor: ");
+        for(int i=0;i<comerciales.length;i++){
+                System.out.println(comerciales[i].mejorDia());
+            }
+        
+        
+        //Mostrar vendedor que más ha vendido
+        tmp = 0;
+        System.out.println("El vendedor que más ha vendido es: ");
+        for(int i=0;i<comerciales.length;i++) {
+            
+        }
+       
     }
 }
