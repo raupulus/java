@@ -22,12 +22,12 @@ public class EJ22 {
     private static final Scanner sc = new Scanner(System.in);
     
     public static void main(String[] args) {
-        Comercial[] Comerciales = new Comercial[2]; //Dejar 5 comerciales
-        inicio();
-        menu();
+        Comercial[] comerciales = new Comercial[2]; //Dejar 5 comerciales
+        inicio(comerciales);
+        menu(comerciales);
     }
     
-    public static void inicio() {
+    public static void inicio(Comercial[] comerciales) {
         //Pedir nombre de comercial
         //Pedir dimensión del array con las ventas (6)
         //Pedir ventas realizadas para cada dia (6)
@@ -35,7 +35,7 @@ public class EJ22 {
         //Pasar toda la información al constructor de la clase Comercial
     }
     
-    public static void menu() {
+    public static void menu(Comercial[] comerciales) {
         
     }
     
