@@ -51,7 +51,11 @@ public class Comercial {
                 tmp1 = i;
             }
         }
-        
+        System.out.println("El vendedor " + nombre);
         return dias[tmp1];
+    }
+    
+    public static void ventasTotal() { //Método que muestra el total que ha vendido
+        
     }
 }
