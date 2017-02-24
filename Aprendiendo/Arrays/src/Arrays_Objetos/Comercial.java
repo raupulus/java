@@ -6,6 +6,7 @@ package Arrays_Objetos;
 public class Comercial {
     private static String nombre;
     private static int[] ventas = new int[6];
+    private static String[] dias = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"};
     
     public Comercial() {
         //Recibe nombre del comercial
@@ -29,6 +30,6 @@ public class Comercial {
     }
     
     public static void mejorDia() {
-        
+        //De 0(Lunes) a 5(Sábado)
     }
 }
