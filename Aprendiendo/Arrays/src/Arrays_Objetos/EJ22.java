@@ -32,14 +32,19 @@ public class EJ22 {
         //Dimensión del array con las ventas (6)
         int tamañoArrayVentas = 6;
         
-        for(int i=0;i<=cantidadComerciales;i++) {
+        for(int i=0;i<cantidadComerciales;i++) {
             //Pedir nombre de comercial
             System.out.println("\n Introduce el nombre del comercial --> " + i);
             String nombreComercial = sc.next();
             
+            //Crear comercial en el array
+            comerciales[i] = new Comercial(nombreComercial, tamañoArrayVentas);
+            
             //Pedir ventas realizadas para cada dia (6)
             for(int j=0;j<dias.length;j++){
-                
+                System.out.println("Introduce la venta del " + dias[j] + " para el comercial " + i + " llamado " + nombreComercial);
+                tmp = sc.nextInt();
+                comerciales[i].ventas(j, tmp);
             }
             
             //Pasar toda la información al constructor de la clase Comercial
