@@ -8,11 +8,15 @@ package arrays;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  * https://github.com/fryntiz
  */
+import java.util.Random;
 public class EJ23 {
+    static Random rd = new Random();
     public static int[] valores = new int[500];
+    public static int[] arrayTmp = new int[valores.length];
     public static int contadorburbuja = 0, contadorInserccion = 0, contadorSeleccion = 0, tmp;
     
     public static void main(String[] args) {
+        generarAleatorios();
         burbuja();
         inserccionDirecta();
         seleccionDirecta();
@@ -21,6 +25,14 @@ public class EJ23 {
         System.out.println("\nEl método Dicotómico ha realizado \"" + contadorInserccion + "\" iteraciones");
     }
 
+    public static void generarAleatorios() { //Método que genera números aleatorios para llenar el array
+        System.out.println("Array generado:");
+        for(int i=0;i<valores.length;i++) {
+            valores[i] = rd.nextInt(); //Mete número aleatorio en cada posición del array
+            System.out.println(valores[i] + ", "); //Dibuja el valor generado en el array
+        }
+    }
+    
     public static void burbuja() {
         tmp=0;
         for(int i=0;i<valores.length-1;i++) {
