@@ -20,11 +20,16 @@ public class EJ22 {
     private static int[] ventas = new int[6];
     
     public static void main(String[] args) {
-        
+        inicio();
+        menu();
     }
     
     public static void inicio() {
+        //Pedir nombre de comercial
+        //Pedir dimensión del array con las ventas (6)
+        //Pedir ventas realizadas para cada dia (6)
         
+        //Pasar toda la información al constructor de la clase Comercial
     }
     
     public static void menu() {
