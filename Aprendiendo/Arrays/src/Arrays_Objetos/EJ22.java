@@ -12,7 +12,7 @@ package Arrays_Objetos;
  * -Un método llamado mejorDia que devuelve un String con el día que mejor ventas tuvo.
  * (Si el mejor día está en la posición 0 devolverá lunes y así hasta la 5 que será sábado)
  * 
- * Desde la clase Main declara un array de objetos de tipo comercial para 5 comerciales y comprueba que funcionman los métodos, de la misma forma, comprueba cual
+ * Desde la clase Main declara un array de objetos de tipo comercial para 5 comerciales y comprueba que funcionan los métodos, de la misma forma, comprueba cual
  * es el comercial que más vende, cual ha sido de todos los comerciales el que ha vendido más en un día y qué día.
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> --> https://github.com/fryntiz
  */
@@ -23,7 +23,11 @@ public class EJ22 {
         
     }
     
-    public static void NOMBRE() {
+    public static void inicio() {
+        
+    }
+    
+    public static void menu() {
         
     }
 }
