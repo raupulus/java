@@ -21,8 +21,8 @@ public class EJ23 {
         inserccionDirecta();
         seleccionDirecta();
         System.out.println("\n\nEl método burbuja ha realizado \"" + contadorburbuja + "\" iteraciones");
-        System.out.println("\nEl método Dicotómico ha realizado \"" + contadorSeleccion + "\" iteraciones");
-        System.out.println("\nEl método Dicotómico ha realizado \"" + contadorInserccion + "\" iteraciones");
+        System.out.println("\nEl método Insercción directa ha realizado \"" + contadorSeleccion + "\" iteraciones");
+        System.out.println("\nEl método Selección directa ha realizado \"" + contadorInserccion + "\" iteraciones");
     }
     
     //Método que genera números aleatorios para llenar el array
@@ -30,7 +30,7 @@ public class EJ23 {
         System.out.println("Array generado:");
         for(int i=0;i<valores.length;i++) {
             valores[i] = rd.nextInt(1001); //Mete número aleatorio en cada posición del array
-            System.out.println(valores[i] + ", "); //Dibuja el valor generado en el array
+            System.out.print(valores[i] + ", "); //Dibuja el valor generado en el array
         }
     }
     
@@ -47,7 +47,7 @@ public class EJ23 {
                 }
             }  
         }
-        System.out.println("\nArray ordenado por método burbuja:");
+        System.out.println("\n\nArray ordenado por método burbuja:");
         for(int i=0;i<arrayTmp.length;i++) {
             System.out.print(arrayTmp[i] + ", ");
         }
@@ -56,12 +56,22 @@ public class EJ23 {
     public static void inserccionDirecta() {
         arrayTmp = valores;
         tmp = 0;
-        for(int i=0;i<arrayTmp.length;i++){
-            contadorInserccion++;
-            //Método para ordenar array por Insercción directa
+        //Algoritmo para ordenar array por Insercción directa
+        int j;
+        for (int i = 1; i < arrayTmp.length; i++){
+            tmp = arrayTmp[i];
+            j = i - 1;
+            
+            for (j=0;(j>=0) && (tmp<arrayTmp[j]);i++) {
+                contadorInserccion++;
+                arrayTmp[j + 1] = arrayTmp[j];
+                j--;
+            }
+            
+            arrayTmp[j + 1] = tmp;
         }
         
-        System.out.println("\nArray ordenado por método Insercción Directa:");
+        System.out.println("\n\nArray ordenado por método Insercción Directa:");
         for(int i=0;i<arrayTmp.length;i++) {
             System.out.print(arrayTmp[i] + ", ");
         }
@@ -69,12 +79,32 @@ public class EJ23 {
     public static void seleccionDirecta() {
         arrayTmp = valores;
         tmp = 0;
+        int menor, posicion;
+        
         for(int i=0;i<arrayTmp.length;i++){
             contadorSeleccion++;
-            //Método para ordenar array por Selección directa
+            
         }
         
-        System.out.println("\nArray ordenado por método Selección directa:");
+        
+        //Algoritmo para ordenar array por Selección directa
+        for (int i = 0; i < arrayTmp.length - 1; i++) { // tomamos como menor el primero
+                menor = arrayTmp[i]; // de los elementos que quedan por ordenar
+                pos = i; // y guardamos su posición
+                for (int j = i + 1; j < arrayTmp.length; j++){ // buscamos en el resto
+                      if (arrayTmp[j] < menor) { // del array algún elemento
+                          menor = arrayTmp[j]; // menor que el actual
+                          pos = j;
+                      }
+                }
+                if (pos != i){ // si hay alguno menor se intercambia
+                    tmp = arrayTmp[i];
+                    arrayTmp[i] = arrayTmp[pos];
+                    arrayTmp[pos] = tmp;
+                }
+          }
+        
+        System.out.println("\n\nArray ordenado por método Selección directa:");
         for(int i=0;i<arrayTmp.length;i++) {
             System.out.print(arrayTmp[i] + ", ");
         }
