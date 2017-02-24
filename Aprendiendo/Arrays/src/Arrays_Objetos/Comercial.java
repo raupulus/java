@@ -55,7 +55,12 @@ public class Comercial {
         return dias[tmp1];
     }
     
-    public static void ventasTotal() { //Método que muestra el total que ha vendido
+    public int ventasTotal() { //Método que muestra el total que ha vendido
+        int tmp = 0;
+        for(int i=0;i<dias.length;i++) {
+            tmp += ventas[i];
+        }
         
+        return tmp;
     }
 }
