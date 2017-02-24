@@ -8,6 +8,11 @@ public class Comercial {
     private static int[] ventas = new int[6];
     
     public Comercial() {
+        //Recibe nombre del comercial
+        //Recibe longitud del array
+    }
+    
+    public void ventas () { //Método llamado para añadir ventas al array
         
     }
     
