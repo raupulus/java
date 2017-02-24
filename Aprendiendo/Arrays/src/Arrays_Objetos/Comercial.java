@@ -12,7 +12,8 @@ public class Comercial {
     }
     
     public static void mostrar() {
-        
+        //Mostrar nombre del vendedor
+        //Mostrar la comisión para cada día
     }
     
     public static void comisiones() {
