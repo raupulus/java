@@ -59,11 +59,13 @@ public class EJ23 {
         //Algoritmo para ordenar array por Insercción directa
         int j;
         for (int i = 1; i < arrayTmp.length; i++){
+            contadorInserccion++;
+            
             tmp = arrayTmp[i];
             j = i - 1;
             
             while ((j>=0) && (tmp<arrayTmp[j])) {
-                contadorInserccion++;
+                
                 arrayTmp[j + 1] = arrayTmp[j];
                 j--;
             }
