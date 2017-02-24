@@ -17,19 +17,20 @@ public class Comercial {
         
     }
     
-    public static void mostrar() {
+    public void mostrar() {
         //Mostrar nombre del vendedor
         //Mostrar la comisión para cada día
     }
     
-    public static void comisiones() {
+    public void comisiones() {
         //Comisiones días pares 10% de las ventas (0,2,4)
         //Comisiones días impares 15% de las ventas
         
         //Hacer sumatorio de ventas y sacar módulo entre 2, si sale sin resto es par
     }
     
-    public static void mejorDia() {
+    public void mejorDia() {
         //De 0(Lunes) a 5(Sábado)
+        //Este método devuelve un string con el mejor día que tuvo
     }
 }
