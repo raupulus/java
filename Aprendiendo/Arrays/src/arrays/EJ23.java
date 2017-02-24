@@ -21,8 +21,8 @@ public class EJ23 {
         inserccionDirecta();
         seleccionDirecta();
         System.out.println("\n\nEl método burbuja ha realizado \"" + contadorburbuja + "\" iteraciones");
-        System.out.println("\nEl método Insercción directa ha realizado \"" + contadorSeleccion + "\" iteraciones");
-        System.out.println("\nEl método Selección directa ha realizado \"" + contadorInserccion + "\" iteraciones");
+        System.out.println("\nEl método Insercción directa ha realizado \"" + contadorInserccion + "\" iteraciones");
+        System.out.println("\nEl método Selección directa ha realizado \"" + contadorSeleccion + "\" iteraciones");
     }
     
     //Método que genera números aleatorios para llenar el array
@@ -62,7 +62,7 @@ public class EJ23 {
             tmp = arrayTmp[i];
             j = i - 1;
             
-            for (j=0;(j>=0) && (tmp<arrayTmp[j]);i++) {
+            while ((j>=0) && (tmp<arrayTmp[j])) {
                 contadorInserccion++;
                 arrayTmp[j + 1] = arrayTmp[j];
                 j--;
@@ -79,25 +79,20 @@ public class EJ23 {
     public static void seleccionDirecta() {
         arrayTmp = valores;
         tmp = 0;
-        int menor, posicion;
-        
-        for(int i=0;i<arrayTmp.length;i++){
-            contadorSeleccion++;
-            
-        }
-        
+        int menor, pos;
         
         //Algoritmo para ordenar array por Selección directa
-        for (int i = 0; i < arrayTmp.length - 1; i++) { // tomamos como menor el primero
-                menor = arrayTmp[i]; // de los elementos que quedan por ordenar
-                pos = i; // y guardamos su posición
-                for (int j = i + 1; j < arrayTmp.length; j++){ // buscamos en el resto
-                      if (arrayTmp[j] < menor) { // del array algún elemento
-                          menor = arrayTmp[j]; // menor que el actual
+        for (int i = 0; i < arrayTmp.length - 1; i++) { 
+                menor = arrayTmp[i];
+                pos = i;
+                for (int j = i + 1; j < arrayTmp.length; j++){
+                    contadorSeleccion++;
+                      if (arrayTmp[j] < menor) {
+                          menor = arrayTmp[j];
                           pos = j;
                       }
                 }
-                if (pos != i){ // si hay alguno menor se intercambia
+                if (pos != i){
                     tmp = arrayTmp[i];
                     arrayTmp[i] = arrayTmp[pos];
                     arrayTmp[pos] = tmp;
