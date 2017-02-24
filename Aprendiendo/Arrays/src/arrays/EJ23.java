@@ -9,7 +9,7 @@ package arrays;
  * https://github.com/fryntiz
  */
 public class EJ23 {
-    public static int[] valores = {2,5,1,6,3,4,8,32,21,62,23,73,21,46,28,98,423,49,23,71,51,422,638};
+    public static int[] valores = new int[500];
     public static int contadorburbuja = 0, contadorInserccion = 0, contadorSeleccion = 0, tmp;
     
     public static void main(String[] args) {
@@ -20,11 +20,22 @@ public class EJ23 {
         System.out.println("\nEl método Dicotómico ha realizado \"" + contadorSeleccion + "\" iteraciones");
         System.out.println("\nEl método Dicotómico ha realizado \"" + contadorInserccion + "\" iteraciones");
     }
-    
+
     public static void burbuja() {
-        for(int i=0;i<valores.length;i++){
-            contadorburbuja++;
-            //Método para ordenar array por Burbuja
+        tmp=0;
+        for(int i=0;i<valores.length-1;i++) {
+            for(int j=0;j<valores.length-i-1;j++) {
+                contadorburbuja++;
+                if(valores[j+1]<valores[j]){
+                    tmp=valores[j+1];
+                    valores[j+1]=valores[j];
+                    valores[j]=tmp;
+                }
+            }  
+        }
+        System.out.println("\nArray ordenado por método burbuja:");
+        for(int i=0;i<valores.length;i++) {
+            System.out.print(valores[i] + ", ");
         }
     }
     
@@ -33,11 +44,21 @@ public class EJ23 {
             contadorInserccion++;
             //Método para ordenar array por Insercción directa
         }
+        
+        System.out.println("\nArray ordenado por método burbuja:");
+        for(int i=0;i<valores.length;i++) {
+            System.out.print(valores[i] + ", ");
+        }
     }
     public static void seleccionDirecta() {
         for(int i=0;i<valores.length;i++){
             contadorSeleccion++;
             //Método para ordenar array por Selección directa
+        }
+        
+        System.out.println("\nArray ordenado por método burbuja:");
+        for(int i=0;i<valores.length;i++) {
+            System.out.print(valores[i] + ", ");
         }
     }
 }
