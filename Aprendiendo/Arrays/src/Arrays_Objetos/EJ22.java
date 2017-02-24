@@ -16,8 +16,10 @@ package Arrays_Objetos;
  * es el comercial que más vende, cual ha sido de todos los comerciales el que ha vendido más en un día y qué día.
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> --> https://github.com/fryntiz
  */
+import java.util.Scanner; //Importo la clase scanner para entrada por teclado
 public class EJ22 {
-    private static int tmp;
+    private static int tmp, input;
+    private static final Scanner sc = new Scanner(System.in);
     
     public static void main(String[] args) {
         Comercial[] Comerciales = new Comercial[2]; //Dejar 5 comerciales
