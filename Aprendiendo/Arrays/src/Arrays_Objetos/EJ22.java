@@ -41,13 +41,11 @@ public class EJ22 {
             comerciales[i] = new Comercial(nombreComercial, tamañoArrayVentas);
             
             //Pedir ventas realizadas para cada dia (6)
-            for(int j=0;j<dias.length;j++){
+            for(int j=0;j<tamañoArrayVentas;j++){
                 System.out.println("Introduce la venta del " + dias[j] + " para el comercial " + i + " llamado " + nombreComercial);
                 tmp = sc.nextInt();
                 comerciales[i].ventas(j, tmp);
             }
-            
-            //Pasar toda la información al constructor de la clase Comercial
         }
     }
     
