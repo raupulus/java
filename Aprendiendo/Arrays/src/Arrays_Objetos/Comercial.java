@@ -10,4 +10,8 @@ public class Comercial {
     public Comercial() {
         
     }
+    
+    public static void comisiones() {
+        
+    }
 }
