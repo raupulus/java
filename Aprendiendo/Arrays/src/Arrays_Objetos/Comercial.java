@@ -42,8 +42,16 @@ public class Comercial {
         }
     }
     
-    public void mejorDia() {
-        //De 0(Lunes) a 5(Sábado)
-        //Este método devuelve un string con el mejor día que tuvo
+    public String mejorDia() { //Este método devuelve un string con el mejor día que tuvo
+        int tmp = 0;
+        int tmp1 = 0;
+        for(int i=0;i<dias.length;i++) {
+            if(ventas[i]>=tmp) {
+                tmp = ventas[i];
+                tmp1 = i;
+            }
+        }
+        
+        return dias[tmp1];
     }
 }
