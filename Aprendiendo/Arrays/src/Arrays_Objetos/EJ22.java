@@ -17,9 +17,10 @@ package Arrays_Objetos;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> --> https://github.com/fryntiz
  */
 public class EJ22 {
-    private static int[] ventas = new int[6];
+    private static int tmp;
     
     public static void main(String[] args) {
+        Comercial[] Comerciales = new Comercial[2]; //Dejar 5 comerciales
         inicio();
         menu();
     }
@@ -34,5 +35,10 @@ public class EJ22 {
     
     public static void menu() {
         
+    }
+    
+    public static void mejorVendedor() {
+        //Compara la mejor venta de cada comercial y muestra el mejor
+        //Mostrar también el día en el que más ha vendido
     }
 }
