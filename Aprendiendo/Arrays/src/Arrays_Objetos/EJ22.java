@@ -25,7 +25,6 @@ public class EJ22 {
     public static void main(String[] args) {
         Comercial[] comerciales = new Comercial[cantidadComerciales];
         inicio(comerciales);
-        menu(comerciales);
     }
     
     public static void inicio(Comercial[] comerciales) {
@@ -48,11 +47,7 @@ public class EJ22 {
             }
         }
     }
-    
-    public static void menu(Comercial[] comerciales) {
-        
-    }
-    
+
     public static void mejorVendedor() {
         //Compara la mejor venta de cada comercial y muestra el mejor
         //Mostrar también el día en el que más ha vendido
