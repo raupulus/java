@@ -24,53 +24,59 @@ public class EJ23 {
         System.out.println("\nEl método Dicotómico ha realizado \"" + contadorSeleccion + "\" iteraciones");
         System.out.println("\nEl método Dicotómico ha realizado \"" + contadorInserccion + "\" iteraciones");
     }
-
-    public static void generarAleatorios() { //Método que genera números aleatorios para llenar el array
+    
+    //Método que genera números aleatorios para llenar el array
+    public static void generarAleatorios() { 
         System.out.println("Array generado:");
         for(int i=0;i<valores.length;i++) {
-            valores[i] = rd.nextInt(); //Mete número aleatorio en cada posición del array
+            valores[i] = rd.nextInt(1001); //Mete número aleatorio en cada posición del array
             System.out.println(valores[i] + ", "); //Dibuja el valor generado en el array
         }
     }
     
     public static void burbuja() {
+        arrayTmp = valores;
         tmp=0;
-        for(int i=0;i<valores.length-1;i++) {
-            for(int j=0;j<valores.length-i-1;j++) {
+        for(int i=0;i<arrayTmp.length-1;i++) {
+            for(int j=0;j<arrayTmp.length-i-1;j++) {
                 contadorburbuja++;
-                if(valores[j+1]<valores[j]){
-                    tmp=valores[j+1];
-                    valores[j+1]=valores[j];
-                    valores[j]=tmp;
+                if(arrayTmp[j+1]<arrayTmp[j]){
+                    tmp=arrayTmp[j+1];
+                    arrayTmp[j+1]=arrayTmp[j];
+                    arrayTmp[j]=tmp;
                 }
             }  
         }
         System.out.println("\nArray ordenado por método burbuja:");
-        for(int i=0;i<valores.length;i++) {
-            System.out.print(valores[i] + ", ");
+        for(int i=0;i<arrayTmp.length;i++) {
+            System.out.print(arrayTmp[i] + ", ");
         }
     }
     
     public static void inserccionDirecta() {
-        for(int i=0;i<valores.length;i++){
+        arrayTmp = valores;
+        tmp = 0;
+        for(int i=0;i<arrayTmp.length;i++){
             contadorInserccion++;
             //Método para ordenar array por Insercción directa
         }
         
-        System.out.println("\nArray ordenado por método burbuja:");
-        for(int i=0;i<valores.length;i++) {
-            System.out.print(valores[i] + ", ");
+        System.out.println("\nArray ordenado por método Insercción Directa:");
+        for(int i=0;i<arrayTmp.length;i++) {
+            System.out.print(arrayTmp[i] + ", ");
         }
     }
     public static void seleccionDirecta() {
-        for(int i=0;i<valores.length;i++){
+        arrayTmp = valores;
+        tmp = 0;
+        for(int i=0;i<arrayTmp.length;i++){
             contadorSeleccion++;
             //Método para ordenar array por Selección directa
         }
         
-        System.out.println("\nArray ordenado por método burbuja:");
-        for(int i=0;i<valores.length;i++) {
-            System.out.print(valores[i] + ", ");
+        System.out.println("\nArray ordenado por método Selección directa:");
+        for(int i=0;i<arrayTmp.length;i++) {
+            System.out.print(arrayTmp[i] + ", ");
         }
     }
 }
