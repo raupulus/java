@@ -27,4 +27,8 @@ public class Comercial {
         
         //Hacer sumatorio de ventas y sacar módulo entre 2, si sale sin resto es par
     }
+    
+    public static void mejorDia() {
+        
+    }
 }
