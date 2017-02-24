@@ -18,21 +18,32 @@ package Arrays_Objetos;
  */
 import java.util.Scanner; //Importo la clase scanner para entrada por teclado
 public class EJ22 {
-    private static int tmp, input;
+    private static int tmp, input, cantidadComerciales = 2; //Dejar 5 comerciales
     private static final Scanner sc = new Scanner(System.in);
+    private static String[] dias = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"}; //Array con días de la semana
     
     public static void main(String[] args) {
-        Comercial[] comerciales = new Comercial[2]; //Dejar 5 comerciales
+        Comercial[] comerciales = new Comercial[cantidadComerciales];
         inicio(comerciales);
         menu(comerciales);
     }
     
     public static void inicio(Comercial[] comerciales) {
-        //Pedir nombre de comercial
-        //Pedir dimensión del array con las ventas (6)
-        //Pedir ventas realizadas para cada dia (6)
+        //Dimensión del array con las ventas (6)
+        int tamañoArrayVentas = 6;
         
-        //Pasar toda la información al constructor de la clase Comercial
+        for(int i=0;i<=cantidadComerciales;i++) {
+            //Pedir nombre de comercial
+            System.out.println("\n Introduce el nombre del comercial --> " + i);
+            String nombreComercial = sc.next();
+            
+            //Pedir ventas realizadas para cada dia (6)
+            for(int j=0;j<dias.length;j++){
+                
+            }
+            
+            //Pasar toda la información al constructor de la clase Comercial
+        }
     }
     
     public static void menu(Comercial[] comerciales) {
