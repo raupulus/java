@@ -8,13 +8,16 @@ public class Comercial {
     private static int[] ventas = new int[6];
     private static String[] dias = {"Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"};
     
-    public Comercial() {
+    public Comercial(String nombreInput, int longitudInput) {
         //Recibe nombre del comercial
+        nombre = nombreInput;
+        
         //Recibe longitud del array
+        ventas =  new int[longitudInput];
     }
     
-    public void ventas () { //Método llamado para añadir ventas al array
-        
+    public void ventas(int diaInput, int ventaInput) { //Método llamado para añadir ventas al array
+        ventas[diaInput] = ventaInput;
     }
     
     public void mostrar() {
