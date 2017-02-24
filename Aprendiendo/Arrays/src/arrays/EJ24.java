@@ -26,7 +26,19 @@ public class EJ24 {
         
     }
     
-    public static void NOMBRE() {
+    public static void menu() {
+        boolean salir = false;
         
+        System.out.println("***** MENÚ *****");
+        int input = 0;
+        
+        
+        while (!salir) {
+            switch (input) {
+                case 1:
+                    
+                    break;
+            }
+        }
     }
 }
