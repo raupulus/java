@@ -53,19 +53,28 @@ public class EJ24 {
             System.out.println("3 - Mostrar qué clase tiene el alumno con el nombre más corto");
             System.out.println("0 - Salir");
             
-            switch (input) {
-                case 1:
-                    System.out.println("Introduce el curso");
-                    input = sc.nextInt();
-                    if ((input>=0) && (input<cursos.length)) {
-                        
-                    }
-                    break;
-            }
+            if ((input>=0) && (input<cursos.length)) {
+                switch (input) {
+                    case 1:
+                        System.out.println("Introduce el curso");
+                        input = sc.nextInt();
+                        System.out.println("\nAlumno con el nombre más largo:");
+                        //System.out.println(cursos[i].elMasLargo());
+                        System.out.println("\nAlumno con el nombre más corto:");
+                        //System.out.println(cursos[i].elMasCorto());
+                        break;
+                    case 2:
+                        nombreMasLargo();
+                }
+            } else {System.out.println("Opción incorrecta");}
         }
     }
     
-    public static void compararLongitudNombres() {
+    public static void nombreMasLargo() {
         //Compara la longitud del nombre más largo de cada clase --> Curso.elMasLargo()
+    }
+    
+    public static void nombreMasCorto() {
+        //Compara la longitud del nombre más corto de cada clase --> Curso.elMasCorto()
     }
 }
