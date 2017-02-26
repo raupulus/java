@@ -20,29 +20,29 @@ package Arrays_Objetos;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+
+
+
+//Ejercicio no terminado. Fallan los métodos de este archivo pero no invierto más tiempo en este ejercicio
+
 import java.util.Scanner;
 
 public class EJ24 {
+    private static Curso[] cursos;
     private static final Scanner sc = new Scanner(System.in);
     
-    public void main(String[] args) {
-        
-        menu(principal());
-    }
-    
-    public Curso[] principal() {
+    public static void main(String[] args) {
         //Creo array con los cursos y parámetros
         Curso[] cursos = { 
             new Curso(2,"1ºDAW"),
             new Curso(2,"2ºDAW"),
-            new Curso(2,"1ºSMR"),
-            new Curso(2,"2ºSMR")
+            //new Curso(2,"1ºSMR"),
+            //new Curso(2,"2ºSMR")
         };
-        
-        return cursos;
+        menu();
     }
-    
-    public void menu(Curso[] cursos) {
+        
+    public static void menu() {
         boolean salir = false;
         int input = 0;
         
@@ -53,7 +53,9 @@ public class EJ24 {
             System.out.println("3 - Mostrar qué clase tiene el alumno con el nombre más corto");
             System.out.println("0 - Salir");
             
-            if ((input>=0) && (input<cursos.length)) {
+            input = sc.nextInt();
+            
+            //if ((input>=0) && (input<cursos.length)) {
                 switch (input) {
                     case 1:
                         System.out.println("Introduce el curso");
@@ -64,20 +66,22 @@ public class EJ24 {
                         //System.out.println(cursos[i].elMasCorto());
                         break;
                     case 2:
-                        nombreMasLargo(cursos);
+                        nombreMasLargo();
                         break;
                     case 3:
-                        nombreMasCorto(cursos);
+                        nombreMasCorto();
                         break;
                     case 0:
                         salir = true;
                         break;
+                    default:
+                        break;
                 }
-            } else {System.out.println("Opción incorrecta");}
+            //} else {System.out.println("Opción incorrecta");}
         }
     }
     
-    public static void nombreMasLargo(Curso[] cursos) {
+    public static void nombreMasLargo() {
         //Compara la longitud del nombre más largo de cada clase --> Curso.elMasLargo()
         int tmp = 0; //Posición en el array
         int tmp1 = 0; //Posición en el arrya de la clase Curso
@@ -92,7 +96,7 @@ public class EJ24 {
         System.out.println("La cantidad de caracteres es: " + cursos[tmp].verNombre(tmp1).toCharArray().length);
     }
     
-    public static void nombreMasCorto(Curso[] cursos) {
+    public static void nombreMasCorto() {
         //Compara la longitud del nombre más corto de cada clase --> Curso.elMasCorto()
         int tmp = 0; //Posición en el array
         int tmp1 = 0; //Posición en el arrya de la clase Curso
