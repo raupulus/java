@@ -64,4 +64,8 @@ public class EJ24 {
             }
         }
     }
+    
+    public static void compararLongitudNombres() {
+        //Compara la longitud del nombre más largo de cada clase --> Curso.elMasLargo()
+    }
 }
