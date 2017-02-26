@@ -65,6 +65,10 @@ public class EJ24 {
                         break;
                     case 2:
                         nombreMasLargo();
+                        break;
+                    case 3:
+                        nombreMasCorto();
+                        break;
                 }
             } else {System.out.println("Opción incorrecta");}
         }
