@@ -23,6 +23,17 @@ package Arrays_Objetos;
 public class EJ24 {
     
     public static void main(String[] args) {
+        principal();
+        menu();
+    }
+    
+    public static void principal() {
+        Curso[] cursos = { //Creo array con los cursos y parametros
+            new Curso(2,"1ºDAW"),
+            new Curso(2,"2ºDAW"),
+            new Curso(2,"1ºSMR"),
+            new Curso(2,"2ºSMR")
+        };
         
     }
     
