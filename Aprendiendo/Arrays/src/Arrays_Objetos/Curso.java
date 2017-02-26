@@ -3,12 +3,23 @@ package Arrays_Objetos;
  *
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
+import java.util.Scanner;
 public class Curso {
+    private static final Scanner sc = new Scanner(System.in);
     private String[] alumnos;
+    private String nombreCurso;
     private int tmp,tmp1;
     
     public Curso(int longitud, String nombre) {
         //Entrada longitud del array
+        String[] alumnos = new String[longitud];
+        nombreCurso = nombre;
+        
+        //Entrada de nombre para alumnos del curso
+        for(int i=0;i<alumnos.length;i++) {
+            System.out.println("Inserta el nombre para el alumno " + i + " del curso " + nombre);
+            alumnos[i] = sc.next();
+        }
     }
     
     public int elMasLargo() {
