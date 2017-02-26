@@ -69,6 +69,9 @@ public class EJ24 {
                     case 3:
                         nombreMasCorto();
                         break;
+                    case 0:
+                        salir = true;
+                        break;
                 }
             } else {System.out.println("Opción incorrecta");}
         }
