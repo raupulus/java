@@ -14,8 +14,8 @@ public class Curso {
         //Devuelve el nombre que tenga más caracteres
     }
     
-    public static void elMasCorto() {
-        
+    public void elMasCorto() {
+        //Devuelve el nombre que tenga menos caracteres
     }
     
     public void desplaza() {
