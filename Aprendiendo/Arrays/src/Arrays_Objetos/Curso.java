@@ -11,7 +11,7 @@ public class Curso {
         //Entrada longitud del array
     }
     
-    public void elMasLargo() {
+    public int elMasLargo() {
         //Devuelve el nombre que tenga más caracteres
         tmp = 0; //Contará Posición del array
         tmp1 = 0; //Contará caracteres
@@ -23,10 +23,22 @@ public class Curso {
                 tmp1 = alumnos.length;
             }
         }
+        return tmp;
     }
     
-    public void elMasCorto() {
+    public int elMasCorto() {
         //Devuelve el nombre que tenga menos caracteres
+        tmp = 0; //Contará Posición del array
+        tmp1 = 0; //Contará caracteres
+        for(int i=0;i<alumnos.length;i++) {
+            char[] arrayChar = alumnos[i].toCharArray(); //Convierte en array de caracteres
+            
+            if(arrayChar.length<tmp1) {
+                tmp = i;
+                tmp1 = alumnos.length;
+            }
+        }
+        return tmp;
     }
     
     public void desplaza() {
