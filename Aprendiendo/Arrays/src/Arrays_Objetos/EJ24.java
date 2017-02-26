@@ -67,7 +67,7 @@ public class EJ24 {
                         nombreMasLargo(cursos);
                         break;
                     case 3:
-                        nombreMasCorto();
+                        nombreMasCorto(cursos);
                         break;
                     case 0:
                         salir = true;
@@ -79,17 +79,31 @@ public class EJ24 {
     
     public static void nombreMasLargo(Curso[] cursos) {
         //Compara la longitud del nombre más largo de cada clase --> Curso.elMasLargo()
-        int tmp = 0, tmp1 = 0;
+        int tmp = 0; //Posición en el array
+        int tmp1 = 0; //Posición en el arrya de la clase Curso
         for(int i=0;i<cursos.length;i++) {
             if(cursos[i].verNombre(cursos[i].elMasLargo()).toCharArray().length>tmp) { //Aquí paso la posición del más largo al método string y comparo longitud con el almacenado en "tmp"
                 tmp = i;
                 tmp1 = cursos[i].elMasLargo();
             }
         }
-        System.out.println("El curso que tiene el alumno con el nombre más largo es: " + cursos[tmp].verNombre(tmp1));
+        System.out.println("El curso que tiene el alumno con el nombre más largo es: " + cursos[tmp]);
+        System.out.println("El nombre del alumno es: " + cursos[tmp].verNombre(tmp1));
+        System.out.println("La cantidad de caracteres es: " + cursos[tmp].verNombre(tmp1).toCharArray().length);
     }
     
-    public static void nombreMasCorto() {
+    public static void nombreMasCorto(Curso[] cursos) {
         //Compara la longitud del nombre más corto de cada clase --> Curso.elMasCorto()
+        int tmp = 0; //Posición en el array
+        int tmp1 = 0; //Posición en el arrya de la clase Curso
+        for(int i=0;i<cursos.length;i++) {
+            if(cursos[i].verNombre(cursos[i].elMasCorto()).toCharArray().length<tmp) { //Aquí paso la posición del más corto al método string y comparo longitud con el almacenado en "tmp"
+                tmp = i;
+                tmp1 = cursos[i].elMasCorto();
+            }
+        }
+        System.out.println("El curso que tiene el alumno con el nombre más corto es: " + cursos[tmp]);
+        System.out.println("El nombre del alumno es: " + cursos[tmp].verNombre(tmp1));
+        System.out.println("La cantidad de caracteres es: " + cursos[tmp].verNombre(tmp1).toCharArray().length);
     }
 }
