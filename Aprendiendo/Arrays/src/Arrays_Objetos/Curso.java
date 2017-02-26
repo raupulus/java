@@ -14,6 +14,10 @@ public class Curso {
         //Devuelve el nombre que tenga más caracteres
     }
     
+    public static void elMasCorto() {
+        
+    }
+    
     public void desplaza() {
         //Desplaza todos los nombres
         //Último nombre pasa a primera posición
