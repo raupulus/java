@@ -5,6 +5,7 @@ package Arrays_Objetos;
  */
 public class Curso {
     private String[] alumnos;
+    private int tmp,tmp1;
     
     public Curso(int longitud, String nombre) {
         //Entrada longitud del array
@@ -12,6 +13,16 @@ public class Curso {
     
     public void elMasLargo() {
         //Devuelve el nombre que tenga más caracteres
+        tmp = 0; //Contará Posición del array
+        tmp1 = 0; //Contará caracteres
+        for(int i=0;i<alumnos.length;i++) {
+            char[] arrayChar = alumnos[i].toCharArray(); //Convierte en array de caracteres
+            
+            if(arrayChar.length>tmp1) {
+                tmp = i;
+                tmp1 = alumnos.length;
+            }
+        }
     }
     
     public void elMasCorto() {
