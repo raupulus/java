@@ -31,7 +31,7 @@ public class EJ24 {
     }
     
     public Curso[] principal() {
-        //Creo array con los cursos y parametros
+        //Creo array con los cursos y parámetros
         Curso[] cursos = { 
             new Curso(2,"1ºDAW"),
             new Curso(2,"2ºDAW"),
@@ -64,7 +64,7 @@ public class EJ24 {
                         //System.out.println(cursos[i].elMasCorto());
                         break;
                     case 2:
-                        nombreMasLargo();
+                        nombreMasLargo(cursos);
                         break;
                     case 3:
                         nombreMasCorto();
@@ -77,8 +77,16 @@ public class EJ24 {
         }
     }
     
-    public static void nombreMasLargo() {
+    public static void nombreMasLargo(Curso[] cursos) {
         //Compara la longitud del nombre más largo de cada clase --> Curso.elMasLargo()
+        int tmp = 0, tmp1 = 0;
+        for(int i=0;i<cursos.length;i++) {
+            if(cursos[i].verNombre(cursos[i].elMasLargo()).toCharArray().length>tmp) { //Aquí paso la posición del más largo al método string y comparo longitud con el almacenado en "tmp"
+                tmp = i;
+                tmp1 = cursos[i].elMasLargo();
+            }
+        }
+        System.out.println("El curso que tiene el alumno con el nombre más largo es: " + cursos[tmp].verNombre(tmp1));
     }
     
     public static void nombreMasCorto() {
