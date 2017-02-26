@@ -20,14 +20,17 @@ package Arrays_Objetos;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+import java.util.Scanner;
+
 public class EJ24 {
+    private static final Scanner sc = new Scanner(System.in);
     
-    public static void main(String[] args) {
-        principal();
-        menu();
+    public void main(String[] args) {
+        
+        menu(principal());
     }
     
-    public static void principal() {
+    public Curso[] principal() {
         //Creo array con los cursos y parametros
         Curso[] cursos = { 
             new Curso(2,"1ºDAW"),
@@ -36,12 +39,12 @@ public class EJ24 {
             new Curso(2,"2ºSMR")
         };
         
+        return cursos;
     }
     
-    public static void menu() {
+    public void menu(Curso[] cursos) {
         boolean salir = false;
         int input = 0;
-        
         
         while (!salir) {
             System.out.println("***** MENÚ *****");
@@ -50,10 +53,13 @@ public class EJ24 {
             System.out.println("3 - Mostrar qué clase tiene el alumno con el nombre más corto");
             System.out.println("0 - Salir");
             
-            
             switch (input) {
                 case 1:
-                    
+                    System.out.println("Introduce el curso");
+                    input = sc.nextInt();
+                    if ((input>=0) && (input<cursos.length)) {
+                        
+                    }
                     break;
             }
         }
