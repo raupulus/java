@@ -6,7 +6,7 @@ package Arrays_Objetos;
 public class Curso {
     private String[] alumnos;
     
-    public Curso(int longitud) {
+    public Curso(int longitud, String nombre) {
         //Entrada longitud del array
     }
     
