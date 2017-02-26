@@ -28,7 +28,8 @@ public class EJ24 {
     }
     
     public static void principal() {
-        Curso[] cursos = { //Creo array con los cursos y parametros
+        //Creo array con los cursos y parametros
+        Curso[] cursos = { 
             new Curso(2,"1ºDAW"),
             new Curso(2,"2ºDAW"),
             new Curso(2,"1ºSMR"),
@@ -39,12 +40,17 @@ public class EJ24 {
     
     public static void menu() {
         boolean salir = false;
-        
-        System.out.println("***** MENÚ *****");
         int input = 0;
         
         
         while (!salir) {
+            System.out.println("***** MENÚ *****");
+            System.out.println("1 - Resumen de un curso pedido por teclado");
+            System.out.println("2 - Mostrar el alumno con el nombre más largo y en qué curso está");
+            System.out.println("3 - Mostrar qué clase tiene el alumno con el nombre más corto");
+            System.out.println("0 - Salir");
+            
+            
             switch (input) {
                 case 1:
                     
