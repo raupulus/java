@@ -30,9 +30,18 @@ public class EJ17 {
         int[] noprimos;
     }
     
-    public static boolean esPrimo(boolean esPrimo) {
+    public static boolean esPrimo(int numero) {
         //Comprobar si es primo y devolver booleano
+        int contador = 2; //Contador del número actual que se comprueba
+        boolean esPrimo=true; //Comienzo dando por supuesto que es primo
         
+        //Bucle que comprueba si se puede dividir entre otros números para sacar si es primo
+        while ((esPrimo) && (contador!=numero)){
+          if (numero % contador == 0) {
+            esPrimo = false;
+          contador++;
+          }
+        }
         return esPrimo;
     }
 }
