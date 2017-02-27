@@ -30,7 +30,9 @@ public class EJ17 {
         int[] noprimos;
     }
     
-    public static void esPrimo() {
+    public static boolean esPrimo(boolean esPrimo) {
         //Comprobar si es primo y devolver booleano
+        
+        return esPrimo;
     }
 }
