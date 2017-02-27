@@ -25,38 +25,57 @@ public class EJ17 {
     }
     
     public static void ordenar() {
-        boolean tmp;
-        
         //Creo dos arrays para ordenar, longitud máxima la del original
         int[] primos = new int[array.length];
         int[] noPrimos = new int[array.length];
         
         for(int i=0;i<array.length;i++) {
-            tmp = esPrimo(array[i]);
-            if (tmp) {
+            if (esPrimo(array[i])) {
                 primos[i] = array[i];
+            } else {
+                noPrimos[i] = array[i];
+            }
+        }
+        
+        //Ordenar array
+        int contador=0;
+        for(int i=0;i<array.length;i++) {
+            if (primos[i] != 0) {
+                array[contador] = primos[i];
+                contador++;
+            }
+        }
+        
+        for(int i=0;i<array.length;i++) {
+            if (noPrimos[i] != 0) {
+                array[contador] = noPrimos[i];
+                contador++;
             }
         }
         
         //Mostrar números primos
         System.out.println("\nLos números primos son:");
         for(int i=0;i<array.length;i++) {
-            System.out.print(primos[i] + ", ");
+            if (primos[i] != 0) {
+                System.out.print(primos[i] + ", ");
+            }
         }
         
         //Mostrar números que no son primos
         System.out.println("\nLos números que no son primos:");
         for(int i=0;i<array.length;i++) {
-            System.out.print(noPrimos[i] + ", ");
+            if (noPrimos[i] != 0) {
+                System.out.print(noPrimos[i] + ", ");
+            }
         }
         
         //Mostrar array principal ordenado
         System.out.println("\nEl array completo ordenado");
         for(int i=0;i<array.length;i++) {
-            System.out.print(array[i] + ", ");
+            if (array[i] != 0) {
+                System.out.print(array[i] + ", ");
+            }
         }
-        
-        System.out.println("El numero 2 es primo? --> " + esPrimo(2));
     }
     
     public static boolean esPrimo(int numero) {
@@ -66,10 +85,11 @@ public class EJ17 {
         
         //Bucle que comprueba si se puede dividir entre otros números para sacar si es primo
         while ((esPrimo) && (contador!=numero)){
-          if (numero % contador == 0) {
-            esPrimo = false;
-          contador++;
-          }
+            if (numero % contador == 0) {
+              esPrimo = false;
+
+            }
+            contador++;
         }
         return esPrimo;
     }
