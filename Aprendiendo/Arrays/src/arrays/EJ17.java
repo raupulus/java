@@ -18,6 +18,10 @@ public class EJ17 {
     
     public static void entrada() {
         //Pide los diez números por teclado
+        for(int i=0;i<array.length;i++) {
+            System.out.println("Introduce el valor para el número --> " + i);
+            array[i] = sc.nextInt();
+        }
     }
     
     public static void ordenar() {
