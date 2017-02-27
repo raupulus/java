@@ -7,7 +7,10 @@ package arrays;
  * se pierda ninguno. Al final se debe mostrar el array resultante.
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
+import java.util.Scanner;
 public class EJ17 {
+    private static final Scanner sc = new Scanner(System.in);
+    private static int[] array = new int[10];
     public static void main(String[] args) {
         entrada();
         ordenar();
@@ -18,6 +21,6 @@ public class EJ17 {
     }
     
     public static void ordenar() {
-        
+        //Ordenar array con números primos al principio
     }
 }
