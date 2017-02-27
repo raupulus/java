@@ -26,5 +26,7 @@ public class EJ17 {
     
     public static void ordenar() {
         //Ordenar array con números primos al principio
+        int[] primos;
+        int[] noprimos;
     }
 }
