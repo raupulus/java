@@ -29,4 +29,8 @@ public class EJ17 {
         int[] primos;
         int[] noprimos;
     }
+    
+    public static void esPrimo() {
+        //Comprobar si es primo y devolver booleano
+    }
 }
