@@ -27,7 +27,26 @@ public class EJ17 {
     public static void ordenar() {
         //Ordenar array con números primos al principio
         int[] primos;
-        int[] noprimos;
+        int[] noPrimos;
+        
+        
+        //Mostrar números primos
+        System.out.println("\nLos números primos son:");
+        for(int i=0;i<array.length;i++) {
+            System.out.print(primos[i] + ", ");
+        }
+        
+        //Mostrar números que no son primos
+        System.out.println("\nLos números que no son primos:");
+        for(int i=0;i<array.length;i++) {
+            System.out.println(noPrimos[i] + ", ");
+        }
+        
+        //Mostrar array principal ordenado
+        System.out.println("\nEl array completo ordenado");
+        for(int i=0;i<array.length;i++) {
+            System.out.println(array[i] + ", ");
+        }
     }
     
     public static boolean esPrimo(int numero) {
