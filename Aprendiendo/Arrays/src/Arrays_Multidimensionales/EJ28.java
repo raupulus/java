@@ -13,6 +13,8 @@ public class EJ28 {
     public static void main(String[] args) {
         //Pedir datos de entrada
         entrada();
+        
+        //Menú para pedir número o salir
     }
     
     public static void entrada() {
@@ -23,6 +25,10 @@ public class EJ28 {
                 matriz[i][j] = sc.nextInt();
             }
         }
+    }
+    
+    public static void menu() {
+        
     }
     
     public static void buscarNumero() {
