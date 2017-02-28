@@ -6,6 +6,7 @@ package Arrays_Multidimensionales;
  */
 import java.util.Scanner;
 public class EJ28 {
+    private static final Scanner sc = new Scanner(System.in);
     private static int filas=4,columnas=4;
     private static int[][] matriz = new int[filas][columnas];
     
@@ -19,7 +20,7 @@ public class EJ28 {
         for(int i=0;i<filas;i++){
             for(int j=0;j<columnas;j++){
                 System.out.println("Introduce el valor de la fila " + i + ", columna " + j);
-                
+                matriz[i][j] = sc.nextInt();
             }
         }
     }
