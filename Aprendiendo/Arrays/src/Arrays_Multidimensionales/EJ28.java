@@ -24,4 +24,8 @@ public class EJ28 {
             }
         }
     }
+    
+    public static void buscarNumero() {
+        
+    }
 }
