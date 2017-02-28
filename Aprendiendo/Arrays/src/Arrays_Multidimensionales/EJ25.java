@@ -9,8 +9,10 @@ public class EJ25 {
     //Importo la clase Scanner para entrada de datos
     private static final Scanner sc = new Scanner(System.in);
     
+    private static int tmp,filas=2,columnas=3;
+    
     //Creo la matriz
-    private static int[][] matriz = new int[2][3];
+    private static int[][] matriz = new int[filas][columnas];//[filas][columnas]
     
     public static void main(String[] args) {
         //Entrada de datos, método entrada()
@@ -18,6 +20,14 @@ public class EJ25 {
     }
     
     public static void entrada() {
-        
+        for(int i=0;i<matriz[][].length;i++) {
+            for(int i=0;i<3;i++) {
+                
+            }
+            System.out.println("contador --> " + tmp);
+            tmp++;
+        }
     }
+    
+    
 }
