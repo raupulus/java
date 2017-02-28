@@ -9,7 +9,8 @@ public class EJ25 {
     //Importo la clase Scanner para entrada de datos
     private static final Scanner sc = new Scanner(System.in);
     
-    private static int tmp,filas=2,columnas=3;
+    //Declaro tamaño de matriz
+    private static int filas=5,columnas=8;
     
     //Creo la matriz
     private static int[][] matriz = new int[filas][columnas];//[filas][columnas]
@@ -17,6 +18,9 @@ public class EJ25 {
     public static void main(String[] args) {
         //Entrada de datos, método entrada()
         entrada();
+        
+        //Muestra números introducidos, método mostrar();
+        mostrar();
     }
     
     public static void entrada() {
@@ -27,15 +31,14 @@ public class EJ25 {
                 matriz[i][j] = sc.nextInt();
             }
         }
-        
+    }
+    
+    public static void mostrar() {
         for(int i=0;i<matriz.length;i++) {
             System.out.println("");
             for(int j=0;j<3;j++) {
-                System.out.print(matriz[i][j] + "  ");
+                System.out.print(matriz[i][j] + "\t");
             }
-            
-            
-            
         }
     }
 }
