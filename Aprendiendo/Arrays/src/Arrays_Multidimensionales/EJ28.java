@@ -4,6 +4,7 @@ package Arrays_Multidimensionales;
  * lo pinte y después que pida una posición X,Y y mostrar el número correspondiente.
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
+import java.util.Scanner;
 public class EJ28 {
     private static int filas=4,columnas=4;
     private static int[][] matriz = new int[filas][columnas];
