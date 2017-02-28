@@ -9,10 +9,11 @@ public class EJ25 {
     private static int[][] matriz = new int[2][3];
     
     public static void main(String[] args) {
-        
+        //Entrada de datos, método entrada()
+        entrada();
     }
     
-    public static void NOMBRE() {
+    public static void entrada() {
         
     }
 }
