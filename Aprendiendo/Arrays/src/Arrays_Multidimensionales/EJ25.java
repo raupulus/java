@@ -6,4 +6,11 @@ package Arrays_Multidimensionales;
  */
 public class EJ25 {
     
+    public static void main(String[] args) {
+        
+    }
+    
+    public static void NOMBRE() {
+        
+    }
 }
