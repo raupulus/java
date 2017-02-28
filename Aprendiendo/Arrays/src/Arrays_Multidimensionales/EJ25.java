@@ -5,6 +5,8 @@ package Arrays_Multidimensionales;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ25 {
+    //Creo la matriz
+    private static int[][] matriz = new int[2][3];
     
     public static void main(String[] args) {
         
