@@ -14,6 +14,12 @@ public class EJ28 {
     }
     
     public static void entrada() {
-        
+        System.out.println("Introduce los números para la matriz:");
+        for(int i=0;i<filas;i++){
+            for(int j=0;j<columnas;j++){
+                System.out.println("Introduce el valor de la fila " + i + ", columna " + j);
+                
+            }
+        }
     }
 }
