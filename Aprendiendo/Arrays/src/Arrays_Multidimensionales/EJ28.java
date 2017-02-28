@@ -7,4 +7,13 @@ package Arrays_Multidimensionales;
 public class EJ28 {
     private static int filas=4,columnas=4;
     private static int[][] matriz = new int[filas][columnas];
+    
+    public static void main(String[] args) {
+        //Pedir datos de entrada
+        entrada();
+    }
+    
+    public static void entrada() {
+        
+    }
 }
