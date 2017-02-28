@@ -29,9 +29,27 @@ public class EJ28 {
     }
     
     public static void menu() {
-        System.out.println("*** *** *** OPCIONES *** *** ***");
-        System.out.println("1 - Introducir posiciones X,Y para mostrar en el array");
-        System.out.println("2 - Salir del programa");
+        Boolean salir = false;
+        int input;
+        
+        while(!salir) {
+            System.out.println("*** *** *** OPCIONES *** *** ***");
+            System.out.println("1 - Introducir posiciones X,Y para mostrar en el array");
+            System.out.println("2 - Salir del programa");
+            
+            input = sc.nextInt();
+            
+            switch(input){
+                case 1:
+                    
+                    break;
+                case 2:
+                    salir = true;
+                    break;
+                default:
+                    System.out.println("No es válido el valor introducido");
+            }
+        }
     }
     
     public static void buscarNumero() {
