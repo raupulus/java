@@ -19,11 +19,15 @@ public class EJ28 {
     }
     
     public static void entrada() {
-        System.out.println("Introduce los números para la matriz:");
+        System.out.println("Introduce números pares a continuación para rellenar la matriz:");
         for(int i=0;i<filas;i++){
             for(int j=0;j<columnas;j++){
                 System.out.println("Introduce el valor de la fila " + i + ", columna " + j);
                 matriz[i][j] = sc.nextInt();
+                if ((matriz[i][j]%2) != 0) {
+                    System.out.println("El número introducido no es par");
+                    j--;
+                }
             }
         }
     }
