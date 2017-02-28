@@ -5,5 +5,6 @@ package Arrays_Multidimensionales;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ28 {
-    
+    private static int filas=4,columnas=4;
+    private static int[][] matriz = new int[filas][columnas];
 }
