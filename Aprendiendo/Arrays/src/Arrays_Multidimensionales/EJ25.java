@@ -20,14 +20,13 @@ public class EJ25 {
     }
     
     public static void entrada() {
-        for(int i=0;i<matriz[][].length;i++) {
-            for(int i=0;i<3;i++) {
+        for(int i=0;i<matriz.length;i++) {
+            for(int j=0;j<3;j++) {
+                System.out.println("Fila " + i + ", columna " + j);
                 
+                System.out.println("contador --> " + tmp);
+                tmp++;
             }
-            System.out.println("contador --> " + tmp);
-            tmp++;
         }
     }
-    
-    
 }
