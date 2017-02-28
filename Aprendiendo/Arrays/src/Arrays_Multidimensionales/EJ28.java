@@ -15,6 +15,7 @@ public class EJ28 {
         entrada();
         
         //Menú para pedir número o salir
+        menu();
     }
     
     public static void entrada() {
@@ -28,7 +29,9 @@ public class EJ28 {
     }
     
     public static void menu() {
-        
+        System.out.println("*** *** *** OPCIONES *** *** ***");
+        System.out.println("1 - Introducir posiciones X,Y para mostrar en el array");
+        System.out.println("2 - Salir del programa");
     }
     
     public static void buscarNumero() {
