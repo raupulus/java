@@ -7,7 +7,7 @@ package Arrays_Multidimensionales;
 import java.util.Scanner;
 public class EJ28 {
     private static final Scanner sc = new Scanner(System.in);
-    private static int filas=4,columnas=4;
+    private static int filas=1,columnas=1;
     private static int[][] matriz = new int[filas][columnas];
     
     public static void main(String[] args) {
@@ -41,7 +41,7 @@ public class EJ28 {
             
             switch(input){
                 case 1:
-                    
+                    buscarNumero();
                     break;
                 case 2:
                     salir = true;
@@ -53,6 +53,22 @@ public class EJ28 {
     }
     
     public static void buscarNumero() {
+        int input=100,tmp=0,tmp1=0;
         
+        while ((input>=filas) | (input<0)) {
+            System.out.println("Introduce la coordenada X (Correspondiente a la fila");
+            input = sc.nextInt();
+            tmp = input;
+        }
+        
+        input=100;
+        
+        while ((input>=filas) | (input<0)) {
+            System.out.println("Introduce la coordenada Y (Correspondiente a la Columna");
+            input = sc.nextInt();
+            tmp1 = input;
+        }
+        
+        System.out.println("Las coordenadas X=" + tmp + " junto a Y=" + tmp1 + ". Corresponden al valor --> " + matriz[tmp][tmp1]);
     }
 }
