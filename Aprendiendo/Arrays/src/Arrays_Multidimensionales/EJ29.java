@@ -7,11 +7,21 @@ package Arrays_Multidimensionales;
  */
 import java.util.Random;
 public class EJ29 {
-    private static int filas=6,columnas=10;
+    private static int filas=6,columnas=10, minimo, maximo;
     private static int[][] matriz = new int[filas][columnas];
     
     public static void main(String[] args) {
+        //Genera los números aleatorios
+        generarNumeros();
         
+        //Busca el número más grande
+        maximo();
+        
+        //Busca el número más pequeño
+        minimo();
+        
+        //Muestra el resultado
+        mostrar();
     }
     
     public static void generarNumeros() {
