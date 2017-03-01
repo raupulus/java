@@ -14,6 +14,10 @@ public class EJ29 {
         
     }
     
+    public static void generarNumeros() {
+        
+    }
+    
     public static void maximo() {
         
     }
