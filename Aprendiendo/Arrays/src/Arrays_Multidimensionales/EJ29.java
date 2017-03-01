@@ -5,6 +5,7 @@ package Arrays_Multidimensionales;
  * A continuación, el programa deberá dar la posición tanto del máximo como del mínimo.
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
+import java.util.Random;
 public class EJ29 {
     private static int filas=6,columnas=10;
     private static int[][] matriz = new int[filas][columnas];
