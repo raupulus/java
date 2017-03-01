@@ -7,7 +7,7 @@ package Arrays_Multidimensionales;
  */
 import java.util.Random;
 public class EJ29 {
-    private static int filas=6,columnas=10, minimo, maximo;
+    private static int filas=6,columnas=10, minimo,minimoF,minimoC, maximo,maximoF,maximoC;
     private static int[][] matriz = new int[filas][columnas];
     
     public static void main(String[] args) {
@@ -37,6 +37,7 @@ public class EJ29 {
     }
     
     public static void mostrar() {
-        
+        System.out.println("\nEl número máximo es -->\t " + maximo + ". Está en la fila " + maximoF + " y en la columna " + maximoC);
+        System.out.println("\nEl número máximo es -->\t " + minimo + ". Está en la fila " + minimoF + " y en la columna " + minimoC);
     }
 }
