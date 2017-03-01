@@ -14,7 +14,15 @@ public class EJ29 {
         
     }
     
-    public static void NOMBRE() {
+    public static void maximo() {
+        
+    }
+    
+    public static void minimo() {
+        
+    }
+    
+    public static void mostrar() {
         
     }
 }
