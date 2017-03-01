@@ -9,6 +9,7 @@ import java.util.Random;
 public class EJ29 {
     private static int filas=6,columnas=10, minimo,minimoF,minimoC, maximo,maximoF,maximoC;
     private static int[][] matriz = new int[filas][columnas];
+    static Random rd = new Random();
     
     public static void main(String[] args) {
         //Genera los números aleatorios
@@ -25,7 +26,13 @@ public class EJ29 {
     }
     
     public static void generarNumeros() {
-        
+        System.out.println("El array contiene " + (filas*columnas) + " números, los cuales son los siguientes:");
+        for (int i=0;i<filas;i++){
+            for (int j=0;j<columnas;j++) {
+                matriz[i][j] = rd.nextInt(1000);
+                System.out.print(matriz[i][j] + ", ");
+            }
+        }
     }
     
     public static void maximo() {
