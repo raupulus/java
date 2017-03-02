@@ -28,5 +28,7 @@ public class EJ27 {
         }
     }
     
-
+    public static void mostrar() {
+        
+    }
 }
