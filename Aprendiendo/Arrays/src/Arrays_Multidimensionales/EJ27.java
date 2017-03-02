@@ -7,7 +7,7 @@ package Arrays_Multidimensionales;
  */
 import java.util.Scanner;
 public class EJ27 {
-    private static int filas=5, columnas=6;
+    private static int filas=5, columnas=6,contadorF,contadorC;
     private static int[][] matriz = new int[filas][columnas];
     private static final Scanner sc = new Scanner(System.in);
     
@@ -18,8 +18,15 @@ public class EJ27 {
     public static void entrada() {
         for (int i=0;i<filas-1;i++) {
             for (int j=0;j<columnas-1;j++) {
-                
+                if(j == (columnas-1)) {
+                    matriz[i][j] = contadorC;
+                } else {
+                    matriz[i][j] = sc.nextInt();
+                    contadorC += matriz[i][j];
+                }
             }
         }
     }
+    
+
 }
