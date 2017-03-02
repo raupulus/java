@@ -16,6 +16,7 @@ public class EJ31 {
     public static void main(String[] args) {
         generar();
         mostrarOriginal();
+        System.out.println("\n\n\n"); //Espaciado entre arrays
         rotar();
         mostrarRotado();
     }
@@ -32,6 +33,16 @@ public class EJ31 {
     public static void rotar() {
         //Este método hace rotar como si fuera un reloj el array
         
+        int aux,x,i=0,j=0;
+        
+        for(i=0;i<filas;i++){
+            aux = matriz[j][i];
+            for(j=0;j<columnas;j++){
+                /////REVISARE AQUI --> Intento conseguir desplazar una fila sin perder el primero
+                aux = matriz[j+1][i+1];
+                matriz[+1][i+1] = matriz[j][i];
+            }
+        }
         //tener en cuenta longitud de array/filas/columnas ya que se deslazan entre estos
     }
     
