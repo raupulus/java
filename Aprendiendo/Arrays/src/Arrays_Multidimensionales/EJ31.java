@@ -15,6 +15,9 @@ public class EJ31 {
     private static int[][] matriz= new int[filas][columnas];
     public static void main(String[] args) {
         generar();
+        mostrarOriginal();
+        rotar();
+        mostrarRotado();
     }
     
     public static void generar() {
@@ -30,5 +33,15 @@ public class EJ31 {
         //Este método hace rotar como si fuera un reloj el array
         
         //tener en cuenta longitud de array/filas/columnas ya que se deslazan entre estos
+    }
+    
+    public static void mostrarOriginal() {
+        //MuestraArray original
+        for(int i=0;i<filas;i++){
+            System.out.println("\n");
+            for(int j=0;j<columnas;j++){
+                System.out.print(matriz[i][j]+"\t");
+            }
+        }
     }
 }
