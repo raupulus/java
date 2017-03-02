@@ -20,7 +20,8 @@ public class EJ31 {
     public static void generar() {
         for(int i=0;i<filas;i++){
             for(int j=0;j<columnas;j++){
-                
+                matriz[i][j] = rd.nextInt(1001);
+                if ((matriz[i][j]<0) | (matriz[i][j]>1000)) {j--;} //Comprueba número válido (0-100)
             }
         }
     }
