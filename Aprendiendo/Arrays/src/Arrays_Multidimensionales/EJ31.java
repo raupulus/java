@@ -36,7 +36,17 @@ public class EJ31 {
     }
     
     public static void mostrarOriginal() {
-        //MuestraArray original
+        //Muestra Array original
+        for(int i=0;i<filas;i++){
+            System.out.println("\n");
+            for(int j=0;j<columnas;j++){
+                System.out.print(matriz[i][j]+"\t");
+            }
+        }
+    }
+    
+    public static void mostrarRotado() {
+        //Muestra Array rotado
         for(int i=0;i<filas;i++){
             System.out.println("\n");
             for(int j=0;j<columnas;j++){
