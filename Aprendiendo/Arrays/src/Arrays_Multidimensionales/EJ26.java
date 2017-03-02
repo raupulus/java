@@ -15,6 +15,7 @@ public class EJ26 {
     public static void main(String[] args) {
         //Llamada a método que genera números aleatorios
         generarAleatorios();
+        mostrar()
     }
     
     public static void generarAleatorios() {
@@ -24,5 +25,9 @@ public class EJ26 {
                 matriz[i][j] = rd.nextInt(1001);
             }
         }
+    }
+    
+    public static void mostrar() {
+        
     }
 }
