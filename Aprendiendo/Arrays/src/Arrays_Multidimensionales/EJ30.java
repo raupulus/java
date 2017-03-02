@@ -21,16 +21,37 @@ public class EJ30 {
         //Genera números para llenar matriz
         for(int i=0;i<fila;i++){
             for(int j=0;j<columna;j++) {
-                matriz[i][j] = rd.nextInt(1001);
+                matriz[i][j] = rd.nextInt(101);
             }
         }
     }
     
     public static void trasponer() {
-        
+        //Transpone los valores
+        for(int i=0;i<fila;i++){
+            for(int j=0;j<columna;j++) {
+                traspuesta[i][j] = matriz[j][i];
+            }
+        }
     }
     
     public static void mostrar() {
+        //Array original
+        System.out.println("\n\nEl array original: ");
+        for(int i=0;i<columna;i++) {
+            System.out.println("\n");
+            for(int j=0;j<columna;j++) {
+                System.out.print(matriz[j][i] + "\t");
+            }
+        }
         
+        //Array transpuesto
+        System.out.println("\n\nEl array Transpuesto: ");
+        for(int i=0;i<columna;i++) {
+            System.out.println("\n");
+            for(int j=0;j<columna;j++) {
+                System.out.print(traspuesta[j][i] + "\t");
+            }
+        }
     }
 }
