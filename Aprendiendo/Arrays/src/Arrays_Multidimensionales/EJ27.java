@@ -6,9 +6,11 @@ package Arrays_Multidimensionales;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ27 {
+    private static int filas=4, columnas=5;
+    private static int[][] matriz = new int[filas][columnas];
     
     public static void main(String[] args) {
-        
+        entrada();
     }
     
     public static void entrada() {
