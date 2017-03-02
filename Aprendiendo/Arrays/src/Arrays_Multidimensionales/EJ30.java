@@ -8,10 +8,20 @@ public class EJ30 {
     private static int[][] matriz = new int[3][3];
     
     public static void main(String[] args) {
+        generar();
+        trasponer();
+        mostrar();
+    }
+    
+    public static void generar() {
+        //Genera números para llenar matriz
+    }
+    
+    public static void trasponer() {
         
     }
     
-    public static void NOMBRE() {
+    public static void mostrar() {
         
     }
 }
