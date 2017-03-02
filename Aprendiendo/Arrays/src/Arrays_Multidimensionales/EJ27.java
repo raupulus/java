@@ -7,7 +7,7 @@ package Arrays_Multidimensionales;
  */
 import java.util.Scanner;
 public class EJ27 {
-    private static int filas=5, columnas=6,contadorF;;
+    private static int filas=4, columnas=6,contadorF;;
     private static int[][] matriz = new int[filas][columnas];
     private static final Scanner sc = new Scanner(System.in);
     
@@ -23,12 +23,12 @@ public class EJ27 {
         for (int i=0;i<filas;i++) {
             for (int j=0;j<columnas;j++) {
                 if(j == (columnas-1)) {
-                    //Asigno en la ultima solumna, el contador
+                    //Asigno en la ultima columna, el contador
                     matriz[i][j] = contadorF;
                 } else {
                     matriz[i][j] = sc.nextInt();
                     //Contador que suma las filas
-                    contadorF += matriz[i][j];
+                    contadorF = contadorF + matriz[i][j];
                 }
             }
         }
@@ -45,9 +45,7 @@ public class EJ27 {
         System.out.println("\nSumas de Columnas");
         //Mostrar la suma de las Filas almacenadas en la última posición
         for (int i=0;i<filas;i++) {
-            for (int j=columnas-2;j==columnas-2;j++) {
-                System.out.println("Fila " + i + " suma un total de --> " + matriz[i][filas-1]);
-            }
+                System.out.println("Fila " + i + " suma un total de --> " + matriz[i][columnas-1]);
         }
     }
 }
