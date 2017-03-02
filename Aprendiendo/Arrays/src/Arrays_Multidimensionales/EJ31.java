@@ -25,4 +25,10 @@ public class EJ31 {
             }
         }
     }
+    
+    public static void rotar() {
+        //Este método hace rotar como si fuera un reloj el array
+        
+        //tener en cuenta longitud de array/filas/columnas ya que se deslazan entre estos
+    }
 }
