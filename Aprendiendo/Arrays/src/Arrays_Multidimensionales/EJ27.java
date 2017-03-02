@@ -7,7 +7,7 @@ package Arrays_Multidimensionales;
  */
 import java.util.Scanner;
 public class EJ27 {
-    private static int filas=5, columnas=6,contadorF,contadorC;;
+    private static int filas=5, columnas=6,contadorF;;
     private static int[][] matriz = new int[filas][columnas];
     private static final Scanner sc = new Scanner(System.in);
     
@@ -19,14 +19,16 @@ public class EJ27 {
     }
     
     public static void entrada() {
-        System.out.println("");
-        for (int i=0;i<filas-1;i++) {
-            for (int j=0;j<columnas-1;j++) {
-                if(j == (columnas-2)) {
-                    matriz[i][j] = contadorC;
+        System.out.println("\nIntroduce los valores de entrada");
+        for (int i=0;i<filas;i++) {
+            for (int j=0;j<columnas;j++) {
+                if(j == (columnas-1)) {
+                    //Asigno en la ultima solumna, el contador
+                    matriz[i][j] = contadorF;
                 } else {
                     matriz[i][j] = sc.nextInt();
-                    contadorC += matriz[i][j];
+                    //Contador que suma las filas
+                    contadorF += matriz[i][j];
                 }
             }
         }
@@ -39,26 +41,12 @@ public class EJ27 {
                 System.out.print(matriz[i][j] + ", ");
             }
         }
-        
-        //Mostrar la suma de las Filas almacenadas en la última posición
-        System.out.println("\nSumas de FIlas:");
-        int x=0;
-        for (int i=0;i<filas-1;i++) {
-            x++;
-            
-            System.out.println("Fila " + i + " suma un total de --> " + matriz[i][x]);
-            
-            matriz[0][1]
-                    matriz[1][1]
-                            matriz[2][1]
-            
-        }
-        
+               
         System.out.println("\nSumas de Columnas");
         //Mostrar la suma de las Filas almacenadas en la última posición
         for (int i=0;i<filas;i++) {
             for (int j=columnas-2;j==columnas-2;j++) {
-                System.out.println("Columna " + i + " suma un total de --> " + matriz[i][filas-1]);
+                System.out.println("Fila " + i + " suma un total de --> " + matriz[i][filas-1]);
             }
         }
     }
