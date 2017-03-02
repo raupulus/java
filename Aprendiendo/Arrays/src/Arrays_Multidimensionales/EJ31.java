@@ -8,8 +8,11 @@ package Arrays_Multidimensionales;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+import java.util.Random;
 public class EJ31 {
-    
+    static Random rd = new Random();
+    private static int filas=12,columnas=12;
+    private static int[][] matriz= new int[filas][columnas];
     public static void main(String[] args) {
         generar();
     }
