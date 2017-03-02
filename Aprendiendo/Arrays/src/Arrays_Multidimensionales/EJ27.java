@@ -40,15 +40,24 @@ public class EJ27 {
             }
         }
         
-        //Mostrar la suma de las columnas almacenadas en la última posición
+        //Mostrar la suma de las Filas almacenadas en la última posición
+        System.out.println("\nSumas de FIlas:");
+        int x=0;
         for (int i=0;i<filas-1;i++) {
-            for (int j=columnas-1;j<columnas-1;j++) {
-                System.out.println("Columna " + i + " suma un total de --> " + matriz[i][filas-1]);
-            }
+            x++;
+            
+            System.out.println("Fila " + i + " suma un total de --> " + matriz[i][x]);
+            
+            matriz[0][1]
+                    matriz[1][1]
+                            matriz[2][1]
+            
         }
         
+        System.out.println("\nSumas de Columnas");
+        //Mostrar la suma de las Filas almacenadas en la última posición
         for (int i=0;i<filas;i++) {
-            for (int j=columnas-1;j==columnas-1;j++) {
+            for (int j=columnas-2;j==columnas-2;j++) {
                 System.out.println("Columna " + i + " suma un total de --> " + matriz[i][filas-1]);
             }
         }
