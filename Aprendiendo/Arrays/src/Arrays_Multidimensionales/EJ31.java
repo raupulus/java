@@ -10,4 +10,11 @@ package Arrays_Multidimensionales;
  */
 public class EJ31 {
     
+    public static void main(String[] args) {
+        generar();
+    }
+    
+    public static void generar() {
+        
+    }
 }
