@@ -15,12 +15,12 @@ public class EJ26 {
     public static void main(String[] args) {
         //Llamada a método que genera números aleatorios
         generarAleatorios();
-        mostrar()
+        //Muestra los 100 primeros
+        mostrar();
     }
     
     public static void generarAleatorios() {
-        //x = rd.nextInt(1000); //numero máximo 1000
-        for(int i=0;i<filas;) {
+        for(int i=0;i<filas;i++) {
             for(int j=0;j<columnas;j++) {
                 matriz[i][j] = rd.nextInt(1001);
             }
@@ -28,6 +28,15 @@ public class EJ26 {
     }
     
     public static void mostrar() {
-        
+        int contador=0;
+        System.out.println("|nLos 100 primeros números son:");
+        for(int i=0;i<filas;i++) {
+            for(int j=0;j<columnas;j++) {
+                if (contador <= 100){
+                    System.out.print(matriz[i][j] + ", ");
+                    contador++;
+                } else {break;}
+            }
+        }
     }
 }
