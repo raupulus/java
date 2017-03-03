@@ -18,7 +18,7 @@ public class EJ31 {
         mostrarOriginal();
         System.out.println("\n\n\n"); //Espaciado entre arrays
         rotar();
-        mostrarRotado();
+        mostrarRotado();    
     }
     
     public static void generar() {
