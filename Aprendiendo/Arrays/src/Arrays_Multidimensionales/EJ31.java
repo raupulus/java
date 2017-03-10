@@ -8,6 +8,14 @@ package Arrays_Multidimensionales;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+
+
+
+/*****************************************************************************
+    EJERCICIO NO TERMINADO no entiendo que se tiene que hacer exactamente
+*****************************************************************************/
+
+
 import java.util.Random;
 public class EJ31 {
     static Random rd = new Random();
