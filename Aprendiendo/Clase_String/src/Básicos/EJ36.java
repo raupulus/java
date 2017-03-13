@@ -11,6 +11,6 @@ public class EJ36 {
         String s1 = "HOLA";
         String s2 = "BOLA";
         
-        
+        System.out.println("Resultado de la comparación: " + s1.compareTo(s2));
     }
 }
