@@ -8,4 +8,7 @@ package Básicos;
 
 public class EJ37 {
     
+    public static void main(String[] args) {
+        
+    }
 }
