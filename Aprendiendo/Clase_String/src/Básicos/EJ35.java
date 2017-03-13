@@ -21,5 +21,16 @@ public class EJ35 {
         }
         
         System.out.println("s1.equals(s2) devuelve: " + s1.equals(s2));
+        
+        String ss1 = new String("HOLA");
+        String ss2 = new String("HOLA");
+        
+        if (ss1==ss2) {
+            System.out.println("ss1==ss2 es true");
+        } else {
+            System.out.println("ss1==ss2 es false");
+        }
+        
+        System.out.println("ss1.equals(ss2) devuelve: " + ss1.equals(ss2));
     }
 }
