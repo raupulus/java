@@ -8,6 +8,9 @@ package Básicos;
 public class EJ36 {
     
     public static void main(String[] args) {
+        String s1 = "HOLA";
+        String s2 = "BOLA";
+        
         
     }
 }
