@@ -9,6 +9,8 @@ package Básicos;
 public class EJ37 {
     
     public static void main(String[] args) {
+        String s1 = "Esta cadena tiene que mostrarse al revés";
+        System.out.println(s1);
         
     }
 }
