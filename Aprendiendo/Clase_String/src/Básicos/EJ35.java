@@ -19,5 +19,7 @@ public class EJ35 {
         } else {
             System.out.println("s1==s2 es false");
         }
+        
+        System.out.println("s1.equals(s2) devuelve: " + s1.equals(s2));
     }
 }
