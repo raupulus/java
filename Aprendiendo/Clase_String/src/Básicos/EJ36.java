@@ -7,4 +7,7 @@ package Básicos;
  */
 public class EJ36 {
     
+    public static void main(String[] args) {
+        
+    }
 }
