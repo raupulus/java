@@ -12,7 +12,7 @@ public class EJ38 {
     public static void main(String[] args) {
         System.out.println("Introduce una cadena para contar los carácteres");
         
-        String input = sc.next(); //Pide introducir la cadena
+        String input = sc.nextLine(); //Pide introducir la cadena
         
         System.out.println("La cadena contiene " + input.length() + " caracteres"); //Muestra la cadena y su longitud
     }
