@@ -69,7 +69,7 @@ public class EJ44 {
                     System.out.println("\n\nEl método length() devuelve : " + c1.length() + " y " + c2.length() + "\n\n");
                     break;
                 case 5:
-                    System.out.println("\n\nEl método equals devuelve : " + c1.equals(c2) + "\n\n");
+                    System.out.println("\n\nEl método concat devuelve : " + c1.concat(c2) + "\n\n");
                     break;
                 default:
                     
