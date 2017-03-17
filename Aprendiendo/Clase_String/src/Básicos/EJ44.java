@@ -39,7 +39,7 @@ public class EJ44 {
             System.out.println("6 - Método charAt(indice)");
             System.out.println("7 - Método substring(desde,hasta)");
             System.out.println("8 - Método indexOf()");
-            System.out.println("9 - Método lasIndexOf(),");
+            System.out.println("9 - Método lastIndexOf(),");
             System.out.println("10 - Método endsWith(texto)");
             System.out.println("11 - Método startsWith(texto)");
             System.out.println("12 - Método replace(caracter1,caracter2)");
@@ -79,6 +79,9 @@ public class EJ44 {
                     break;
                 case 8:
                     System.out.println("\n\nEl método indeOf() devuelve : " + c1.indexOf(c2) + "\n\n");
+                    break;
+                case 9:
+                    System.out.println("\n\nEl método lastIndexOf() devuelve : " + c1.lastIndexOf(c2) + "\n\n");
                     break;
                 default:
                     
