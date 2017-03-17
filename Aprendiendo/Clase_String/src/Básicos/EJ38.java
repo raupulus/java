@@ -16,10 +16,16 @@ public class EJ38 {
         
         System.out.println("La cadena contiene " + input.length() + " caracteres"); //Muestra la cadena y su longitud
         
-        int contador;
+        int contador = 0;
+        String tmp;
         
-        for (int i = 0; i< input.length(); i++) {
-            
+        for (int i = 0; i< input.length(); i++) { //Comprueba que es una vocal y suma en el contador si se cumple
+            tmp = ""+input.charAt(i);
+            if (tmp.matches("[a,e,i,o,u]")) {
+                contador++;
+            }
         }
+        
+        System.out.println("\nEl número de vocales es " + contador); //Muestra las vocales
     }
 }
