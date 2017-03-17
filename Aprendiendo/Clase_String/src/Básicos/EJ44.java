@@ -71,6 +71,12 @@ public class EJ44 {
                 case 5:
                     System.out.println("\n\nEl método concat devuelve : " + c1.concat(c2) + "\n\n");
                     break;
+                case 6:
+                    System.out.println("\n\nEl método charAt(5) devuelve : " + c1.charAt(5) + " y " + c2.charAt(5) + "\n\n");
+                    break;
+                case 7:
+                    System.out.println("\n\nEl método substring(2, 12) devuelve : " + c1.substring(2, 12) + " y " + c2.substring(2, 12) + "\n\n");
+                    break;
                 default:
                     
                     break;
