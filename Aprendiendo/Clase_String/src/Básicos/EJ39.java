@@ -6,5 +6,8 @@ package Básicos;
  * https://github.com/fryntiz
  */
 public class EJ39 {
-    
+
+    public static void main(String[] args) {
+        
+    }
 }
