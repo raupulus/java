@@ -6,6 +6,11 @@ package Básicos;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+
+
+//EJERCICIO NO TERMINADO --> No logro ver como ordenar cadenas de forma sencilla
+
+
 import java.util.Scanner;
 public class EJ41 {
     private static final Scanner sc = new Scanner(System.in);
@@ -21,6 +26,8 @@ public class EJ41 {
         for(int i = 0; i<input.length;i++) {
             for(int j = 0; j<input.length;j++) {
                 if (input[i] > input[j]){
+                    
+                    //NO SE COMO ORDENAR
                     
                 }
             }
