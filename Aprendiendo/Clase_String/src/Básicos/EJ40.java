@@ -15,7 +15,11 @@ public class EJ40 {
     public static void main(String[] args) {
         int x1,x2;
         //Seleccionar aleatorios del array
-        x1 = rd.nextInt(1000);
-        x2 = rd.nextInt(1000);
+        x1 = rd.nextInt(array.length);
+        x2 = rd.nextInt(array.length);
+        
+        System.out.println("\nLos paises elegidos son: " + array[x1] + " y " + array[x2]);
+        
+        System.out.println("\n\nComparando las dos cadenas el resultado es: " + array[x1].compareTo(array[x2]));
     }
 }
