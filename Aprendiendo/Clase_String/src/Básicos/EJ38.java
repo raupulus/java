@@ -15,5 +15,11 @@ public class EJ38 {
         String input = sc.nextLine(); //Pide introducir la cadena
         
         System.out.println("La cadena contiene " + input.length() + " caracteres"); //Muestra la cadena y su longitud
+        
+        int contador;
+        
+        for (int i = 0; i< input.length(); i++) {
+            
+        }
     }
 }
