@@ -6,6 +6,15 @@ package Básicos;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+import java.util.Scanner;
 public class EJ41 {
+    private static final Scanner sc = new Scanner(System.in);
+    private static String[] input;
     
+    public static void main(String[] args) {
+        System.out.println("Introduce 3 palabras para ordenar");
+        input[1] = sc.next();
+        input[2] = sc.next();
+        input[3] = sc.next();
+    }
 }
