@@ -19,7 +19,7 @@ public class EJ39 {
         int contador = 0;
         String tmp;
         
-        for (int i = 0; i< input.length(); i++) { //Comprueba que es una vocal y suma en el contador si se cumple
+        for (int i = 0; i< input.length(); i++) { //Comprueba que es Mayúsculas y suma en el contador si se cumple
             tmp = ""+input.charAt(i);
             if (tmp.matches("[A-Z]")) {
                 contador++;
