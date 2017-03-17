@@ -9,12 +9,13 @@ package Básicos;
  */
 import java.util.Random;
 public class EJ40 {
-    private static rd = new Random();
+    static Random rd = new Random();
     private static String[] array = {"España", "Francia", "Irlanda", "Reino Unido", "Cataluña", "Andalucía"};
     
     public static void main(String[] args) {
-        
-        
-        //x = rd.nextInt(1000); //numero máximo 1000
+        int x1,x2;
+        //Seleccionar aleatorios del array
+        x1 = rd.nextInt(1000);
+        x2 = rd.nextInt(1000);
     }
 }
