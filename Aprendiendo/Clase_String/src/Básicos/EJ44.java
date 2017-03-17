@@ -77,6 +77,9 @@ public class EJ44 {
                 case 7:
                     System.out.println("\n\nEl método substring(2, 12) devuelve : " + c1.substring(2, 12) + " y " + c2.substring(2, 12) + "\n\n");
                     break;
+                case 8:
+                    System.out.println("\n\nEl método indeOf() devuelve : " + c1.indexOf(c2) + "\n\n");
+                    break;
                 default:
                     
                     break;
