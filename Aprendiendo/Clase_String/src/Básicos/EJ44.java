@@ -7,6 +7,12 @@ package Básicos;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+
+
+
+//EJERCICIO NO TERMINADO!!!!!  ---> Voy por la parte 9
+
+
 import java.util.Scanner;
 public class EJ44 {
     private static final Scanner sc = new Scanner(System.in);
