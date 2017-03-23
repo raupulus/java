@@ -52,7 +52,7 @@ public class EJ44 {
             System.out.println("13 - Método replaceALL(cadena1,cadena2)");
             System.out.println("14 - Método toUpperCase()");
             System.out.println("15 - Método toLowerCase()");
-            System.out.println("16 - Método split(patrón");
+            System.out.println("16 - Método split(patrón)");
             System.out.println("17 - Método Cambiar cadenas");
                 
             
@@ -108,7 +108,7 @@ public class EJ44 {
                     System.out.println("\n\nEl método toLowerCase() devuelve : " + c1.toLowerCase() + " y " + c2.toLowerCase() + "\n\n");
                     break;
                 case 16:
-                    
+                    System.out.println("\n\nEl método split(patrón) devuelve : " + c1.split(c2) + "\n\n");
                     break;
                 case 17:
                     
