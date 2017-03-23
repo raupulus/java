@@ -9,10 +9,11 @@ package Wrappers;
 public class Ej1 {
    
     public static void main(String[] args) {
+        Integer wrapper1 = new Integer(10);
+        Integer wrapper2 = new Integer(10);
         
-    }
-    
-    public static void NOMBRE() {
-        
+        Boolean compara = wrapper1 == wrapper2;
+        System.out.println("Con el comparador == el resultado es: " + compara);
+        System.out.println("Con el método equals el resultado es: " + wrapper1.equals(wrapper2));
     }
 }
