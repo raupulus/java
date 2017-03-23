@@ -7,5 +7,12 @@ package Wrappers;
  * https://github.com/fryntiz
  */
 public class Ej1 {
-
+   
+    public static void main(String[] args) {
+        
+    }
+    
+    public static void NOMBRE() {
+        
+    }
 }
