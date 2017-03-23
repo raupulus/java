@@ -105,7 +105,7 @@ public class EJ44 {
                     System.out.println("\n\nEl método toUpperCase() devuelve : " + c1.toUpperCase() + " y " + c2.toUpperCase() + "\n\n");
                     break;
                 case 15:
-                    
+                    System.out.println("\n\nEl método toLowerCase() devuelve : " + c1.toLowerCase() + " y " + c2.toLowerCase() + "\n\n");
                     break;
                 case 16:
                     
