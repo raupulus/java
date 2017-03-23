@@ -77,10 +77,10 @@ public class EJ44 {
                 case 5:
                     System.out.println("\n\nEl método concat devuelve : " + c1.concat(c2) + "\n\n");
                     break;
-                case 6:
+                case 6: //No funciona
                     System.out.println("\n\nEl método charAt(5) devuelve : " + c1.charAt(5) + " y " + c2.charAt(5) + "\n\n");
                     break;
-                case 7:
+                case 7: //No funciona
                     System.out.println("\n\nEl método substring(2, 12) devuelve : " + c1.substring(2, 12) + " y " + c2.substring(2, 12) + "\n\n");
                     break;
                 case 8:
@@ -88,6 +88,9 @@ public class EJ44 {
                     break;
                 case 9:
                     System.out.println("\n\nEl método lastIndexOf() devuelve : " + c1.lastIndexOf(c2) + "\n\n");
+                    break;
+                case 10:
+                    System.out.println("\n\nEl método endsWith(texto) devuelve : " + c1.endsWith(c2) + "\n\n");
                     break;
                 default:
                     
