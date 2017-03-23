@@ -92,6 +92,27 @@ public class EJ44 {
                 case 10:
                     System.out.println("\n\nEl método endsWith(texto) devuelve : " + c1.endsWith(c2) + "\n\n");
                     break;
+                case 11:
+                    System.out.println("\n\nEl método startsWith(texto) devuelve : " + c1.endsWith(c2) + "\n\n");
+                    break;
+                case 12:
+                    
+                    break;
+                case 13:
+                    
+                    break;
+                case 14:
+                    
+                    break;
+                case 15:
+                    
+                    break;
+                case 16:
+                    
+                    break;
+                case 17:
+                    
+                    break;
                 default:
                     
                     break;
