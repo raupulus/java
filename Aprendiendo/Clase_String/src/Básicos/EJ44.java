@@ -96,7 +96,7 @@ public class EJ44 {
                     System.out.println("\n\nEl método startsWith(texto) devuelve : " + c1.endsWith(c2) + "\n\n");
                     break;
                 case 12:
-                    
+                    System.out.println("\n\nEl método replace(a,e) devuelve : " + c1.replace("a","b") + " y " + "\n\n");
                     break;
                 case 13:
                     
