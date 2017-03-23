@@ -8,11 +8,6 @@ package Básicos;
  * https://github.com/fryntiz
  */
 
-
-
-//EJERCICIO NO TERMINADO!!!!!  ---> Voy por la parte 9
-
-
 import java.util.Scanner;
 public class EJ44 {
     private static final Scanner sc = new Scanner(System.in);
@@ -53,8 +48,6 @@ public class EJ44 {
             System.out.println("14 - Método toUpperCase()");
             System.out.println("15 - Método toLowerCase()");
             System.out.println("16 - Método split(patrón)");
-            System.out.println("17 - Método Cambiar cadenas");
-                
             
             input = sc.nextInt();
             
@@ -77,11 +70,11 @@ public class EJ44 {
                 case 5:
                     System.out.println("\n\nEl método concat devuelve : " + c1.concat(c2) + "\n\n");
                     break;
-                case 6: //No funciona
-                    System.out.println("\n\nEl método charAt(5) devuelve : " + c1.charAt(5) + " y " + c2.charAt(5) + "\n\n");
+                case 6:
+                    System.out.println("\n\nEl método charAt(1) devuelve : " + c1.charAt(1) + " y " + c2.charAt(1) + "\n\n");
                     break;
-                case 7: //No funciona
-                    System.out.println("\n\nEl método substring(2, 12) devuelve : " + c1.substring(2, 12) + " y " + c2.substring(2, 12) + "\n\n");
+                case 7:
+                    System.out.println("\n\nEl método substring(1, 3) devuelve : " + c1.substring(1, 3) + " y " + c2.substring(1, 3) + "\n\n");
                     break;
                 case 8:
                     System.out.println("\n\nEl método indeOf() devuelve : " + c1.indexOf(c2) + "\n\n");
@@ -109,9 +102,6 @@ public class EJ44 {
                     break;
                 case 16:
                     System.out.println("\n\nEl método split(patrón) devuelve : " + c1.split(c2) + "\n\n");
-                    break;
-                case 17:
-                    
                     break;
                 default:
                     
