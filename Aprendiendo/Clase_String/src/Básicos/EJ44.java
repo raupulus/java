@@ -99,10 +99,10 @@ public class EJ44 {
                     System.out.println("\n\nEl método replace(a,e) devuelve : " + c1.replace("a","b") + " y " + c2.replace("a","b") + "\n\n");
                     break;
                 case 13:
-                    System.out.println("\n\nEl método replaceAll(as,BOING) devuelve : " + c1.replaceAll("as", "BOING") + " y " + "\n\n");
+                    System.out.println("\n\nEl método replaceAll(as,BOING) devuelve : " + c1.replaceAll("as", "BOING") + " y " + c2.replaceAll("as", "BOING") + "\n\n");
                     break;
                 case 14:
-                    
+                    System.out.println("\n\nEl método toUpperCase() devuelve : " + c1.toUpperCase() + " y " + c2.toUpperCase() + "\n\n");
                     break;
                 case 15:
                     
