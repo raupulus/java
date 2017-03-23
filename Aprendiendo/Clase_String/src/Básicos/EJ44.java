@@ -96,10 +96,10 @@ public class EJ44 {
                     System.out.println("\n\nEl método startsWith(texto) devuelve : " + c1.endsWith(c2) + "\n\n");
                     break;
                 case 12:
-                    System.out.println("\n\nEl método replace(a,e) devuelve : " + c1.replace("a","b") + " y " + "\n\n");
+                    System.out.println("\n\nEl método replace(a,e) devuelve : " + c1.replace("a","b") + " y " + c2.replace("a","b") + "\n\n");
                     break;
                 case 13:
-                    
+                    System.out.println("\n\nEl método replaceAll(as,BOING) devuelve : " + c1.replaceAll("as", "BOING") + " y " + "\n\n");
                     break;
                 case 14:
                     
