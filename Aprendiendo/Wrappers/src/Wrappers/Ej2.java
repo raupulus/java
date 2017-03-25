@@ -27,11 +27,12 @@ public class Ej2 {
     }
     
     public static void comprobar() {
-        Integer tmp, alreves;
+        Integer tmp;
+        String alreves = "";
         tmp = input;
         while (tmp > 0) {
-            alreves.concat(tmp%10);
-            tmp = tmp - (tmp%10);
+            alreves = alreves.concat(Integer.toString(tmp%10)); //Cadena donde guardo el número invertido
+            tmp = tmp/10; //Quito la parte del resto añadido a la cadena "alrves"
         }
     }
 }
