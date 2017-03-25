@@ -5,4 +5,7 @@ package Wrappers;
  */
 public class Ej3_Conversor {
     
+    public static void Ej3_Conversor() {
+        
+    }
 }
