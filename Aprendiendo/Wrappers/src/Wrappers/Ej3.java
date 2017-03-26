@@ -38,17 +38,20 @@ public class Ej3 {
             System.out.println("Pulsa B para Binario");
             System.out.println("Pulsa H para Hexadecimal");
             System.out.println("Pulsa O para Octal");
-            input1 = sc.nextLine();
+            System.out.println("para salir introduce \"salir\"");
+            input1 = sc.next();
             
-            //Comprobar valores válidos
-            if (input1 == "B" | input1 == "H" | input1 == "O" |
-                input1 == "b" | input1 == "h" | input1 == "o") {
+            if ( //Comprobar valores válidos
+                ("B".equalsIgnoreCase(input1)) |
+                ("H".equalsIgnoreCase(input1)) |
+                ("O".equalsIgnoreCase(input1))) {
                 System.out.println(ejercicio.getNumero(input1));
-            } else if (input1 == "salir" | input1 == "Salir" | input1 == "SALIR"){
+            } else if
+               (("salir".equalsIgnoreCase(input1)) |
+                ("Salir".equalsIgnoreCase(input1)) |
+                ("SALIR".equalsIgnoreCase(input1))) {
                 salir = true;
-            }
-            
-            else {
+            } else {
                 System.out.println("El valor introducido es incorrecto (B,H,O)");
             }
         }
