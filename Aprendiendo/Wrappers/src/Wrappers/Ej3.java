@@ -20,8 +20,7 @@ public class Ej3 {
     private static String input1;
     
     public static void main(String[] args) {
-        entrada();
-        
+        entrada(); //Introducir el número
     }
     
     public static void entrada() {
@@ -34,7 +33,7 @@ public class Ej3 {
         
         //Pedir parámetro
         boolean salir = false;
-        while (!salir) {
+        while (!salir) { //Menú para pedir opción a realizar
             System.out.println("Pulsa B para Binario");
             System.out.println("Pulsa H para Hexadecimal");
             System.out.println("Pulsa O para Octal");
