@@ -12,22 +12,20 @@ public class Ej3_Conversor {
     
     public String getNumero(String x) {
         x = x.toUpperCase(); //Pasa la opción a mayúsculas
-        int binario,hexadecimal,octal;
+        String tmp = "";
         
         switch (x) {
             case "B":
-                System.out.println("Salida = " + valorEntrada);
-            break;
+                tmp = Integer.toBinaryString(valorEntrada); 
+                break;
             case "H":
-            
-            break;
+                tmp = Integer.toHexString(valorEntrada); 
+                break;
             case "O":
-            
-            break;
+                tmp = Integer.toOctalString(valorEntrada); 
+                break;
         }
         
-        System.out.println("Soy el número devuelto!!!");
-        
-        return "El resultado es " + x;
+        return "\n\nEl resultado es " + tmp;
     }
 }
