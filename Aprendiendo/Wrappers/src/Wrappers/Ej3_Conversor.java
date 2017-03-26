@@ -11,12 +11,12 @@ public class Ej3_Conversor {
     }
     
     public String getNumero(String x) {
-        x = String.toUpperCase(x);
+        x = x.toUpperCase(); //Pasa la opción a mayúsculas
         int binario,hexadecimal,octal;
         
         switch (x) {
             case "B":
-            
+                System.out.println("Salida = " + valorEntrada);
             break;
             case "H":
             
