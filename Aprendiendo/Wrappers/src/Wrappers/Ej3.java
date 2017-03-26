@@ -21,13 +21,16 @@ public class Ej3 {
     
     public static void main(String[] args) {
         entrada();
-        Ej3_Conversor ejercicio = new Ej3_Conversor(input);
-        ejercicio.getNumero(input1);
+        
     }
     
     public static void entrada() {
         //Pedir número
         input = sc.nextInt();
+        
+        //Crea el objeto desde la clase
+        Ej3_Conversor ejercicio = new Ej3_Conversor(input);
+        
         
         //Pedir parámetro
         boolean salir = false;
@@ -37,9 +40,15 @@ public class Ej3 {
             System.out.println("Pulsa O para Octal");
             input1 = sc.nextLine();
             
-            if (input1 == "B" | input1 == "H" | input1 == "O") {
+            //Comprobar valores válidos
+            if (input1 == "B" | input1 == "H" | input1 == "O" |
+                input1 == "b" | input1 == "h" | input1 == "o") {
+                System.out.println(ejercicio.getNumero(input1));
+            } else if (input1 == "salir" | input1 == "Salir" | input1 == "SALIR"){
                 salir = true;
-            } else {
+            }
+            
+            else {
                 System.out.println("El valor introducido es incorrecto (B,H,O)");
             }
         }
