@@ -13,14 +13,35 @@ package Wrappers;
  * 
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
-
+import java.util.Scanner;
 public class Ej3 {
+    private static final Scanner sc = new Scanner(System.in);
+    private static int input;
+    private static String input1;
     
     public static void main(String[] args) {
-        
+        entrada();
+        Ej3_Conversor ejercicio = new Ej3_Conversor(input);
+        ejercicio.getNumero(input1);
     }
     
-    public static void NOMBRE() {
+    public static void entrada() {
+        //Pedir número
+        input = sc.nextInt();
         
+        //Pedir parámetro
+        boolean salir = false;
+        while (!salir) {
+            System.out.println("Pulsa B para Binario");
+            System.out.println("Pulsa H para Hexadecimal");
+            System.out.println("Pulsa O para Octal");
+            input1 = sc.nextLine();
+            
+            if (input1 == "B" | input1 == "H" | input1 == "O") {
+                salir = true;
+            } else {
+                System.out.println("El valor introducido es incorrecto (B,H,O)");
+            }
+        }
     }
 }
