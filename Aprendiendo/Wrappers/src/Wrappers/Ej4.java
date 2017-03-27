@@ -23,4 +23,8 @@ public class Ej4 {
         System.out.println("Introduce un número entero");
         input = sc.nextInt();
     }
+    
+    public static void menu() {
+        
+    }
 }
