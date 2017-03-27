@@ -11,12 +11,16 @@ package Wrappers;
  */
 import java.util.Scanner;
 public class Ej4 {
+    private static final Scanner sc = new Scanner(System.in);
+    private static int input;
     
     public static void main(String[] args) {
+        entrada();
         
     }
     
-    public static void NOMBRE() {
-        
+    public static void entrada() {
+        System.out.println("Introduce un número entero");
+        input = sc.nextInt();
     }
 }
