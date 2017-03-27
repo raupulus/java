@@ -12,20 +12,25 @@ package Wrappers;
 import java.util.Scanner;
 public class Ej4 {
     private static final Scanner sc = new Scanner(System.in);
-    private static int input;
+    private static int inputDecimal,inputBinario;
     
     public static void main(String[] args) {
-        entrada();
         menu();
     }
     
-    public static void entrada() {
-        System.out.println("Introduce un número entero");
-        input = sc.nextInt();
+    public static void entradaDecimal() {
+        System.out.println("Introduce un número entero decimal");
+        inputDecimal = sc.nextInt();
+    }
+    
+    public static void entradaBinario() {
+        System.out.println("Introduce un número en binario");
+        inputBinario = sc.nextInt();
     }
     
     public static void menu() {
         boolean salir = false;
+        int opcion;
         while (!salir) {
             System.out.println("0 - Salir");
             System.out.println("1 - Entrada decimal");
@@ -33,7 +38,22 @@ public class Ej4 {
             System.out.println("3 - Pasar decimal a Binario con método Integer");
             System.out.println("4 - Pasar decimal a Binario con método usando array para almacenar los restos y el último cociente");
             System.out.println("5 - Pasar de binario a decimal");
-            System.out.println("6 - Pasar de");
+            System.out.println("6 - Pasar de binario a hexadecimal");
+            System.out.println("7 - Pasar de binario a octal");
+            
+            opcion = sc.nextInt();
+            
+            switch (opcion) {
+                case 0:
+                    salir = true;
+                    break;
+                case 1:
+                    entradaDecimal();
+                    break;
+                case 2:
+                    entradaBinario();
+                    break;
+            }
         }
     }
 }
