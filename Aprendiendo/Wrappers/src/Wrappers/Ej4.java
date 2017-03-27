@@ -16,7 +16,7 @@ public class Ej4 {
     
     public static void main(String[] args) {
         entrada();
-        
+        menu();
     }
     
     public static void entrada() {
@@ -25,6 +25,15 @@ public class Ej4 {
     }
     
     public static void menu() {
-        
+        boolean salir = false;
+        while (!salir) {
+            System.out.println("0 - Salir");
+            System.out.println("1 - Entrada decimal");
+            System.out.println("2 - Entrada Binaria");
+            System.out.println("3 - Pasar decimal a Binario con método Integer");
+            System.out.println("4 - Pasar decimal a Binario con método usando array para almacenar los restos y el último cociente");
+            System.out.println("5 - Pasar de binario a decimal");
+            System.out.println("6 - Pasar de");
+        }
     }
 }
