@@ -34,4 +34,12 @@ public class Ej7 {
         }
         
     }
+    
+    public static void suma() {
+        
+    }
+    
+    public static void media() {
+        
+    }
 }
