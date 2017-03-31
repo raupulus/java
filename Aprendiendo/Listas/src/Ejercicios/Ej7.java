@@ -18,7 +18,13 @@ public class Ej7 {
         
     }
     
-    public static void NOMBRE() {
-        
+    public static void entrada() {
+        //Método que lee los números introducido hasta que se introduzca 0
+        boolean terminar = false;
+        int tmp = 0;
+        while (!terminar) {
+            m[tmp] = sc.nextInt();
+            tmp++;
+        }
     }
 }
