@@ -10,13 +10,16 @@ import java.util.ArrayList;
 
 public class Ej7 {
     private static final Scanner sc = new Scanner(System.in);
-    private static int input;
-    //input = sc.nextInt();
+    private static int suma,media;
     private static ArrayList<Integer> m = new ArrayList();
     
     public static void main(String[] args) {
         entrada();
+        suma();
+        media();
         System.out.println(m.toString());
+        System.out.println("\n\nLa suma es --> " + suma);
+        System.out.println("\n\nLa media es --> " + media);
     }
     
     public static void entrada() {
