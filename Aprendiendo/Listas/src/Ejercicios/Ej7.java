@@ -24,6 +24,10 @@ public class Ej7 {
         int tmp = 0;
         while (!terminar) {
             m[tmp] = sc.nextInt();
+            if(m[tmp] == 0){
+                terminar = true;
+                break;
+            }
             tmp++;
         }
     }
