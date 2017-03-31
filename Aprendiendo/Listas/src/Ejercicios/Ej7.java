@@ -12,23 +12,26 @@ public class Ej7 {
     private static final Scanner sc = new Scanner(System.in);
     private static int input;
     //input = sc.nextInt();
-    private static ArrayList<Integer> m;
+    private static ArrayList<Integer> m = new ArrayList();
     
     public static void main(String[] args) {
-        
+        entrada();
+        System.out.println(m.toString());
     }
     
     public static void entrada() {
         //Método que lee los números introducido hasta que se introduzca 0
         boolean terminar = false;
-        int tmp = 0;
+        int tmp;
         while (!terminar) {
-            m[tmp] = sc.nextInt();
-            if(m[tmp] == 0){
+            System.out.println("\nIntroduce otro valor:");
+            tmp = sc.nextInt();
+            if(tmp == 0){ //Si el valor introducido es 0 termina
                 terminar = true;
                 break;
             }
-            tmp++;
+            m.add(tmp);
         }
+        
     }
 }
