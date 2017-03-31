@@ -12,22 +12,22 @@ package Wrappers;
 import java.util.Scanner;
 public class Ej4 {
     private static final Scanner sc = new Scanner(System.in);
-    private static int inputDecimal,inputBinario;
+    private static int inputDecimal,tmp,inputBinario;
     
     public static void main(String[] args) {
         menu();
     }
-    
+
     public static void entradaDecimal() {
         System.out.println("Introduce un número entero decimal");
         inputDecimal = sc.nextInt();
     }
-    
+
     public static void entradaBinario() {
         System.out.println("Introduce un número en binario");
         inputBinario = sc.nextInt();
     }
-    
+
     public static void menu() {
         boolean salir = false;
         int opcion;
@@ -54,10 +54,10 @@ public class Ej4 {
                     entradaBinario();
                     break;
                 case 3:
-                    
+                    System.out.println("\nEl valor decimal en binario es --> " + Integer.toBinaryString(inputDecimal) + "\n");
                     break;
                 case 4:
-                    
+                    decimalAbinario();
                     break;
                 case 5:
                     
@@ -70,5 +70,35 @@ public class Ej4 {
                     break;
             }
         }
+    }
+    
+    public static void decimalAbinario() {
+        int[] cocientes = new int[100];
+        int[] restos = new int[100];
+        int x = 0; //Contador
+        
+        while (inputDecimal >= 2) {
+            restos[x] = inputDecimal%2;
+            inputDecimal /= 2;
+            x++;
+        }
+        if (inputDecimal == 1) {
+            restos[x] = inputDecimal;
+        }
+        
+        //Comprueba donde comienza el valor para no pintar 0 a la izquierda
+        for (int i = restos.length - 1; 0 <=i ; i--) {
+            if (restos[i] == 1) {
+                x = i + 1;
+                break;
+            }
+        }
+        
+        //Bucle que muestra valores desde el final
+        System.out.println("\nEl valor decimal en binario es:");
+        for (int i = x - 1; 0 <=i ; i--) {
+            System.out.print(restos[i]);
+        }
+        System.out.println("\n\n");
     }
 }
