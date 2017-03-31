@@ -6,11 +6,13 @@ package Ejercicios;
  * https://github.com/fryntiz
  */
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Ej7 {
     private static final Scanner sc = new Scanner(System.in);
     private static int input;
     //input = sc.nextInt();
+    private static ArrayList<Integer> m;
     
     public static void main(String[] args) {
         
