@@ -9,6 +9,11 @@ package Wrappers;
  * en binario y lo transforme a decimal, a hexadecimal y a octal.
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
+
+//Ejercicio sin terminar --> Falta:
+// -Comprobar entrada que sea binaria
+// --Pasar a decimal, a hexadecimal y a octal la entrada binaria
+
 import java.util.Scanner;
 public class Ej4 {
     private static final Scanner sc = new Scanner(System.in);
@@ -60,7 +65,7 @@ public class Ej4 {
                     decimalAbinario();
                     break;
                 case 5:
-                    
+                    System.out.println();
                     break;
                 case 6:
                     
