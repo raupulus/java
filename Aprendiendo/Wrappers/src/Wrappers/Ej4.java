@@ -78,10 +78,10 @@ public class Ej4 {
                     System.out.println();
                     break;
                 case 6:
-                    
+                    binarioAhexadecimal();
                     break;
                 case 7:
-                    
+                    binarioAoctal();
                     break;
             }
         }
@@ -121,5 +121,17 @@ public class Ej4 {
         String tmp1 = Integer.toString(inputBinario); //Pasa de Integer a cadena la entrada
         tmp = Integer.parseInt(tmp1, 2); //Convierte a base 10 Integer la cadena tmp1
         System.out.println(tmp);
+    }
+    
+    public static void binarioAhexadecimal() {
+        String tmp1 = Integer.toString(inputBinario); //Pasa de Integer a cadena la entrada
+        tmp = Integer.parseInt(tmp1, 2); //Convierte a base 10 Integer la cadena tmp1
+        System.out.println(Integer.toHexString(tmp));
+    }
+    
+    public static void binarioAoctal() {
+        String tmp1 = Integer.toString(inputBinario); //Pasa de Integer a cadena la entrada
+        tmp = Integer.parseInt(tmp1, 2); //Convierte a base 10 Integer la cadena tmp1
+        System.out.println(Integer.toOctalString(tmp));
     }
 }
