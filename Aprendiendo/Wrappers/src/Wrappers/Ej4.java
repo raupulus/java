@@ -11,7 +11,6 @@ package Wrappers;
  */
 
 //Ejercicio sin terminar --> Falta:
-// -Comprobar entrada que sea binaria
 // --Pasar a decimal, a hexadecimal y a octal la entrada binaria
 
 import java.util.Scanner;
@@ -37,6 +36,7 @@ public class Ej4 {
                 tmp /= 10; //Asigna a tmp el valor descontando el módulo
             } else {
                 System.out.println("\n\nError !!!!! --> No es correcto el valor introducido, no es un número binario\n");
+                inputBinario = 0; //Reseteo el valor de inputBinario a 0
                 break;
             }
         }
