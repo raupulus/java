@@ -11,8 +11,8 @@ public class Ej5 {
         String varString = "33"; //Declarado string
         
         //De String a Float
-        
-        
+        System.out.println("\n\nConvertir de String a Float");
+        System.out.println("Mediante parseFloat --> " + Float.parseFloat(varString));
         
         //De Float a String
         System.out.println("\n\nConvertir de Float a String:");
