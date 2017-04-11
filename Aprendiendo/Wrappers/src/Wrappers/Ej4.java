@@ -10,9 +10,6 @@ package Wrappers;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 
-//Ejercicio sin terminar --> Falta:
-// --Pasar a decimal, a hexadecimal y a octal la entrada binaria
-
 import java.util.Scanner;
 public class Ej4 {
     private static final Scanner sc = new Scanner(System.in);
