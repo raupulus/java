@@ -118,6 +118,8 @@ public class Ej4 {
     }
     
     public static void binarioAdecimal() {
-        
+        String tmp1 = Integer.toString(inputBinario); //Pasa de Integer a cadena la entrada
+        tmp = Integer.parseInt(tmp1, 2); //Convierte a base 10 Integer la cadena tmp1
+        System.out.println(tmp);
     }
 }
