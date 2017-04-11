@@ -31,6 +31,15 @@ public class Ej4 {
     public static void entradaBinario() {
         System.out.println("Introduce un número en binario");
         inputBinario = sc.nextInt();
+        tmp = inputBinario;
+        while (tmp > 1) { //Bucle que se ejecuta mientras la entrada sea más de 1
+            if ((tmp%10 == 0) | (tmp%10 == 1)) { //Comprueba cada dígito para asegurar que sea "0" o "1"
+                tmp /= 10; //Asigna a tmp el valor descontando el módulo
+            } else {
+                System.out.println("\n\nError !!!!! --> No es correcto el valor introducido, no es un número binario\n");
+                break;
+            }
+        }
     }
 
     public static void menu() {
@@ -65,6 +74,7 @@ public class Ej4 {
                     decimalAbinario();
                     break;
                 case 5:
+                    binarioAdecimal();
                     System.out.println();
                     break;
                 case 6:
@@ -105,5 +115,9 @@ public class Ej4 {
             System.out.print(restos[i]);
         }
         System.out.println("\n\n");
+    }
+    
+    public static void binarioAdecimal() {
+        
     }
 }
