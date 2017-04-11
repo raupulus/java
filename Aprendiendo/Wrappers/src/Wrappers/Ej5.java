@@ -6,4 +6,9 @@ package Wrappers;
  */
 public class Ej5 {
     
+    public static void main(String[] args) {
+        float varFloat= 20; //Declarado variable float primitivo
+        String varString = ""; //Declarado string
+    }
+    
 }
