@@ -8,7 +8,16 @@ public class Ej5 {
     
     public static void main(String[] args) {
         float varFloat= 20; //Declarado variable float primitivo
-        String varString = ""; //Declarado string
+        String varString = "33"; //Declarado string
+        
+        //De String a Float
+        
+        
+        
+        //De Float a String
+        System.out.println("\n\nConvertir de Float a String:");
+        System.out.println("Mediante valueOf --> " + String.valueOf(varFloat));
+        System.out.println("Mediante toString --> " + Float.toString(varFloat));
     }
     
 }
