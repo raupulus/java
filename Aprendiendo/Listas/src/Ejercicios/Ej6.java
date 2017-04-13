@@ -1,10 +1,10 @@
 package Ejercicios;
 /**
- * Sin usar las clases proporcionadas por JCF, crea manualmente una lista
- * simplemente enlzada (ListaSE) de números enteros que permita las siguientes
- * operaciones:
+ * Sin usar las clases proporcionadas por JCF (Java Collections Framework, 
+ * crea manualmente una lista simplemente enlzada (ListaSE) de números enteros
+ * que permita las siguientes operaciones:
  * 
- * -voidagregar(nuevo) Añade un nuevo nodo al final de la lista. Este método
+ * -void agregar(nuevo) Añade un nuevo nodo al final de la lista. Este método
  * estará sobrecargado para recibir un número entero o bien un nodo.
  * 
  * -void insertar(nuevo) Insertar un nodo al principio de lista
@@ -33,6 +33,14 @@ package Ejercicios;
 public class Ej6 {
     
     public static void main(String[] args) {
+        
+    }
+    
+    public void agregar(int nuevo) {
+        
+    }
+    
+    public void agregar(???? nodo) {
         
     }
 }
