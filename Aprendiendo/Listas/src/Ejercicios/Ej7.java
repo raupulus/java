@@ -6,7 +6,7 @@ package Ejercicios;
  * https://github.com/fryntiz
  */
 import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.ArrayList; //Importa librería de arrayList
 
 public class Ej7 {
     private static final Scanner sc = new Scanner(System.in);
@@ -26,6 +26,7 @@ public class Ej7 {
     
     public static void entrada() {
         //Método que lee los números introducido hasta que se introduzca 0
+        System.out.println("Introduce los valores (0 termina)");
         boolean terminar = false;
         int tmp;
         while (!terminar) {
