@@ -3,6 +3,12 @@ package Ejercicios;
  * Crear un programa que permita gestionar una agenda utilizando iteradores y
  * las siguientes clases:
  * 
+ * Persona: Tiene como atributos un nombre y un dni. un constructor recibe ambos
+ * datos. Además tiene métodos get para recuperar cada uno de ellos.
+ * 
+ * Agenda: Contiene una lista de personas creadas con un ArrayList y los
+ * siguientes métodos:
+ * 
  * -añadePersona --> Recibe como argumento un objeto de la clase "Persona" y lo
  * añade a la lista, comprobando previamente que no exista otra persona con ese
  * dni
