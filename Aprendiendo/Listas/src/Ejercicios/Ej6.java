@@ -40,7 +40,7 @@ public class Ej6 {
         
     }
     
-    public void agregar(???? nodo) {
+    //public void agregar(???? nodo) {
         
-    }
+    //}
 }
