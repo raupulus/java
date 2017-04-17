@@ -15,8 +15,28 @@ package Ejercicios;
  * lista, si existe visualiza el nombre y devuelve true. Si no existe devuelve false
  * 
  * -muestraListaPersona --> Visualiza todos los elementos de la lista
+ * 
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class EJ8 {
     
+    public static void main(String[] args) {
+        
+    }
+    
+    public static void añadirPersona() {
+        
+    }
+    
+    public static void borrarPersona() {
+        
+    }
+    
+    public static void buscarPersona() {
+        
+    }
+    
+    public static void muestraListaPersona() {
+        
+    }
 }
