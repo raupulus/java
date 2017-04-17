@@ -16,8 +16,10 @@ public class Atleta {
     private String nombre;
     private int[] tiempos = new int[3];
     
-    public static void Atleta() { //Constructor de la clase
-        
+    public void Atleta(int inputDorsal, String inputNombre, int[] inputTiempos) { //Constructor de la clase
+        dorsal = inputDorsal;
+        nombre = inputNombre;
+        tiempos = inputTiempos; //COMPROBAR QUE FUNCIONA ESTA PARTE
     }
     
     public static void crearAtleta() {
