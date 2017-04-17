@@ -16,7 +16,23 @@ public class Atleta {
     private String nombre;
     private int[] tiempos = new int[3];
     
-    public static void Atleta() {
+    public static void Atleta() { //Constructor de la clase
+        
+    }
+    
+    public static void crearAtleta() {
+        
+    }
+    
+    public static void getDorsal() {
+        
+    }
+    
+    public static void getNombre() {
+        
+    }
+    
+    public int[] getTiempos() {
         
     }
 }
