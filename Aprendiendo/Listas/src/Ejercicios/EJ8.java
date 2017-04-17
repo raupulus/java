@@ -31,7 +31,12 @@ public class EJ8 {
     }
     
     public static void menu() {
-        
+        System.out.println("********** AGENDA **********");
+        System.out.println("\n");
+        System.out.println("1 - Añadir Persona");
+        System.out.println("2 - Borrar Persona");
+        System.out.println("3 - Buscar Persona");
+        System.out.println("4 - Mostrar toda la agenda");
     }
     
     public static void añadirPersona() {
