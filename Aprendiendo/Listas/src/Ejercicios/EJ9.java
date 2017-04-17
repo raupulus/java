@@ -20,6 +20,7 @@ package Ejercicios;
  * 4 - Listado de los atletas seleccionados ordenado por tiempo y prueba
  * 5 - Listado de ganadores (Sumando todos los tiempos)
  * 6 - Buscar un Atleta (Por nombre o dorsal)
+ * 7 - Salir
  * 
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
