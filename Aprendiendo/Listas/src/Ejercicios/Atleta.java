@@ -12,5 +12,11 @@ package Ejercicios;
  * https://github.com/fryntiz
  */
 public class Atleta {
+    private int dorsal;
+    private String nombre;
+    private int[] tiempos = new int[3];
     
+    public static void Atleta() {
+        
+    }
 }
