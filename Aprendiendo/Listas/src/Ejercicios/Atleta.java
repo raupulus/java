@@ -24,15 +24,15 @@ public class Atleta {
         
     }
     
-    public static void getDorsal() {
-        
+    public int getDorsal() {
+        return dorsal;
     }
     
-    public static void getNombre() {
-        
+    public String getNombre() {
+        return nombre;
     }
     
     public int[] getTiempos() {
-        
+        return tiempos;
     }
 }
