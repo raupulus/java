@@ -27,5 +27,16 @@ package Ejercicios;
  */
 
 public class EJ9 {
+    private int dorsal;
+    private String nombre;
+    private int[] tiempos = new int[3];
+    public static void main(String[] args) {
+        menu();
+    }
     
+    public static void menu(){
+        
+    }
 }
+
+
