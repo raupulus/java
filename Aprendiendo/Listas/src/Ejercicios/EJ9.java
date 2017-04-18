@@ -34,7 +34,7 @@ public class EJ9 {
         menu();
     }
     
-    public static void menu(){
+    public static void menu() { //Menú que muestra las posibles opciones
         boolean salir = false;
         while (!salir) {
             System.out.println("");
@@ -61,7 +61,27 @@ public class EJ9 {
         }
     }
     
-
+    public static void opcion(int elegida) { //Método que resuelve la opción escogida
+        switch (elegida) {
+            case 1:
+                
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+            case 5:
+                
+                break;
+            case 6:
+                
+        }
+    }
     
     public static void añadirAtleta() {
         
