@@ -53,7 +53,8 @@ public class EJ9 {
             input = sc.nextInt();
             if ((input >= 1) && (input <= 6)) {
                 opcion(input);
-            } else if (input == 7) {
+            } else if (input == 7) { //Rompe el bucle si el valor introducido es 7
+                salir=true;
                 break;
             } else {
                 System.out.println("Entrada errónea, vuelve a elegir una opción");
