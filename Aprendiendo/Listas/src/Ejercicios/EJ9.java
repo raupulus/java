@@ -25,9 +25,12 @@ package Ejercicios;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
-
+import java.util.Scanner;
 public class EJ9 {
-   
+    private static final Scanner sc = new Scanner(System.in);
+    private static int input;
+    //input = sc.nextInt();
+    
     public static void main(String[] args) {
         menu();
     }
