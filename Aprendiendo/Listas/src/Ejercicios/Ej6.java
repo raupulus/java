@@ -32,6 +32,8 @@ package Ejercicios;
  */
 public class Ej6 {
     
+    //EJERCICIO NO TERMINADO - NO ENTIENDO EL OBJETIVO
+    
     public static void main(String[] args) {
         
     }
