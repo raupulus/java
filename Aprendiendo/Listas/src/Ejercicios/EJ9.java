@@ -46,7 +46,10 @@ public class EJ9 {
         System.out.println("6 - Buscar un Atleta (Por nombre o dorsal)");
         System.out.println("7 - Salir");
         
-        
+        boolean salir = false;
+        while (!salir) {
+            
+        }
     }
     
     public static void añadirAtleta() {
