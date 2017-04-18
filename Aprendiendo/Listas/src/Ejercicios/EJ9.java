@@ -64,28 +64,56 @@ public class EJ9 {
     public static void opcion(int elegida) { //Método que resuelve la opción escogida
         switch (elegida) {
             case 1:
-                
+                añadirAtleta();
                 break;
             case 2:
-                
+                mostrarAtletas();
                 break;
             case 3:
-                
+                borrarLentos();
                 break;
             case 4:
-                
+                listarSeleccionados();
                 break;
             case 5:
-                
+                listarGanadores();
                 break;
             case 6:
-                
+                buscarAtleta();
+                break;
         }
     }
     
+    //Añadir un nuevo Atleta
     public static void añadirAtleta() {
         
     }
+    
+    //Mostrar todos los Atletas existentes
+    public static void mostrarAtletas() {
+        
+    }
+    
+    //Borrar todos los atletas cuyo tiempo sea inferior al tiempo medio de todos
+    public static void borrarLentos() {
+        
+    }
+    
+    public static void listarSeleccionados() {
+        //¿Cuales son los seleccionados? - Criterios para que lo sean
+    }
+    
+    //Listar Ganadores sumando todos sus tiempos (menor tiempo es mejor)
+    public static void listarGanadores() {
+        
+    }
+    
+    //Buscar un Atleta por nombre o dorsal
+    public static void buscarAtleta() {
+        //Preguntar si se introduce nombre o dorsal
+        
+        //Buscar por nombre:
+        
+        //Buscar por dorsal
+    }
 }
-
-
