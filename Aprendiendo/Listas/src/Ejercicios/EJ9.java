@@ -29,31 +29,39 @@ import java.util.Scanner;
 public class EJ9 {
     private static final Scanner sc = new Scanner(System.in);
     private static int input;
-    //input = sc.nextInt();
     
     public static void main(String[] args) {
         menu();
     }
     
     public static void menu(){
-        System.out.println("");
-        System.out.println("\t*******************************");
-        System.out.println("\t******** C A R R E R A ********");
-        System.out.println("\t*******************************");
-        System.out.println("");
-        System.out.println("1 - Añadir un atleta");
-        System.out.println("2 - Listado de atletas con el tiempo total empleado en las 3 pruebas");
-        System.out.println("3 - Borrar todos los atletas cuyo tiempo sea inferior al tiempo medio de todos");
-        System.out.println("4 - Listado de los atletas seleccionados ordenado por tiempo y prueba");
-        System.out.println("5 - Listado de ganadores (Sumando todos los tiempos)");
-        System.out.println("6 - Buscar un Atleta (Por nombre o dorsal)");
-        System.out.println("7 - Salir");
-        
         boolean salir = false;
         while (!salir) {
-            
+            System.out.println("");
+            System.out.println("\t*******************************");
+            System.out.println("\t******** C A R R E R A ********");
+            System.out.println("\t*******************************");
+            System.out.println("");
+            System.out.println("1 - Añadir un atleta");
+            System.out.println("2 - Listado de atletas con el tiempo total empleado en las 3 pruebas");
+            System.out.println("3 - Borrar todos los atletas cuyo tiempo sea inferior al tiempo medio de todos");
+            System.out.println("4 - Listado de los atletas seleccionados ordenado por tiempo y prueba");
+            System.out.println("5 - Listado de ganadores (Sumando todos los tiempos)");
+            System.out.println("6 - Buscar un Atleta (Por nombre o dorsal)");
+            System.out.println("7 - Salir");
+        
+            input = sc.nextInt();
+            if ((input >= 1) && (input <= 6)) {
+                opcion(input);
+            } else if (input == 7) {
+                break;
+            } else {
+                System.out.println("Entrada errónea, vuelve a elegir una opción");
+            }
         }
     }
+    
+
     
     public static void añadirAtleta() {
         
