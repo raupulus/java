@@ -26,13 +26,18 @@ package Ejercicios;
  * https://github.com/fryntiz
  */
 import java.util.Scanner;
+import java.util.ArrayList;
 public class EJ9 {
     private static final Scanner sc = new Scanner(System.in);
     private static int input;
     
+    //ArrayList de objetos de la clase Atleta
+    private ArrayList<Atleta> a1 = new ArrayList<Atleta>();
+    
     public static void main(String[] args) {
         menu();
     }
+    
     
     public static void menu() { //Menú que muestra las posibles opciones
         boolean salir = false;
