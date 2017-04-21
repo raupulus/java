@@ -7,5 +7,7 @@ package Calendarios_y_fechas;
  * https://github.com/fryntiz
  */
 public class EJ19 {
-    
+    public static void main(String[] args) {
+        
+    } 
 }
