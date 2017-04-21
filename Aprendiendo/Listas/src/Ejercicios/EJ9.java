@@ -92,7 +92,18 @@ public class EJ9 {
     
     //Añadir un nuevo Atleta
     public static void añadirAtleta() {
+        System.out.println("Introduce el número del dorsal");
+        int dorsal = sc.nextInt();
         
+        System.out.println("Introduce el nombre del Atleta");
+        String nombre = sc.next();
+        
+        System.out.println("Introduce cada uno de los 3 tiempos y pulsa \"ENTER\"");
+        int[] tiempos = new int[3];
+        tiempos[0] = sc.nextInt();
+        tiempos[1] = sc.nextInt();
+        tiempos[2] = sc.nextInt();
+
     }
     
     //Mostrar todos los Atletas existentes
