@@ -1,7 +1,4 @@
 package Calendarios_y_fechas;
-
-import java.util.Calendar;
-
 /**
  * Practica con GregorianCalendary y SimpleDateFormat. Copia y pega un método main
  * las siguientes sentencias.
