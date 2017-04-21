@@ -10,6 +10,7 @@ package Calendarios_y_fechas;
 
 //En el ejercicio pone copiar dentro de main las sentencias pero no funciona
 //Tampoco hay documento explicando como funciona
+//Dejo este ejercicio tal como se supone que es por falta de datos
 public class EJ19 {
     public static void main(String[] args) {
         Calendar c1 = GregorianCalendar.getInstance();
