@@ -19,9 +19,9 @@ public class Atleta {
     public Atleta(int inputDorsal, String inputNombre, int[] inputTiempos) { //Constructor de la clase
         dorsal = inputDorsal;
         nombre = inputNombre;
-        tiempos = inputTiempos; //COMPROBAR QUE FUNCIONA ESTA PARTE
-        tiempoTotal = tiempos[0] + tiempos[1] + tiempos[2];
-        media = tiempoTotal/tiempos.length;
+        tiempos = inputTiempos;
+        tiempoTotal = tiempos[0] + tiempos[1] + tiempos[2]; //Suma los tiempos
+        media = tiempoTotal/tiempos.length; //Saca la media
     }
     
     public int getDorsal() {
