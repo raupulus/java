@@ -30,8 +30,8 @@ public class Atleta {
         return nombre;
     }
     
-    public int[] getTiempos() {
-        return tiempos;
+    public int getTiempos(int x) {
+        return tiempos[x];
     }
     
     public String toString() {
