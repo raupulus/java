@@ -140,17 +140,17 @@ public class EJ9 {
     public static void listarGanadores() {
         int oro=0,plata=0,bronce=0; //Guarda la posición del podio por medalla
         for (int i = 0; i < a1.size(); i++) {
-            if (a1.get(i).getTiempoTotal() > a1.get(oro).getTiempoTotal()) {
+            if (a1.get(i).getTiempoTotal() < a1.get(oro).getTiempoTotal()) {
                 oro = i;
             } 
         }
         for (int i = 0; i < a1.size(); i++) {
-            if ((a1.get(i).getTiempoTotal() > a1.get(plata).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() < a1.get(oro).getTiempoTotal()) )) {
+            if ((a1.get(i).getTiempoTotal() < a1.get(plata).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() > a1.get(oro).getTiempoTotal()) )) {
                 plata = i;
             } 
         }
         for (int i = 0; i < a1.size(); i++) {
-            if ((a1.get(i).getTiempoTotal() > a1.get(bronce).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() < a1.get(plata).getTiempoTotal()) )) {
+            if ((a1.get(i).getTiempoTotal() < a1.get(bronce).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() > a1.get(plata).getTiempoTotal()) )) {
                 bronce = i;
             } 
         }
