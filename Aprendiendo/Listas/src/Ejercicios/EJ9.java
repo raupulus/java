@@ -121,7 +121,7 @@ public class EJ9 {
                 mediaTotal += a1.get(i).getTiempos(j);
             }
         }
-        
+
         System.out.println("La media total es: " + mediaTotal);
         
         //Comparar la media total con la de cada atleta y eliminar si es menor
