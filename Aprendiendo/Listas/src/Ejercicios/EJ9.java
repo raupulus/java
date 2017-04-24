@@ -56,7 +56,6 @@ public class EJ9 {
                 opcion(input); //Pasa opción elegida al método
             } else if (input == 7) { //Rompe el bucle si el valor introducido es 7
                 salir = true;
-                break;
             } else {
                 System.out.println("Entrada errónea, vuelve a elegir una opción");
             }
@@ -115,13 +114,13 @@ public class EJ9 {
     //Borrar todos los atletas cuyo tiempo sea inferior al tiempo medio de todos
     public static void borrarLentos() {
         //Sacar media total
-        int mediaTotal=0;
+        int mediaTotal = 0;
         for (int i = 0; i < a1.size(); i++) {
             mediaTotal += a1.get(i).getTiempoTotal();
         }
         mediaTotal /= a1.size(); //Divide el sumatorio entre cantidad de atletas
         System.out.println("La media entre todos los atletas es: " + mediaTotal);
-        
+
         //Comparar la media total con la de cada atleta y eliminar si es menor
         for (int i = 0; i < a1.size(); i++) {
             if (a1.get(i).getTiempoTotal() < mediaTotal) {
@@ -133,26 +132,26 @@ public class EJ9 {
 
     public static void listarSeleccionados() {
         //¿Cuales son los seleccionados? - Criterios para que lo sean
-        
+
     }
 
     //Listar Ganadores sumando todos sus tiempos (menor tiempo es mejor)
     public static void listarGanadores() {
-        int oro=0,plata=0,bronce=0; //Guarda la posición del podio por medalla
+        int oro = 0, plata = 0, bronce = 0; //Guarda la posición del podio por medalla
         for (int i = 0; i < a1.size(); i++) {
             if (a1.get(i).getTiempoTotal() < a1.get(oro).getTiempoTotal()) {
                 oro = i;
-            } 
+            }
         }
         for (int i = 0; i < a1.size(); i++) {
-            if ((a1.get(i).getTiempoTotal() < a1.get(plata).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() > a1.get(oro).getTiempoTotal()) )) {
+            if ((a1.get(i).getTiempoTotal() < a1.get(plata).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() > a1.get(oro).getTiempoTotal()))) {
                 plata = i;
-            } 
+            }
         }
         for (int i = 0; i < a1.size(); i++) {
-            if ((a1.get(i).getTiempoTotal() < a1.get(bronce).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() > a1.get(plata).getTiempoTotal()) )) {
+            if ((a1.get(i).getTiempoTotal() < a1.get(bronce).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() > a1.get(plata).getTiempoTotal()))) {
                 bronce = i;
-            } 
+            }
         }
         System.out.println("\nEl oro es para: " + a1.get(oro));
         System.out.println("La plata es para: " + a1.get(plata));
@@ -162,8 +161,20 @@ public class EJ9 {
     //Buscar un Atleta por nombre o dorsal
     public static void buscarAtleta() {
         //Preguntar si se introduce nombre o dorsal
+        System.out.println("\n1 - Buscar por Nombre");
+        System.out.println("2 - Buscar por dorsal");
+        String nombre;
+        int dorsal;
+        input = sc.nextInt();
 
-        //Buscar por nombre:
+        //Buscar por nombre
+        if (input == 1) {
+            System.out.println("Introduce el nombre a buscar a continuación:");
+            nombre = sc.next();
+            for (int i = 0; i < a1.size(); i++) {
+                
+            }
+        }
         //Buscar por dorsal
     }
 }
