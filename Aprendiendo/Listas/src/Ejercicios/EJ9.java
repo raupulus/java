@@ -34,12 +34,12 @@ public class EJ9 {
     //ArrayList de objetos de la clase Atleta
     private ArrayList<Atleta> a1 = new ArrayList<Atleta>();
     
-    public static void main(String[] args) {
+    public void main(String[] args) {
         menu();
     }
     
     
-    public static void menu() { //Menú que muestra las posibles opciones
+    public void menu() { //Menú que muestra las posibles opciones
         boolean salir = false;
         while (!salir) {
             System.out.println("");
@@ -67,7 +67,7 @@ public class EJ9 {
         }
     }
     
-    public static void opcion(int elegida) { //Método que resuelve la opción escogida
+    public void opcion(int elegida) { //Método que resuelve la opción escogida
         switch (elegida) {
             case 1:
                 añadirAtleta();
@@ -91,7 +91,7 @@ public class EJ9 {
     }
     
     //Añadir un nuevo Atleta
-    public static void añadirAtleta() {
+    public void añadirAtleta() {
         System.out.println("Introduce el número del dorsal");
         int dorsal = sc.nextInt();
         
@@ -103,6 +103,10 @@ public class EJ9 {
         tiempos[0] = sc.nextInt();
         tiempos[1] = sc.nextInt();
         tiempos[2] = sc.nextInt();
+        
+        Atleta nuevoAtleta = new Atleta (dorsal, nombre, tiempos);
+        //Crear objeto
+        a1.add(nuevoAtleta);
 
     }
     
