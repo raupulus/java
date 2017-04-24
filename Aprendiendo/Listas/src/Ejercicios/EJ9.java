@@ -117,14 +117,18 @@ public class EJ9 {
         //Sacar media total
         int mediaTotal=0;
         for (int i = 0; i < a1.size(); i++) {
-            for (int j = 0; j < 3; j++) {
-                mediaTotal += a1.get(i).getTiempos(j);
-            }
+            mediaTotal += a1.get(i).getTiempoTotal();
         }
-
-        System.out.println("La media total es: " + mediaTotal);
+        mediaTotal /= a1.size(); //Divide el sumatorio entre cantidad de atletas
+        System.out.println("La media entre todos los atletas es: " + mediaTotal);
         
         //Comparar la media total con la de cada atleta y eliminar si es menor
+        for (int i = 0; i < a1.size(); i++) {
+            if (a1.get(i).getTiempoTotal() < mediaTotal) {
+                System.out.println("El Atleta " + a1.get(i).getNombre() + " eliminado por lento (" + a1.get(i).getTiempoTotal() + ")");
+                a1.remove(i);
+            }
+        }
     }
 
     public static void listarSeleccionados() {
