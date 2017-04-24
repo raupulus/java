@@ -133,11 +133,30 @@ public class EJ9 {
 
     public static void listarSeleccionados() {
         //¿Cuales son los seleccionados? - Criterios para que lo sean
+        
     }
 
     //Listar Ganadores sumando todos sus tiempos (menor tiempo es mejor)
     public static void listarGanadores() {
-
+        int oro=0,plata=0,bronce=0; //Guarda la posición del podio por medalla
+        for (int i = 0; i < a1.size(); i++) {
+            if (a1.get(i).getTiempoTotal() > a1.get(oro).getTiempoTotal()) {
+                oro = i;
+            } 
+        }
+        for (int i = 0; i < a1.size(); i++) {
+            if ((a1.get(i).getTiempoTotal() > a1.get(plata).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() < a1.get(oro).getTiempoTotal()) )) {
+                plata = i;
+            } 
+        }
+        for (int i = 0; i < a1.size(); i++) {
+            if ((a1.get(i).getTiempoTotal() > a1.get(bronce).getTiempoTotal()) && ((a1.get(i).getTiempoTotal() < a1.get(plata).getTiempoTotal()) )) {
+                bronce = i;
+            } 
+        }
+        System.out.println("\nEl oro es para: " + a1.get(oro));
+        System.out.println("La plata es para: " + a1.get(plata));
+        System.out.println("El bronce es para: " + a1.get(bronce));
     }
 
     //Buscar un Atleta por nombre o dorsal
