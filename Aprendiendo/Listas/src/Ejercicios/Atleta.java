@@ -33,4 +33,9 @@ public class Atleta {
     public int[] getTiempos() {
         return tiempos;
     }
+    
+    public String toString() {
+        
+        return "Dorsal " + getDorsal() + "nombre: " + getNombre() + " tiempos() " + tiempos[1] + ", " + tiempos[2] + ", " + tiempos[3];
+    }
 }
