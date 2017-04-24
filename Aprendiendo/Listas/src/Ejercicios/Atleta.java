@@ -12,7 +12,7 @@ package Ejercicios;
  * https://github.com/fryntiz
  */
 public class Atleta {
-    private int dorsal;
+    private int dorsal,media,tiempoTotal;
     private String nombre;
     private int[] tiempos = new int[3];
     
@@ -20,6 +20,8 @@ public class Atleta {
         dorsal = inputDorsal;
         nombre = inputNombre;
         tiempos = inputTiempos; //COMPROBAR QUE FUNCIONA ESTA PARTE
+        tiempoTotal = tiempos[0] + tiempos[1] + tiempos[2];
+        media = tiempoTotal/tiempos.length;
     }
     
     public int getDorsal() {
@@ -32,6 +34,14 @@ public class Atleta {
     
     public int getTiempos(int x) {
         return tiempos[x];
+    }
+    
+    public int getTiempoTotal() {
+        return tiempoTotal;
+    }
+    
+    public int getMedia() {
+        return media;
     }
     
     public String toString() {
