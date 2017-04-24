@@ -45,6 +45,6 @@ public class Atleta {
     }
     
     public String toString() {
-        return "Dorsal:\t" + getDorsal() + "\t\tnombre:\t" + getNombre() + "\t\ttiempos:\t" + tiempos[0] + ", " + tiempos[1] + ", " + tiempos[2];
+        return "Dorsal:\t" + getDorsal() + "\t\tnombre:\t" + getNombre() + "\t\ttiempo:\t" + tiempoTotal;
     }
 }
