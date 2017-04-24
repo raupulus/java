@@ -183,6 +183,22 @@ public class EJ9 {
         }
         
         //Buscar por dorsal
-        
+        if (input == 2) {
+            System.out.println("Introduce el número a buscar a continuación:");
+            dorsal = sc.nextInt();
+            for (int i = 0; i < a1.size(); i++) {
+                if (a1.get(i).getDorsal() == dorsal) {
+                    System.out.println(a1.get(i));
+                    coincide = true;
+                } else if ((i == a1.size()-1) && (coincide == false)) {
+                    System.out.println("Ninguna coincidencia encontrada");
+                }
+            }
+        }
     }
 }
+
+
+// Lista de fallos hasta el momento
+// Buscar por nombre falla (posiblemente método scanner) por dorsal va bien
+// 4 - Listado de los atletas seleccionados ordenado por tiempo y prueba
