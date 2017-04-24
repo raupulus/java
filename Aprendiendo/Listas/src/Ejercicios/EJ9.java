@@ -165,6 +165,7 @@ public class EJ9 {
         System.out.println("2 - Buscar por dorsal");
         String nombre;
         int dorsal;
+        boolean coincide = false;
         input = sc.nextInt();
 
         //Buscar por nombre
@@ -172,9 +173,16 @@ public class EJ9 {
             System.out.println("Introduce el nombre a buscar a continuación:");
             nombre = sc.next();
             for (int i = 0; i < a1.size(); i++) {
-                
+                if (a1.get(i).getNombre() == nombre) {
+                    System.out.println(a1.get(i));
+                    coincide = true;
+                } else if ((i == a1.size()-1) && (coincide == false)) {
+                    System.out.println("Ninguna coincidencia encontrada");
+                }
             }
         }
+        
         //Buscar por dorsal
+        
     }
 }
