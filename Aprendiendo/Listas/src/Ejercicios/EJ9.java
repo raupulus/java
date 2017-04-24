@@ -32,14 +32,14 @@ public class EJ9 {
     private static int input;
     
     //ArrayList de objetos de la clase Atleta
-    private ArrayList<Atleta> a1 = new ArrayList<Atleta>();
+    private static ArrayList<Atleta> a1 = new ArrayList<Atleta>();
     
-    public void main(String[] args) {
+    public static void main(String[] args) {
         menu();
     }
     
     
-    public void menu() { //Menú que muestra las posibles opciones
+    public static void menu() { //Menú que muestra las posibles opciones
         boolean salir = false;
         while (!salir) {
             System.out.println("");
@@ -67,7 +67,7 @@ public class EJ9 {
         }
     }
     
-    public void opcion(int elegida) { //Método que resuelve la opción escogida
+    public static void opcion(int elegida) { //Método que resuelve la opción escogida
         switch (elegida) {
             case 1:
                 añadirAtleta();
@@ -91,7 +91,7 @@ public class EJ9 {
     }
     
     //Añadir un nuevo Atleta
-    public void añadirAtleta() {
+    public static void añadirAtleta() {
         System.out.println("Introduce el número del dorsal");
         int dorsal = sc.nextInt();
         
@@ -110,28 +110,28 @@ public class EJ9 {
     }
     
     //Mostrar todos los Atletas existentes
-    public void mostrarAtletas() {
+    public static void mostrarAtletas() {
         for (int i = 0; i < a1.size(); i++) {
-            a1.get(i);
+            System.out.println(a1.get(i));
         }
     }
     
     //Borrar todos los atletas cuyo tiempo sea inferior al tiempo medio de todos
-    public void borrarLentos() {
+    public static void borrarLentos() {
         
     }
     
-    public void listarSeleccionados() {
+    public static void listarSeleccionados() {
         //¿Cuales son los seleccionados? - Criterios para que lo sean
     }
     
     //Listar Ganadores sumando todos sus tiempos (menor tiempo es mejor)
-    public void listarGanadores() {
+    public static void listarGanadores() {
         
     }
     
     //Buscar un Atleta por nombre o dorsal
-    public void buscarAtleta() {
+    public static void buscarAtleta() {
         //Preguntar si se introduce nombre o dorsal
         
         //Buscar por nombre:
