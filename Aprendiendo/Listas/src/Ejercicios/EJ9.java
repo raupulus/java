@@ -56,8 +56,8 @@ public class EJ9 {
             System.out.println("7 - Salir");
         
             input = sc.nextInt();
-            if ((input >= 1) && (input <= 6)) {
-                opcion(input);
+            if ((input >= 1) && (input <= 6)) { //Comprueba entrada válida
+                opcion(input); //Pasa opción elegida al método
             } else if (input == 7) { //Rompe el bucle si el valor introducido es 7
                 salir=true;
                 break;
