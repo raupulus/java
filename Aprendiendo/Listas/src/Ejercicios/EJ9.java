@@ -107,30 +107,31 @@ public class EJ9 {
         Atleta nuevoAtleta = new Atleta (dorsal, nombre, tiempos);
         //Crear objeto
         a1.add(nuevoAtleta);
-
     }
     
     //Mostrar todos los Atletas existentes
-    public static void mostrarAtletas() {
-        
+    public void mostrarAtletas() {
+        for (int i = 0; i < a1.size(); i++) {
+            a1.get(i);
+        }
     }
     
     //Borrar todos los atletas cuyo tiempo sea inferior al tiempo medio de todos
-    public static void borrarLentos() {
+    public void borrarLentos() {
         
     }
     
-    public static void listarSeleccionados() {
+    public void listarSeleccionados() {
         //¿Cuales son los seleccionados? - Criterios para que lo sean
     }
     
     //Listar Ganadores sumando todos sus tiempos (menor tiempo es mejor)
-    public static void listarGanadores() {
+    public void listarGanadores() {
         
     }
     
     //Buscar un Atleta por nombre o dorsal
-    public static void buscarAtleta() {
+    public void buscarAtleta() {
         //Preguntar si se introduce nombre o dorsal
         
         //Buscar por nombre:
