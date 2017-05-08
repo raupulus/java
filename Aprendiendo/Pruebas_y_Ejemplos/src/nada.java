@@ -4,5 +4,8 @@
  * https://github.com/fryntiz
  */
 public class nada {
-    
+    public static void main(String[] args) {
+        System.out.println("AB".compareTo("BC"));
+        
+    }
 }
