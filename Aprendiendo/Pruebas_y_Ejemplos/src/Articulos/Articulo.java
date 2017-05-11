@@ -5,5 +5,6 @@ package Articulos;
  * https://github.com/fryntiz
  */
 public class Articulo {
+    protected String titulo;
     
 }
