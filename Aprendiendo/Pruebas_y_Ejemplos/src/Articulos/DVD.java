@@ -7,7 +7,10 @@ package Articulos;
  */
 public class DVD extends Articulo {
 
-    public DVD(String titulo, int duracion) {
+    private String director;
+
+    public DVD(String titulo, int duracion, String director) {
         super(titulo, duracion); //Pasa atributos al constructor
+        this.director = director;
     }
 }
