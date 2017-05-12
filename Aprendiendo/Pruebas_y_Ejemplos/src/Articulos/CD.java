@@ -19,4 +19,9 @@ public class CD extends Articulo {
         this.artista = artista;
         numeroPistas = pistas;
     }
+    
+    @Override
+    public void print() {
+        
+    }
 }
