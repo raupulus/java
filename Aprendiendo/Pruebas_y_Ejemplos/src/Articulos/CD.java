@@ -20,6 +20,7 @@ public class CD extends Articulo {
         numeroPistas = pistas;
     }
     
+    //Sobreescribir método "print()"
     @Override
     public void print() {
         System.out.println("\n");
