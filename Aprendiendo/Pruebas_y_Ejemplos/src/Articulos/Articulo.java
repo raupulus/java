@@ -22,4 +22,11 @@ public class Articulo {
         loTengo = false; //Por defecto "false"
         comentario = ""; //Por defecto sin comentario
     }
+    
+    public void print() {
+        System.out.println("Título --> " + titulo);
+        System.out.println("Duración --> " + duracion);
+        System.out.println("Lo tengo --> " + loTengo);
+        System.out.println("Comentario --> " + comentario);
+    }
 }
