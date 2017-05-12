@@ -16,6 +16,8 @@ public class DVD extends Articulo {
     
     @Override
     public void print() {
-        
+        System.out.println("\n");
+        System.out.println("Soy un DVD");
+        super.print();
     }
 }
