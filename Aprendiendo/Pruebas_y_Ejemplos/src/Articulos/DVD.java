@@ -14,6 +14,7 @@ public class DVD extends Articulo {
         this.director = director;
     }
     
+    //Sobreescribir método "print()"
     @Override
     public void print() {
         System.out.println("\n");
