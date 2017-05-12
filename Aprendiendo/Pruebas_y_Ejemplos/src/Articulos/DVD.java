@@ -19,5 +19,6 @@ public class DVD extends Articulo {
         System.out.println("\n");
         System.out.println("Soy un DVD");
         super.print();
+        System.out.println("Director --> " + director);
     }
 }
