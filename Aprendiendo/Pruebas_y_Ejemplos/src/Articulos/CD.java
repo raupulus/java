@@ -22,6 +22,10 @@ public class CD extends Articulo {
     
     @Override
     public void print() {
-        
+        System.out.println("\n");
+        System.out.println("Soy un CD");
+        super.print();
+        System.out.println("Artista --> " + artista);
+        System.out.println("Número de Pistas --> " + numeroPistas);
     }
 }
