@@ -13,4 +13,9 @@ public class DVD extends Articulo {
         super(titulo, duracion); //Pasa atributos al constructor
         this.director = director;
     }
+    
+    @Override
+    public void print() {
+        
+    }
 }
