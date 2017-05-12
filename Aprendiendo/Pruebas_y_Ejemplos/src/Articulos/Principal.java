@@ -9,10 +9,10 @@ import java.util.ArrayList;
  */
 public class Principal {
 
-    private ArrayList<CD> cds = new ArrayList<CD>();
-    private ArrayList<DVD> dvds = new ArrayList<DVD>();
+    private static ArrayList<CD> cds = new ArrayList<CD>();
+    private static ArrayList<DVD> dvds = new ArrayList<DVD>();
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         addCD("Los mejores éxitos", 60, "Los Chichos", 12);
         addCD("Arreando mulas", 43, "Los Chichos", 9);
         addDVD("Blanca la enana y las 7 nieves", 121, "Troglopoco");
@@ -21,15 +21,16 @@ public class Principal {
         listar();
     }
     
-    public void addCD(String titulo, int duracion, String artista, int pistas) {
+    public static void addCD(String titulo, int duracion, String artista, int pistas) {
         cds.add(new CD(titulo, duracion, artista, pistas));
+        System.out.println(titulo);
     }
 
-    public void addDVD(String titulo, int duracion, String director) {
+    public static void addDVD(String titulo, int duracion, String director) {
         dvds.add(new DVD(titulo, duracion, director));
     }
 
-    public void listar() {
+    public static void listar() {
         for (CD cd : cds) {
             cd.print();
             System.out.println();
