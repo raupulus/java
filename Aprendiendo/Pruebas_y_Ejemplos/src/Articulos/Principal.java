@@ -1,4 +1,7 @@
 package Articulos;
+
+import java.util.ArrayList;
+
 /**
  *
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
