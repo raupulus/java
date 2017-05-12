@@ -23,10 +23,31 @@ public class Articulo {
         comentario = ""; //Por defecto sin comentario
     }
     
+    //Método print para mostrar atributos privados
     public void print() {
         System.out.println("Título --> " + titulo);
         System.out.println("Duración --> " + duracion);
         System.out.println("Lo tengo --> " + loTengo);
         System.out.println("Comentario --> " + comentario);
+    }
+    
+    //Devolver variable privada "titulo"
+    public String getTitulo() {
+        return titulo;
+    }
+    
+     //Devolver variable privada "duracion"
+    public int getDuracion() {
+        return duracion;
+    }
+    
+     //Devolver variable privada "loTengo"
+    public Boolean getLoTengo() {
+        return loTengo;
+    }
+    
+     //Devolver variable privada "comentario"
+    public String getComentario() {
+        return comentario;
     }
 }
