@@ -17,38 +17,42 @@ import javax.swing.JTextField;
 
 public class Basica extends JFrame implements ActionListener {
 
-    private JLabel texto;           // etiqueta o texto no editable
-    private JTextField caja;        // caja de texto, para insertar datos
-    private JButton boton;          // boton con una determinada accion
+    private JLabel texto;           // Etiqueta principal con texto no editable
+    private JTextField caja;        // Creo una Caja de texto para entrada
+    private JButton boton;          // Creo un botón
+    private JButton boton1;         // Creo un botón
 
     public Basica() {
-        super();                    // usamos el contructor de la clase padre JFrame
-        configurarVentana();        // configuramos la ventana
-        inicializarComponentes();   // inicializamos los atributos o componentes
+        super();                    // Llamada al constructor de la clase padre JFrame
+        configurarVentana();        // Configuro la ventana
+        inicializarComponentes();   // Inicializar los componentes
     }
 
     private void configurarVentana() {
-        this.setTitle("Esta Es Una Ventana");                   // colocamos titulo a la ventana
-        this.setSize(310, 210);                                 // colocamos tamanio a la ventana (ancho, alto)
-        this.setLocationRelativeTo(null);                       // centramos la ventana en la pantalla
-        this.setLayout(null);                                   // no usamos ningun layout, solo asi podremos dar posiciones a los componentes
-        this.setResizable(false);                               // hacemos que la ventana no sea redimiensionable
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // hacemos que cuando se cierre la ventana termina todo proceso
+        this.setTitle("Nombre de la ventana");                  // Título de la ventana
+        this.setSize(480, 320);                                 // Tamaño de la ventana (ancho, alto)
+        this.setLocationRelativeTo(null);                       // Centramos la ventana en la pantalla
+        this.setLayout(null);                                   // No doi ningun layout, solo asi podremos dar posiciones a los componentes
+        this.setResizable(false);                               // No redimensionable
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    // Cerrar procesos al cerrar la ventana
     }
 
     private void inicializarComponentes() {
-        // creamos los componentes
+        // Creo componentes
         texto = new JLabel();
         caja = new JTextField();
         boton = new JButton();
-        // configuramos los componentes
-        texto.setText("Inserte Nombre");    // colocamos un texto a la etiqueta
-        texto.setBounds(50, 50, 100, 25);   // colocamos posicion y tamanio al texto (x, y, ancho, alto)
-        caja.setBounds(150, 50, 100, 25);   // colocamos posicion y tamanio a la caja (x, y, ancho, alto)
-        boton.setText("Mostrar Mensaje");   // colocamos un texto al boton
-        boton.setBounds(50, 100, 200, 30);  // colocamos posicion y tamanio al boton (x, y, ancho, alto)
-        boton.addActionListener(this);      // hacemos que el boton tenga una accion y esa accion estara en esta clase
-        // adicionamos los componentes a la ventana
+        boton1 = new JButton();
+        
+        // Establezco parámetros a los componentes
+        texto.setText("Introduce tu Nombre");    // Entrada textarea
+        texto.setBounds(130, 50, 300, 25);   // Posicion y tamanio al texto (x, y, ancho, alto)
+        caja.setBounds(200, 50, 300, 25);   // Posicion y tamanio a la caja (x, y, ancho, alto)
+        boton.setText("Púlsame");   // Texto en el botón
+        boton.setBounds(50, 100, 200, 30);  // Posicion y tamanio al boton (x, y, ancho, alto)
+        boton.addActionListener(this);      // Boton tenga una acción y esa accion estara en esta clase
+        
+        // Se añaden componentes creados a la ventana
         this.add(texto);
         this.add(caja);
         this.add(boton);
@@ -56,13 +60,13 @@ public class Basica extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String nombre = caja.getText();                                 // obtenemos el contenido de la caja de texto
-        JOptionPane.showMessageDialog(this, "Hola " + nombre + ".");    // mostramos un mensaje (frame, mensaje)
+        String nombre = caja.getText();                                 // Obtenemos el contenido de la caja de texto
+        JOptionPane.showMessageDialog(this, "Hola " + nombre + ".");    // Mostramos un mensaje (frame, mensaje)
     }
 
     public static void main(String[] args) {
-        Basica V = new Basica();      // creamos una ventana
-        V.setVisible(true);             // hacemos visible la ventana creada
+        Basica V = new Basica();      // Crear una ventana
+        V.setVisible(true);             // Hacer visible la ventana creada
     }
 }
 
