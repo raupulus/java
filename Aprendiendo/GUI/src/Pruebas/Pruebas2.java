@@ -5,12 +5,14 @@ package Pruebas;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 private JButton btn;
 private JTextArea textarea;
 
-public class Pruebas2 {
-    //super("Hello World");
+public class Pruebas2 extends JPanel{
+    super("Hello World");
         
     setLayout(new BorderLayout());
     
