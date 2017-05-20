@@ -28,6 +28,11 @@ public class Principal extends JFrame {
     private int intentos=0,aciertos=0,fallas=0;
     
     public Principal() {
-
+       
+    }
+    
+    //Método para generar números aleatorios
+    public long numAleatorio(){
+        return (long)(Math.random()*1000);
     }
 }
