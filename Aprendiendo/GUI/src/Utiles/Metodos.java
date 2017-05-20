@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 
 public class Metodos extends JFrame {
 
+    //Para cerrar ventanas
     public Metodos() {
         addWindowListener(new WindowAdapter() {
             @Override
