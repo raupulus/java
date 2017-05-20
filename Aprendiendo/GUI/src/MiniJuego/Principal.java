@@ -17,4 +17,7 @@ import javax.swing.UIManager;
 
 public class Principal extends JFrame {
 
+    public Principal() {
+
+    }
 }
