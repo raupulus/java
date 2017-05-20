@@ -17,9 +17,13 @@ import javax.swing.UIManager;
 
 public class Principal extends JFrame {
 
+    //Los atributos para controles, campos de texto y botones
     final private JTextField txtNum1, txtNum2, txtResultado, txtIntentos, txtAciertos, txtFallas;
     private JButton btnActiva, btnComprueba;
     private JButton btnSalir;
+    
+    //Atributos para suma y valores
+    private long num1,num2,valor;
 
     public Principal() {
 
