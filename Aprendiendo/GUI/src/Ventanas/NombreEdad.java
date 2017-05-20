@@ -53,10 +53,16 @@ public class NombreEdad extends JFrame implements ActionListener {
         this.add(txtNombre);
         this.add(lblEdad);
         this.add(txtEdad);
-
-
+        
+        //Congiguraciones y comportamiento
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Cerrar al salir
+        this.setTitle("Nombre de la Ventana"); 
+        //this.setSize(200, 200);
+        this.setResizable(false); //Bloquea la redimensión de la ventana
+        //this.setSize(new Dimension(300,200));
+        this.pack();
+        this.setVisible(true); //Marca como visible la ventana
     }
 
-   
 
 }
