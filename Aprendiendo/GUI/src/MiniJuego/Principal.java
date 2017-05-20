@@ -56,6 +56,7 @@ public class Principal extends JFrame {
        //Creo botones para Comprobar 
        btnComprueba= new JButton("Comprobar");
        btnComprueba.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 Principal alea=new Principal();				
                 valor=Long.parseLong(JOptionPane.showInputDialog("Introduce valor"));
