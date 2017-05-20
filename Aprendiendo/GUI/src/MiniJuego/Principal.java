@@ -23,14 +23,15 @@ public class Principal extends JFrame {
     private JButton btnSalir;
     
     //Atributos para suma,intentos y valores
-    private long num1,num2,valor;
-    private long suma_prog;
-    private int intentos=0,aciertos=0,fallas=0;
-    
+    long num1,num2,valor;
+    long suma_prog;
+    int intentos=0,aciertos=0,fallas=0;
+        
     public Principal() {
         //Creo botones para activar
         btnComprueba= new JButton("Comprueba");
         btnComprueba.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 Principal alea=new Principal();				
                 valor=Long.parseLong(JOptionPane.showInputDialog("Añadir un valor"));
