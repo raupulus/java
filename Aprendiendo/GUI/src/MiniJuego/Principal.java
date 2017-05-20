@@ -26,7 +26,10 @@ public class Principal extends JFrame {
     long num1,num2,valor;
     long suma_prog;
     int intentos=0,aciertos=0,fallas=0;
-        
+       
+    public static void main(String[] args) {
+        new Principal();
+    }
     public Principal() {
         //Creo botones para activar
         btnComprueba= new JButton("Comprueba");
