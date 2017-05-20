@@ -75,6 +75,15 @@ public class Principal extends JFrame {
                 }
             }
         });
+       
+       //Creo botón para salir
+       btnSalir= new JButton("Cerrar");
+       btnSalir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
 
     }
     
