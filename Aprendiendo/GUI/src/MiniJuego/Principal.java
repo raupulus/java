@@ -15,6 +15,6 @@ import java.awt.event.*;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-public class Principal {
+public class Principal extends JFrame {
 
 }
