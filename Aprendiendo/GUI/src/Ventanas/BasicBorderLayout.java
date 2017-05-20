@@ -53,12 +53,12 @@ public class BasicBorderLayout {
         //Crear y levantar ventana
         JFrame frame = new JFrame("Raúl Caro Pastorino");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+
         //Configurar el panel de contenido
         addComponentsToPane(frame.getContentPane());
         //Utilizando BorderLayout predeterminado del panel de contenido sin necesitar:
         //setLayout(new BorderLayout());
-        
+
         //Muestra la venta
         frame.pack();
         frame.setVisible(true);
@@ -77,7 +77,7 @@ public class BasicBorderLayout {
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         }
-        
+
         //Desactivar el uso del metal en fuentes negrita
         UIManager.put("swing.boldMetal", Boolean.FALSE);
 
