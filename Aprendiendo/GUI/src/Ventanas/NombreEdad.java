@@ -23,3 +23,22 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import javax.swing.JTextField;
+
+public class NombreEdad extends JFrame implements ActionListener {
+
+    private JButton btnAceptar;
+
+    private JButton btnCancelar;
+
+    JTextField txtNombre;
+
+    JTextField txtEdad;
+
+    public static void main(String[] args) {
+
+        NombreEdad vp = new NombreEdad();
+
+    }
+
+
+}
