@@ -1,11 +1,20 @@
 package MiniJuego;
 
 /**
- * Juego de adivinar la suma de dos números generados aleatoriamente
- * Constará generar dos números y luego pedir un valor introducido
- * 
+ * Juego de adivinar la suma de dos números generados aleatoriamente Constará
+ * generar dos números y luego pedir un valor introducido
+ *
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JButton;
+import java.awt.event.*;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+
 public class Principal {
-    
+
 }
