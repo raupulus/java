@@ -64,5 +64,17 @@ public class NombreEdad extends JFrame implements ActionListener {
         this.setVisible(true); //Marca como visible la ventana
     }
 
+    public void actionPerformed(ActionEvent e) {
 
+        if (e.getSource() == btnAceptar) {
+            StringBuilder sb = new StringBuilder("Nombre: ");
+            sb.append(txtNombre.getText());
+            sb.append("\nEdad: ");
+            sb.append(txtEdad.getText());
+            JOptionPane.showMessageDialog(this, sb.toString(), "Información de la Persona", JOptionPane.INFORMATION_MESSAGE);
+        } else if (e.getSource() == btnBorrar) {
+            txtNombre.setText("");
+            txtEdad.setText("");
+        }
+    }
 }
