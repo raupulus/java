@@ -77,6 +77,16 @@ public class BasicBorderLayout {
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         }
+        
+        //Desactivar el uso del metal en fuentes negrita
+        UIManager.put("swing.boldMetal", Boolean.FALSE);
 
+        //Programar un trabajo para el subproceso de envío de eventos
+        //Crear y mostrar la GUI de esta aplicación
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
     }
 }
