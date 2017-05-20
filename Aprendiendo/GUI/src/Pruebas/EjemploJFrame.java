@@ -35,31 +35,28 @@ public class EjemploJFrame extends JFrame {
         });
     }
 
-    // EL CONSTRUCTOR QUE SE USA CUANDO ARRANCA AQUÍ ARRIBA
     public EjemploJFrame() {
-        // el titulo de la ventana
-        setTitle("Swing: Jugando con las ventanas by jnj");
-        // acción al cerrar el frame: sale del programa
-        // en éste caso, terminando la ejecución
+        
+        setTitle("Swing: Jugando con las ventanas by jnj");// el titulo de la ventana
+        // Acción al cerrar el frame: sale del programa en éste caso, terminando la ejecución
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // posición de las esquinas del formulario en tu escritorio
+        // Posición de las esquinas del formulario en tu escritorio
         setBounds(100, 100, 450, 433);
-        // el panel que contiene todo
+        // El panel que contiene todo
         contentPane = new JPanel();
-        // borde del panel
+        // Borde del panel
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-        // se pone el panel en la ventana
+        // Se pone el panel en la ventana
         setContentPane(contentPane);
-        // se establece disposición de las capas a null
-        // para poder posicionar por coordenadas los componentes
-        // ésto se hace con un Absolute Layout que se llama
-        // en el diseñador visual
+        // Se establece disposición de las capas a null para poder posicionar por coordenadas los componentes
+        // Ésto se hace con un Absolute Layout que se llama en el diseñador visual
         contentPane.setLayout(null);
 
-        // el botón que abre ventanas de diálogo
+        // El botón que abre ventanas de diálogo
         JButton btnAbrirUnaVentana = new JButton(
-                "Abrir una ventana de diu00E1logo con el usuario");
+                "Abrir una ventana de diálogo con el usuario");
         btnAbrirUnaVentana.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent arg0) {
                 EjemploJDialog dialogo = new EjemploJDialog();
                 dialogo.setVisible(true);
@@ -68,11 +65,11 @@ public class EjemploJFrame extends JFrame {
         btnAbrirUnaVentana.setBounds(10, 11, 414, 23);
         contentPane.add(btnAbrirUnaVentana);
 
-        // el botón que abre ventanas de diálogo
-        // pero de manera MODAL
+        // El botón que abre ventanas de diálogo pero de manera MODAL
         JButton btnAbrirUnaVentana_1 = new JButton(
-                "Abrir una ventana de diu00E1logo MODAL");
+                "Abrir una ventana de diálogo MODAL");
         btnAbrirUnaVentana_1.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 EjemploJDialog dialogo = new EjemploJDialog();
                 dialogo.setModal(true);
@@ -83,30 +80,30 @@ public class EjemploJFrame extends JFrame {
         contentPane.add(btnAbrirUnaVentana_1);
 
         JLabel lblSiLaAbrimos = new JLabel(
-                "Si la abrimos modal, hasta no cerrarla no podemos tocar u00E9sta ventana.");
+                "Si la abrimos modal, hasta no cerrarla no podemos tocar ésta ventana.");
         lblSiLaAbrimos.setBounds(10, 45, 414, 14);
         contentPane.add(lblSiLaAbrimos);
 
-        // el panel-escritorio donde veremos los JFrames internos 
+        // El panel-escritorio donde veremos los JFrames internos 
         final JDesktopPane desktopPane = new JDesktopPane();
         desktopPane.setBounds(10, 138, 414, 246);
         contentPane.add(desktopPane);
 
-        // botón para abrir las ventanas internas
+        // Botón para abrir las ventanas internas
         JButton btnAbrirUnJframe = new JButton(
-                "Abrir un JFrame interno aquu00ED abajo");
+                "Abrir un JFrame interno aquí abajo");
         btnAbrirUnJframe.addActionListener(new ActionListener() {
-            // variable para que cada nueva ventana interna
-            // salga en diferente posición y se vean todas
+            // Variable para que cada nueva ventana interna
+            // Salga en diferente posición y se vean todas
             int posicioninicial = 0;
 
             public void actionPerformed(ActionEvent e) {
                 EjemploJInternalFrame jif = new EjemploJInternalFrame();
                 jif.setVisible(true);
-                // posición de la nueva ventana
+                // Posición de la nueva ventana
                 jif.setLocation(posicioninicial, posicioninicial);
-                // las siguiente posición será diferente así
-                // veremos todas las ventanas internas
+                // Las siguiente posición será diferente así
+                // Veremos todas las ventanas internas
                 posicioninicial += 10;
                 desktopPane.add(jif);
             }
