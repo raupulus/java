@@ -2,7 +2,8 @@ package Pruebas;
 
 /**
  *
- * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
+ * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
+ * https://github.com/fryntiz
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
