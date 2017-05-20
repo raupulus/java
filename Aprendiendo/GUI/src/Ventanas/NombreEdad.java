@@ -23,13 +23,10 @@ public class NombreEdad extends JFrame implements ActionListener {
     JTextField txtEdad; //Entrada de texto para Edad
 
     public static void main(String[] args) {
-
         NombreEdad vp = new NombreEdad();
-
     }
 
     public NombreEdad() {
-
         JLabel lblNombre = new JLabel("Nombre: ");
         txtNombre = new JTextField(10);
 
@@ -64,8 +61,8 @@ public class NombreEdad extends JFrame implements ActionListener {
         this.setVisible(true); //Marca como visible la ventana
     }
 
+    @Override
     public void actionPerformed(ActionEvent e) {
-
         if (e.getSource() == btnAceptar) {
             StringBuilder sb = new StringBuilder("Nombre: ");
             sb.append(txtNombre.getText());
