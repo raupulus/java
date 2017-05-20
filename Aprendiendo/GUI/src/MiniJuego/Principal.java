@@ -22,9 +22,11 @@ public class Principal extends JFrame {
     private JButton btnActiva, btnComprueba;
     private JButton btnSalir;
     
-    //Atributos para suma y valores
+    //Atributos para suma,intentos y valores
     private long num1,num2,valor;
-
+    private long suma_prog;
+    private int intentos=0,aciertos=0,fallas=0;
+    
     public Principal() {
 
     }
