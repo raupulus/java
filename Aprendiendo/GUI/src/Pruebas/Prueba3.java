@@ -16,7 +16,17 @@ public class Prueba3 extends JFrame {
     JPanel panel;
 
     public static void main(String[] args) {
-        new Prueba3();
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    JFrame.setDefaultLookAndFeelDecorated(true);
+                    new Prueba3();
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "Error: " + e);
+                }
+            }
+        });
     }
     
     public Prueba3() {
