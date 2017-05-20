@@ -28,9 +28,33 @@ public class Principal extends JFrame {
     private int intentos=0,aciertos=0,fallas=0;
     
     public Principal() {
-        //Creo botones
-        btnComprueba= new JButton("Comprobar");
+        //Creo botones para activar
+        btnComprueba= new JButton("Comprueba");
         btnComprueba.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Principal alea=new Principal();				
+                valor=Long.parseLong(JOptionPane.showInputDialog("Añadir un valor"));
+                alea.setValor(valor);
+                txtResultado.setText(String.valueOf(alea.getValor()));//valor del usuario
+                suma_prog=Long.parseLong(txtNum1.getText())+ Long.parseLong(txtNum2.getText());
+
+                if(suma_prog==alea.getValor()){
+                    aciertos+=1;
+                    intentos+=1;
+                    txtIntentos.setText(String.valueOf(intentos));
+                    txtAciertos.setText(String.valueOf(aciertos));
+                }else{
+                    fallas+=1;
+                    intentos+=1;
+                    txtIntentos.setText(String.valueOf(intentos));
+                    txtFallas.setText(String.valueOf(fallas));
+                }
+            }
+        });
+
+       //Creo botones para Comprobar 
+       btnComprueba= new JButton("Comprobar");
+       btnComprueba.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 Principal alea=new Principal();				
                 valor=Long.parseLong(JOptionPane.showInputDialog("Introduce valor"));
@@ -51,7 +75,6 @@ public class Principal extends JFrame {
                 }
             }
         });
-
 
     }
     
