@@ -47,5 +47,21 @@ public class BasicBorderLayout {
         pane.add(button, BorderLayout.LINE_END);
     }
 
-    
+    //Crear y mostrar la interfaz. Debe ser invocado desde el hilo de envío de eventos
+    private static void createAndShowGUI() {
+
+        //Crear y levantar ventana
+        JFrame frame = new JFrame("Raúl Caro Pastorino");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        //Configurar el panel de contenido
+        addComponentsToPane(frame.getContentPane());
+        //Utilizando BorderLayout predeterminado del panel de contenido sin necesitar:
+        //setLayout(new BorderLayout());
+        
+        //Muestra la venta
+        frame.pack();
+        frame.setVisible(true);
+    }
+
 }
