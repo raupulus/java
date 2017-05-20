@@ -1,6 +1,9 @@
 package Ventanas;
 
 /**
+ * Ventana simple que pide tu nombre y edad
+ * Al Pulsar "Aceptar" Salta un diaógo mostrando la información introducida
+ * Al pulsar "Borrar" Limpia lo que hayamos escrito
  *
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
