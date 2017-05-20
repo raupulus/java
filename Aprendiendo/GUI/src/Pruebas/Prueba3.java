@@ -26,14 +26,8 @@ public class Prueba3 extends JFrame {
         etiqueta = new JLabel("Una etiqueta");
         boton = new JButton("Un botón");
         otroBoton = new JButton("Otro Botón");
-        panel.add(boton,
-          BorderLayout.SOUTH
-        );
-        panel.add(etiqueta,
-          BorderLayout.WEST
-        );
-        panel.add(otroBoton,
-          BorderLayout.NORTH
-        );
+        panel.add(boton,BorderLayout.SOUTH);
+        panel.add(etiqueta,BorderLayout.WEST);
+        panel.add(otroBoton,BorderLayout.NORTH);
     }
 }
