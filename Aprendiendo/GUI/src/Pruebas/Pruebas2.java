@@ -5,16 +5,22 @@ package Pruebas;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
+import java.awt.event.ActionEvent;
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 
-private JButton btn;
-private JTextArea textarea;
+
 
 public class Pruebas2 extends JPanel{
+    private JButton btn;
+    private JTextArea textarea;
+
     super("Hello World");
         
-    setLayout(new BorderLayout());
+    Pruebas2(new BorderLayout();
     
     btn = new JButton("click me");
     textArea = new JtextArea();
