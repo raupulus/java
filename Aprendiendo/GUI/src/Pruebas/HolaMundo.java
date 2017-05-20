@@ -13,18 +13,13 @@ import java.awt.event.*;
 public class HolaMundo {
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Soy el título"); //Titulo ventana
-        final JLabel label = new JLabel("¡Hola Mundo!"); //Contenido de ventana
+        JFrame frame = new JFrame("Soy el título"); //Construye el JLabel
+        final JLabel label = new JLabel("¡Hola Mundo!"); //Agrega el JLabel
         frame.getContentPane().add(label);
 
-        //frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        }
-        );
-
+        //Cerrar ventana al salir
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         frame.pack();
         frame.setVisible(true);
     }
