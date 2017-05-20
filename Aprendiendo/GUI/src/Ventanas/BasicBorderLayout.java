@@ -64,4 +64,19 @@ public class BasicBorderLayout {
         frame.setVisible(true);
     }
 
+    public static void main(String[] args) {
+        //Utilizar una apariencia adaptada y manejo de errores
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+        } catch (UnsupportedLookAndFeelException ex) {
+            ex.printStackTrace();
+        } catch (IllegalAccessException ex) {
+            ex.printStackTrace();
+        } catch (InstantiationException ex) {
+            ex.printStackTrace();
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
+
+    }
 }
