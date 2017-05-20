@@ -19,14 +19,13 @@ public class EjemploJFrame extends JFrame {
 
     private JPanel contentPane;
 
-    // METODO PRINCIPAL QUE ARRANCA TODA LA APLICACIÓN
-    public static void main(String[] args) {
+    public static void main(String[] args) { //Main para comenzar
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    // crea el JFrame 
+                    // Crea el JFrame 
                     EjemploJFrame frame = new EjemploJFrame();
-                    // lo hace visible
+                    // Lo hace visible
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -37,7 +36,7 @@ public class EjemploJFrame extends JFrame {
 
     public EjemploJFrame() {
         
-        setTitle("Swing: Jugando con las ventanas by jnj");// el titulo de la ventana
+        setTitle("Probando Swing by Raúl");// el titulo de la ventana
         // Acción al cerrar el frame: sale del programa en éste caso, terminando la ejecución
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Posición de las esquinas del formulario en tu escritorio
