@@ -16,8 +16,9 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 public class Principal extends JFrame {
-
+    final private JTextField txtNum1,txtNum2,txtResultado,txtIntentos,txtAciertos,txtFallas;
+    
     public Principal() {
-
+        
     }
 }
