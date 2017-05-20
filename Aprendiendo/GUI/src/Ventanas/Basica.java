@@ -51,7 +51,7 @@ public class Basica extends JFrame implements ActionListener {
         boton.setText("Púlsame"); // Texto en el botón
         boton.setBounds(0, 100, 200, 30);  // Posicion y tamanio al boton (x, y, ancho, alto)
         boton.addActionListener(this); // Boton tenga una acción y esa accion estara en esta clase
-        
+
         boton1.setText("No Pulsar!!!");  
         boton1.setBounds(200, 100, 200, 30);
         boton1.addActionListener(this);
@@ -64,7 +64,7 @@ public class Basica extends JFrame implements ActionListener {
         this.add(boton1);
     }
 
-    @Override
+    @Override   
     public void actionPerformed(ActionEvent e) {
         String nombre = caja.getText();                                 // Obtenemos el contenido de la caja de texto
         JOptionPane.showMessageDialog(this, "Te saludo " + nombre + ".");    // Mostramos un mensaje (frame, mensaje)
