@@ -6,5 +6,10 @@ package ExcepcionesSinCapturar;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 public class NullPointerException {
+    public static void main(String[] args) {
+        NullPointerException excepcion = new NullPointerException();
+        expcecion.metodoA();
+    }
+    
     
 }
