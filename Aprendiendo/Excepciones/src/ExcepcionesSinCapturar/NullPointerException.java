@@ -11,5 +11,8 @@ public class NullPointerException {
         expcecion.metodoA();
     }
     
+    private void metodoA() {
+        this.metodoB();
+    }
     
 }
