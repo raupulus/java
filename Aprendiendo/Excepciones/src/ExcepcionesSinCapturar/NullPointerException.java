@@ -18,4 +18,9 @@ public class NullPointerException {
     private void metodoB() {
         this.metodoC();
     }
+    
+    private void metodoC() {
+        String provocoError = null;
+        provocoError.length();
+    }
 }
