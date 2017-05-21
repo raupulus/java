@@ -15,6 +15,7 @@ public class VentanaPrincipalYDialogo {
         JFrame ventanaPrincipal = new JFrame("Ejemplo JFrame");
         ventanaPrincipal.setBounds(0, 0, 800, 600);
         ventanaPrincipal.setVisible(true);
+        ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Ventana de diálogo
         JDialog ventanaDialogo = new JDialog(ventanaPrincipal);
