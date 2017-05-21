@@ -11,11 +11,12 @@ public class NullPointerException {
         try {
             String cadenaNula = null;
             cadenaNula.length();
-        } catch(NullPointerException e) {
+        } catch(Exception e) {  //Al poner dentro de catch "NullPointerException"
+                                //No me permite compilar: no resuelto...
             System.out.println("Atención, este error ha sido capturado");
             
             //Mostrar en la consola el error producido:
-            //e.printStackTrace();
+            e.printStackTrace();
         }
     }
 }
