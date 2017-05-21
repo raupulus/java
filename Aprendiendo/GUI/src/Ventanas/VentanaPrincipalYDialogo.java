@@ -1,5 +1,7 @@
 package Ventanas;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
