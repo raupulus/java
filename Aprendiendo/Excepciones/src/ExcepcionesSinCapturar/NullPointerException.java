@@ -8,11 +8,14 @@ package ExcepcionesSinCapturar;
 public class NullPointerException {
     public static void main(String[] args) {
         NullPointerException excepcion = new NullPointerException();
-        expcecion.metodoA();
+        excepcion.metodoA();
     }
     
     private void metodoA() {
         this.metodoB();
     }
     
+    private void metodoB() {
+        this.metodoC();
+    }
 }
