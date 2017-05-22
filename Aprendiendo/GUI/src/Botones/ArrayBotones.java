@@ -10,14 +10,24 @@ import javax.swing.JFrame;
  *
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
-public class ArrayBotones extends JFrame{
-    JButton[] arrayBotones;
-    TextArea texto;
+
+public class ArrayBotones extends JFrame {
+    JButton[] arrayBotones; //Creo un array de objetos botones
+    TextArea texto; //Creo un objeto TextArea
+ 
     
     public ArrayBotones() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(700, 700));
-        setTitle("Soy un Array de Botones");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Cerrar al salir
+        setPreferredSize(new Dimension(700, 700)); //Tamaño
+        setTitle("Soy un Array de Botones"); //Título
         setLayout(new FlowLayout());
+        
+    }
+    
+    //Metodo para crear botones 
+    public void generarBotones(int cantidad) {
+        String boton = "Botón";
+        arrayBotones = new JButton[cantidad];
+         
     }
 }
