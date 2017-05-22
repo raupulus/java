@@ -15,14 +15,14 @@ import javax.swing.JFrame;
 
 public class ArrayBotones extends JFrame {
     
-    static int cantidadBotontes = 40;
-    static JButton[] arrayBotones;
-    static TextArea texto;
+    static int cantidadBotontes = 10; //Número de botones que serán creados
+    static JButton[] arrayBotones; //Creo array de botones
+    static TextArea texto; //Creo area de texto
 
     public ArrayBotones() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setPreferredSize(new Dimension(700, 700));
-        setTitle("Array de botones");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Cerrar al salir
+        setPreferredSize(new Dimension(500, 500)); //Tamaño de la ventana
+        setTitle("Esto es un array de Botones");
         setLayout(new FlowLayout());
 
         //Llama a la función para generar los botones
