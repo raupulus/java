@@ -10,7 +10,11 @@ public class VentanaAdaptable {
 
     //Ventana principal
         JFrame ventanaPrincipal = new JFrame("Ejemplo JFrame");
-        ventanaPrincipal.setBounds(0, 0, 800, 600);
+    
+    //AutoAjustar al contenido
+        ventanaPrincipal.pack();
+    
+    //Declarar como visible
         ventanaPrincipal.setVisible(true);
         
     //Cerrar al Salir
