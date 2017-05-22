@@ -9,58 +9,53 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
- *
+ * Esta clase permite crear JPanel al ser instanciada desde otra
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 
 public class ArrayBotones extends JFrame {
-    static JButton[] arrayBotones; //Creo un array de objetos botones
-    static TextArea texto; //Creo un objeto TextArea
- 
-    
+
+    static JButton[] botones;
+    static TextArea ta;
+
     public ArrayBotones() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //Cerrar al salir
-        setPreferredSize(new Dimension(700, 700)); //Tamaño
-        setTitle("Soy un Array de Botones"); //Título
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setPreferredSize(new Dimension(700, 700));
+        setTitle("Array de botones");
         setLayout(new FlowLayout());
-        
+
+        // Botones
+        crearBotones(40);
+        for (int i = 0; i < botones.length; i++) {
+            add(botones[i]);
+        }
+        ta = new TextArea();
+        add(ta);
+
+        // Para hacerlo visible
+        pack();
+        setVisible(true);
     }
-    
-    //Botones
-    generarBotones(40);
-    for (int i = 0; i < arrayBotones.lenght; i++) {
-        add(arrayBotones[i]);
+
+    public static void crearBotones(int numero) {
+        String str = "Botón ";
+        botones = new JButton[numero];
+        for (int i = 0; i < numero; i++) {
+            botones[i] = new JButton(str + (i + 1));
+            botones[i].setPreferredSize(new Dimension(100, 50));
+            botones[i].addActionListener(new MiReceptor());
+        }
     }
-    
-    texto = new TextArea();
-    add(texto);
-    
-    //Hacerlo visible
-    pack();
-    setVisible(true);
-    
-    
-    //Metodo para crear botones 
-    public static void generarBotones(int cantidad) {
-        String boton = "Botón";
-        arrayBotones = new JButton[cantidad];
-        
-        //Rellenar array de botones
-        for (int i = 0; i < cantidad; i++) {
-            arrayBotones[i] = new JButton(texto + (i + 1));
-            arrayBotones[i].setPreferredSize(new Dimension(100, 50));
-            arrayBotones[i].addActionListener(new MiReceptor());;
-        } 
-    }
-    
+
     public static void main(String[] args) {
         ArrayBotones b = new ArrayBotones();
     }
-    
+
     static class MiReceptor implements ActionListener {
-        
+
+        @Override
         public void actionPerformed(ActionEvent e) {
-            texto.append("Has pulsado el " + e.getActionCommand() + "\n");
+            ta.append("Has pulsado el "+e.getActionCommand() + '\n');
         }
     }
 }
