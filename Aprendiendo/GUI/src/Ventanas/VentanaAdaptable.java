@@ -19,6 +19,5 @@ public class VentanaAdaptable {
         
     //Cerrar al Salir
         ventanaPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 }
