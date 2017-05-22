@@ -9,14 +9,15 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
- * Esta clase permite crear JPanel al ser instanciada desde otra
+ * Este archivo creará un array de botones que se agregarán a un panel
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 
 public class ArrayBotones extends JFrame {
-
-    static JButton[] botones;
-    static TextArea ta;
+    
+    static int cantidadBotontes = 40;
+    static JButton[] arrayBotones;
+    static TextArea texto;
 
     public ArrayBotones() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -24,38 +25,45 @@ public class ArrayBotones extends JFrame {
         setTitle("Array de botones");
         setLayout(new FlowLayout());
 
-        // Botones
-        crearBotones(40);
-        for (int i = 0; i < botones.length; i++) {
-            add(botones[i]);
+        //Llama a la función para generar los botones
+        generarBotones(cantidadBotontes);
+        
+        //Recorre el array de botones añadiéndolos al panel
+        for (int i = 0; i < arrayBotones.length; i++) {
+            add(arrayBotones[i]);
         }
-        ta = new TextArea();
-        add(ta);
+        texto = new TextArea();
+        add(texto);
 
-        // Para hacerlo visible
+        // Alinea automáticamente
         pack();
+        
+        //Vuelve visible
         setVisible(true);
     }
 
-    public static void crearBotones(int numero) {
+    //Método para generar botones
+    public static void generarBotones(int numero) {
         String str = "Botón ";
-        botones = new JButton[numero];
+        arrayBotones = new JButton[numero];
         for (int i = 0; i < numero; i++) {
-            botones[i] = new JButton(str + (i + 1));
-            botones[i].setPreferredSize(new Dimension(100, 50));
-            botones[i].addActionListener(new MiReceptor());
+            arrayBotones[i] = new JButton(str + (i + 1));
+            arrayBotones[i].setPreferredSize(new Dimension(100, 50));
+            arrayBotones[i].addActionListener(new MiReceptor());
         }
     }
 
+    //Main que crea una instancia de esta misma clase
     public static void main(String[] args) {
         ArrayBotones b = new ArrayBotones();
     }
 
+    //Evento que reacciona al pulsar un botón generado
     static class MiReceptor implements ActionListener {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            ta.append("Has pulsado el "+e.getActionCommand() + '\n');
+            texto.append("Has pulsado el "+e.getActionCommand() + '\n');
         }
     }
 }
