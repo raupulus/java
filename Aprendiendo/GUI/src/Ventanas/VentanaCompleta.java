@@ -5,6 +5,10 @@ package Ventanas;
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
 
+
+
+//SIN TERMINAR
+
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JLabel;
