@@ -32,10 +32,19 @@ public class IntentandoLanzar {
     }
 
     public static void iniciar(int x) {
-        if (x == 0) {
+        if (x == 1) {
             excepcionArithmetic();
+
+        } else if (x == 2) {
+
+        } else if (x == 3) {
+
+        } else if (x == 4) {
+
+        } else if (x == 5) {
+
         } else {
-            System.out.println("Hola");
+            System.out.println("No has elegido ninguna opción válida");
         }
     }
 
