@@ -2,6 +2,7 @@ package Pruebas;
 
 //Importar paquete para excepciones
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 /**
  *
@@ -9,6 +10,7 @@ import java.util.InputMismatchException;
  */
 public class IntentandoLanzar {
 
+    private static final Scanner sc = new Scanner(System.in);
     private static int opcion;
 
     public static void excepcionArithmetic() {
@@ -56,27 +58,29 @@ public class IntentandoLanzar {
             System.out.println("4 - NullPointerException");
             System.out.println("5 - IllegalStateException");
             System.out.println("Introduce el valor de la excepción:");
+
+            opcion = sc.nextInt();
             iniciar(opcion);
-            System.out.println("Todo Correcto, no hay excepción");
+
+            System.out.println("\nTodo Correcto, no hay excepción");
         } catch (ArithmeticException e) {
-            System.out.println("He atrapado ArithmeticException");
+            System.out.println("\nHe atrapado ArithmeticException");
             System.out.println(e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println("He atrapado InputMismatchException");
+            System.out.println("\nHe atrapado InputMismatchException");
             System.out.println(e.getMessage());
         } catch (IllegalArgumentException e) {
-            System.out.println("He atrapado IllegalArgumentException");
+            System.out.println("\nHe atrapado IllegalArgumentException");
             System.out.println(e.getMessage());
         } catch (NullPointerException e) {
-            System.out.println("He atrapado NullPointerException");
+            System.out.println("\nHe atrapado NullPointerException");
             System.out.println(e.getMessage());
         } catch (IllegalStateException e) {
-            System.out.println("He atrapado IllegalStateException");
+            System.out.println("\nHe atrapado IllegalStateException");
             System.out.println(e.getMessage());
         } finally {
-            System.out.println("He llegado al final");
+            System.out.println("\nHe llegado al final");
             System.out.println("Se acaba de ejecutar: \'finally\'");
         }
     }
-
 }
