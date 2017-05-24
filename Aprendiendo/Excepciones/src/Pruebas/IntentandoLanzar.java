@@ -31,8 +31,13 @@ public class IntentandoLanzar {
         throw new IllegalStateException("Ha ocurrido una excepción IllegalStateException");
     }
 
+    public static void iniciar(int numero) {
+       
+    }
+
     public static void main(String[] args) {
         try {
+            iniciar(0);
             System.out.println("Todo Correcto, no hay excepción");
         } catch (ArithmeticException e) {
             System.out.println("He atrapado ArithmeticException");
