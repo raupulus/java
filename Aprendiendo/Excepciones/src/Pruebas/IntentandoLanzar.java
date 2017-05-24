@@ -41,6 +41,12 @@ public class IntentandoLanzar {
 
     public static void main(String[] args) {
         try {
+            System.out.println("0 - No hay excepción");
+            System.out.println("1 - ArithmeticException");
+            System.out.println("2 - InputMismatchException");
+            System.out.println("3 - IllegalArgumentException");
+            System.out.println("4 - NullPointerException");
+            System.out.println("5 - IllegalStateException");
             System.out.println("Introduce el valor de la excepción:");
             iniciar(opcion);
             System.out.println("Todo Correcto, no hay excepción");
