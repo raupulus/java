@@ -34,15 +34,14 @@ public class IntentandoLanzar {
     public static void iniciar(int x) {
         if (x == 1) {
             excepcionArithmetic();
-
         } else if (x == 2) {
-
+            excepcionInputMismatch();
         } else if (x == 3) {
-
+            excepcionIllegalArgument();
         } else if (x == 4) {
-
+            excepcionNullPointer();
         } else if (x == 5) {
-
+            excepcionIllegalState();
         } else {
             System.out.println("No has elegido ninguna opción válida");
         }
