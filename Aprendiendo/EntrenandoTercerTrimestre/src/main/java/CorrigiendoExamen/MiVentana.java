@@ -23,8 +23,6 @@ public class MiVentana extends JFrame {
         crearGUI();
     }
     
-    
-    
     private void crearGUI() {
         //Crear la lista de animales en un LinkedList
         List<Animal> listaAni = new LinkedList<>();
@@ -34,8 +32,8 @@ public class MiVentana extends JFrame {
         
         //Bucle para recorrer la clase enumerada para añadir los valores
         for (int i=0; i < tiposAnimales.length; i++) {
-            listaAni.add(TipoAnimal.values().name)
-            
+            listaAni.add(new Animal(tiposAnimales[i].name()));
+            System.out.println(listaAni.get(i));
         }
     }
 }
