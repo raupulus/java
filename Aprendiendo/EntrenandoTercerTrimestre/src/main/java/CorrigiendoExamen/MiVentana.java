@@ -32,8 +32,15 @@ public class MiVentana extends JFrame {
         
         //Bucle para recorrer la clase enumerada para añadir los valores
         for (int i=0; i < tiposAnimales.length; i++) {
-            listaAni.add(new Animal(tiposAnimales[i].name()));
+            try {
+                listaAni.add(new Animal(tiposAnimales[i].name()));
+            } catch (IllegalArgumentException e) {
+                System.out.println(e);
+            }
+                
+            
             System.out.println(listaAni.get(i));
+            
         }
     }
 }
