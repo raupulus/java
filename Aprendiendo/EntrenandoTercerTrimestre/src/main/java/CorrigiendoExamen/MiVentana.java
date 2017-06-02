@@ -5,7 +5,7 @@ import java.util.List;
 import javax.swing.JFrame;
 
 /**
- *
+ * Clase ventana que crea la interfaz y array de animales
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
