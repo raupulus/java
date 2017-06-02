@@ -33,4 +33,10 @@ public class Animal {
             this.nombre=nombre;
         }
     }
+    
+    //Método toString para mostrar nombre
+    @Override
+    public String toString() {
+        return nombre;
+    }
 }
