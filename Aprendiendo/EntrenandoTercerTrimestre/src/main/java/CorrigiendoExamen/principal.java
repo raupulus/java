@@ -3,7 +3,7 @@ package CorrigiendoExamen;
 import javax.swing.SwingUtilities;
 
 /**
- *
+ * Clase principal que enlaza todo el programa
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
