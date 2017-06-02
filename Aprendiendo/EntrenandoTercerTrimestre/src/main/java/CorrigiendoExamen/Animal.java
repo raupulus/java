@@ -13,11 +13,11 @@ public class Animal {
     
     //Constructor de la clase
     public Animal(String nombre) {
-        this.nombre=nombre;
+        setNombre(nombre);
     }
     
     private void setNombre(String nombre) 
-    throws NullPointerException { //
+    throws NullPointerException, IllegalArgumentException { //Lanza arriba las excepciones, al método que llama
         
         //Comprueba si es nulo el nombre
         if (nombre == null) {
@@ -29,6 +29,8 @@ public class Animal {
             //Crea y lanza la excepción hacia arriba. IllegalArgument exception
             //se utiliza cuando indicamos que un argumento no es válido
             throw new IllegalArgumentException("El nombre del animal no puede estar vacío"); 
+        } else {
+            this.nombre=nombre;
         }
     }
 }
