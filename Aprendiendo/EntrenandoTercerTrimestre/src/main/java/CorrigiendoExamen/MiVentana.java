@@ -48,5 +48,6 @@ public class MiVentana extends JFrame {
         for (int i = 0; i < listaAni.size(); i++) {
             listaBot.add(new Boton(listaAni.get(i).getNombre()));
         }
+        System.out.println("Botones " + listaBot);
     }
 }
