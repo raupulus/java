@@ -43,6 +43,10 @@ public class MiVentana extends JFrame {
         }
         
         //Creamos Lista de botones basada en la lista del nombre de animales
-        List<Boton> listaBot = new ArrayList();
+        List<Boton> listaBot = new ArrayList<>();
+        
+        for (int i = 0; i < listaAni.size(); i++) {
+            listaBot.add(new Boton(listaAni.get(i).getNombre()));
+        }
     }
 }
