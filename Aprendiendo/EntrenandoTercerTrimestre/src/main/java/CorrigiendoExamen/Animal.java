@@ -29,17 +29,17 @@ public class Animal {
             //Crea y lanza la excepción hacia arriba. IllegalArgument exception
             //se utiliza cuando indicamos que un argumento no es válido
             throw new IllegalArgumentException("El nombre del animal no puede estar vacío"); 
-        //No se permite que sea ORNITORRINCO
-        } else if (nombre.equals("ORNITORRINCO")) {
-            //Crea y lanza la excepción hacia arriba. IllegalArgument exception
-            throw new IllegalArgumentException("No puede ser un ornitorrinco"); 
         } else {
             this.nombre=nombre;
         }
     }
     
+    //Accesor para el nombre
+    public String getNombre() {
+        return nombre;
+    }
+
     //Método toString para mostrar nombre
-    @Override
     public String toString() {
         return nombre;
     }
