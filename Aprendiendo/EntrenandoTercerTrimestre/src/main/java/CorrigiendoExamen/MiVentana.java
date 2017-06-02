@@ -23,7 +23,19 @@ public class MiVentana extends JFrame {
         crearGUI();
     }
     
+    
+    
     private void crearGUI() {
+        //Crear la lista de animales en un LinkedList
         List<Animal> listaAni = new LinkedList<>();
+        
+        //Creo un alias de array de objetos para la lista enumerada "TipoAnimal"
+        TipoAnimal[] tiposAnimales = TipoAnimal.values();//Es un array con objetos para cada tipo de animales
+        
+        //Bucle para recorrer la clase enumerada para añadir los valores
+        for (int i=0; i < tiposAnimales.length; i++) {
+            listaAni.add(TipoAnimal.values().name)
+            
+        }
     }
 }
