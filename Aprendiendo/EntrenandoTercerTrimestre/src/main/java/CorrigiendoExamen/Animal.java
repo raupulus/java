@@ -1,5 +1,5 @@
 /*
- * Clase Animal
+ * Clase Animal que se utilizará para crear objetos de tipo animal
  */
 package CorrigiendoExamen;
 
