@@ -1,5 +1,6 @@
 package CorrigiendoExamen;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import javax.swing.JFrame;
@@ -32,15 +33,16 @@ public class MiVentana extends JFrame {
         
         //Bucle para recorrer la clase enumerada para añadir los valores
         for (int i=0; i < tiposAnimales.length; i++) {
+            //Con el bloque try catch capturamos posibles excepciones al construir
             try {
                 listaAni.add(new Animal(tiposAnimales[i].name()));
+                System.out.println(listaAni.get(i));
             } catch (IllegalArgumentException e) {
                 System.out.println(e);
             }
-                
-            
-            System.out.println(listaAni.get(i));
-            
         }
+        
+        //Creamos Lista de botones basada en la lista del nombre de animales
+        List<Boton> listaBot = new ArrayList();
     }
 }
