@@ -10,7 +10,7 @@ public class Robot {
     private int id;
     private String alias;
     private char generacion; //Valores posibles "A","B","C"
-    private TipoOrientacion = TipoOrientacion.aleatorio();
+    private TipoOrientacion orientacion= TipoOrientacion.aleatorio();
     private int distancia = 0;
     private int posicionX = 0;
     private int posicionY = 0;
@@ -29,8 +29,17 @@ public class Robot {
     }
     
     private String getCodigo() {
-        String codigo="";
+        String codigo = "";
         //codigo=generacion+id
         return codigo;
+    }
+    
+    public String toString() {
+        String cadena = "";
+        return cadena;
+    }
+    
+    public girar(TipoOrientacion direccion) {
+        orientacion = direccion;
     }
 }
