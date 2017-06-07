@@ -18,4 +18,19 @@ public class Robot {
     public Robot(String alias, char generacion) {
         
     }
+    
+    public void avanzar(int distancia) {
+        //Sumar distancia a la distancia ya recorrida
+        //sumar distancia a la posición según TipoOrientación
+    }
+    
+    public void saludar() {
+        
+    }
+    
+    private String getCodigo() {
+        String codigo="";
+        //codigo=generacion+id
+        return codigo;
+    }
 }
