@@ -12,7 +12,7 @@ public class Prueba6 {
 
     public static void main(String[] args) {
 
-        //????
+        //Con Runnable agregamos otro hilo
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 //Crea la ventana
