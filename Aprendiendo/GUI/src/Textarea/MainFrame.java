@@ -1,5 +1,6 @@
 package Textarea;
 
+import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
@@ -25,6 +26,15 @@ public class MainFrame extends JFrame {
         //Nombre del marco/ventana
         super("Hola Mundo!!!");
 
+        // ?????
+        setLayout(new BorderLayout());
+        
+        //Crea el área de texto
+        textArea = new JTextArea();
+        
+        //Crea el botón
+        btn = new JButton("Púlsame!");
+        
         //Establecer Tamaño fijo
         setSize(600, 500);
 
