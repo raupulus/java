@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 /**
- *
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
@@ -34,6 +33,10 @@ public class MainFrame extends JFrame {
         
         //Crea el botón
         btn = new JButton("Púlsame!");
+        
+        //Agrega componentes al panel indicando su posición
+        add(textArea, BorderLayout.CENTER);
+        add(btn, BorderLayout.SOUTH);
         
         //Establecer Tamaño fijo
         setSize(600, 500);
