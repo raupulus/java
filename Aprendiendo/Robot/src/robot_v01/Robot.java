@@ -15,8 +15,9 @@ public class Robot {
     private int posicionX = 0;
     private int posicionY = 0;
     
-    public Robot(String alias, char generacion) {
-        
+    public Robot(String new_alias, char new_generacion) {
+        alias = new_alias;
+        generacion = new_generacion;
     }
     
     public void avanzar(int distancia) {
@@ -39,7 +40,7 @@ public class Robot {
         return cadena;
     }
     
-    public girar(TipoOrientacion direccion) {
+    public void girar(TipoOrientacion direccion) {
         orientacion = direccion;
     }
 }
