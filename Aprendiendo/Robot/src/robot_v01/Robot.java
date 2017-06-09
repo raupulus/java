@@ -9,21 +9,24 @@ public class Robot {
     private static int contador = 0;
     private int id;
     private String alias;
-    private char generacion; //Valores posibles "A","B","C"
+    private char generacion; //Valores posibles "A","B","M"
     private TipoOrientacion orientacion;
     private int distancia = 0;
-    private Posicion posicion; //Crea objeto de tipo posicion(X,Y)
+    private Posicion posicion; //Crea objeto de tipo Posicion(X,Y)
     
     public Robot(String new_alias, char new_generacion) {
         alias = new_alias;
-        generacion = new_generacion;
+        setGeneracion(new_generacion);
         //orientacion = TipoOrientacion.aleatorio();
-        posicion = new Posicion(0, 0);
+        posicion = new Posicion(0, 0); //Crea el objeto Posicion(X,Y)
     }
     
-    public void avanzar(int distancia) {
+    public void avanzar(int AñadeDistancia) {
         //Sumar distancia a la distancia ya recorrida
-        //sumar distancia a la posición según TipoOrientación
+        distancia += AñadeDistancia;
+        
+        //Sumar distancia a la posición según TipoOrientación
+        //Pedir 2 valores(X,Y) controlar para sumar o restar
     }
     
     public void saludar() {
@@ -32,7 +35,7 @@ public class Robot {
     
     private String getCodigo() {
         String codigo = "";
-        //codigo=generacion+id
+        codigo = String.valueOf(generacion) + String.valueOf(id);
         return codigo;
     }
     
@@ -60,6 +63,18 @@ public class Robot {
             case OESTE:
                 orientacion = TipoOrientacion.NORTE;
                 break;
+        }
+    }
+    
+/******************************
+***  ACCESORES Y MUTADORES  ***
+*******************************/
+    
+    private void setGeneracion(char setG) {
+        if ((generacion == 'A') || (generacion == 'B') || (generacion == 'M')) {
+            generacion = setG;
+        } else {
+            System.out.println("Error, no es válido " + setG + " Solo puede ser A,B,M");
         }
     }
 }
