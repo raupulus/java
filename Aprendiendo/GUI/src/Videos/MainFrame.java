@@ -22,6 +22,9 @@ public class MainFrame extends JFrame {
     //Declarar Botón
     private JButton btn;
     
+    //Declarar Toolbar
+    private Toolbar toolbar;
+    
     public MainFrame() {
         
         //Nombre del marco/ventana
@@ -30,12 +33,14 @@ public class MainFrame extends JFrame {
         // ?????
         setLayout(new BorderLayout());
         
-        //Crea el área de texto
-        //textArea = new JTextArea();
+        //Crea un panel que contendrá el area de texto
         textPanel = new TextPanel();
         
         //Crea el botón
-        btn = new JButton("Púlsame!"); 
+        btn = new JButton("Púlsame!");
+        
+        //Crea el toolbar
+        toolbar = new Toolbar();
         
         //Añade evento al botón
         btn.addActionListener(new ActionListener() {
