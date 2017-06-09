@@ -12,13 +12,13 @@ public class Robot {
     private char generacion; //Valores posibles "A","B","C"
     private TipoOrientacion orientacion;
     private int distancia = 0;
-    private int posicionX = 0;//reunir en un solo objeto llamado posicion
-    private int posicionY = 0;
+    private Posicion posicion; //Crea objeto de tipo posicion(X,Y)
     
     public Robot(String new_alias, char new_generacion) {
         alias = new_alias;
         generacion = new_generacion;
         //orientacion = TipoOrientacion.aleatorio();
+        posicion = new Posicion(0, 0);
     }
     
     public void avanzar(int distancia) {
