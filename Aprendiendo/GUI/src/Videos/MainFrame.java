@@ -14,17 +14,12 @@ import javax.swing.JTextArea;
 
 //Clase que hereda de JFrame, ya no es necesario establecer "frame" antes de cada método
 public class MainFrame extends JFrame {
-    
-    //Declarar Area de texto
-    //private JTextArea textArea;
-    //NO SE PORQUE PERO CAMBIA TextAREA por textPanel:
+
+    //Crea un panel que será un objeto de la clase TextPanel
     private TextPanel textPanel;
-    
-    
     
     //Declarar Botón
     private JButton btn;
-    
     
     public MainFrame() {
         
@@ -38,7 +33,6 @@ public class MainFrame extends JFrame {
         //textArea = new JTextArea();
         textPanel = new TextPanel();
         
-        
         //Crea el botón
         btn = new JButton("Púlsame!"); 
         
@@ -46,8 +40,9 @@ public class MainFrame extends JFrame {
         btn.addActionListener(new ActionListener() {
             //Método a ejecutar cuando ocurra el evento
             public void actionPerformed(ActionEvent e) {
-                //Pintar dentro del área de texto "textArea"
-                //textArea.append("Estoy escribiendo!\n");
+                //Pintar dentro del área de texto "textArea" llamando al método
+                //creado en "TextPanel" pasándole un String con lo que pintar
+                textPanel.appendText("Estoy escribiendo!\n");
             }  
         });
         
