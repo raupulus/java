@@ -1,9 +1,13 @@
 package Videos;
 
+import javax.swing.JPanel;
+
 /**
  *
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es>
  */
-public class TextPanel {
+
+//Clase principal que extiende 
+public class TextPanel extends JPanel{
     
 }
