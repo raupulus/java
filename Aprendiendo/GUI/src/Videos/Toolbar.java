@@ -36,20 +36,19 @@ public class Toolbar extends JPanel implements ActionListener {
     }
 
     //Método para modificar el TextPanel al pulsar un boton del toolbar
-    public void setTextPanel (TextPanel textpanel) {
+    public void setTextPanel (TextPanel textPanel) {
         this.textPanel = textPanel;
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        //Convierte a tipo JButon el evento que llega 
+        //Convierte a tipo JButon el evento que llega  
         JButton clicked = (JButton) e.getSource();
          
         //Muestra por la consola que un boton ha sido pulsado
         System.out.println("Se ha pulsado " + clicked.getText());
         
         //Muestra que se ha pulsado un botón escrito dentro del area de texto
-       textPanel.appendText(clicked.getText());
-        
+        textPanel.appendText(clicked.getText() + "\n");
     }
 }
