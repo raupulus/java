@@ -12,7 +12,7 @@ public enum TipoOrientacion {
 
     static Random rd = new Random();
 
-    
+    //Genera un número aleatorio rango 0-3 y asigna ese valor
     public TipoOrientacion aleatorio() {
         TipoOrientacion ale = NORTE;
         int x;
