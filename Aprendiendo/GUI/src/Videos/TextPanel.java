@@ -29,7 +29,7 @@ public class TextPanel extends JPanel{
     }
     
     //Al invocarse este método se recibe lo que se pintará en el textArea
-    public void e(String text) {
+    public void appendText(String text) {
         textArea.append(text);
     }
 }
