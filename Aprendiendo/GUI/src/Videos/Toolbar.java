@@ -15,6 +15,7 @@ public class Toolbar extends JPanel {
     private JButton goodbyeButton;
     
     public Toolbar() {
-        
+        helloButton = new JButton("Holaaa!");
+        goodbyeButton = new JButton("Ta luegooo!");
     }
 }
