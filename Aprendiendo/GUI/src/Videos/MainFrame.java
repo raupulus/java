@@ -53,6 +53,7 @@ public class MainFrame extends JFrame {
         });
         
         //Agrega componentes al panel indicando su posición
+        add(toolbar, BorderLayout.NORTH);
         add(textPanel, BorderLayout.CENTER);
         add(btn, BorderLayout.SOUTH);
         
