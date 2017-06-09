@@ -1,6 +1,8 @@
 package Videos;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
@@ -33,6 +35,15 @@ public class MainFrame extends JFrame {
         
         //Crea el botón
         btn = new JButton("Púlsame!");
+        
+        //Añade evento al botón
+        btn.addActionListener(new ActionListener() {
+            //Método a ejecutar cuando ocurra el evento
+            public void actionPerformed(ActionEvent e) {
+                //Pintar dentro del área de texto "textArea"
+                textArea.append("Estoy escribiendo!\n");
+            }
+        });
         
         //Agrega componentes al panel indicando su posición
         add(textArea, BorderLayout.CENTER);
