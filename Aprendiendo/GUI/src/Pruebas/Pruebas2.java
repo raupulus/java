@@ -18,9 +18,10 @@ public class Pruebas2 extends JPanel{
     private JButton btn;
     private JTextArea textarea;
 
+    /*
     super("Hello World");
         
-    Pruebas2(new BorderLayout();
+    Pruebas2(new BorderLayout());
     
     btn = new JButton("click me");
     textArea = new JtextArea();
@@ -37,4 +38,5 @@ public class Pruebas2 extends JPanel{
     setSize(600,500);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setVisible(True);
+    */
 }
