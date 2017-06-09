@@ -1,5 +1,6 @@
 package Videos;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -8,6 +9,11 @@ import javax.swing.JPanel;
  * https://github.com/fryntiz
  */
 public class Toolbar extends JPanel {
+    
+    //Creo botones
+    private JButton helloButton;
+    private JButton goodbyeButton;
+    
     public Toolbar() {
         
     }
