@@ -15,10 +15,12 @@ public class Robot {
     private Posicion posicion; //Crea objeto de tipo Posicion(X,Y)
     
     public Robot(String new_alias, char new_generacion) {
-        alias = new_alias;
+        setAlias(new_alias);
         setGeneracion(new_generacion);
         //orientacion = TipoOrientacion.aleatorio();
         posicion = new Posicion(0, 0); //Crea el objeto Posicion(X,Y)
+        ++contador;
+        id = contador;
     }
     
     public void avanzar(int AñadeDistancia) {
@@ -29,7 +31,7 @@ public class Robot {
         //Pedir 2 valores(X,Y) controlar para sumar o restar
     }
     
-    public void saludar() {
+    public void saludar() {/**************TODO************/
         
     }
     
@@ -38,17 +40,20 @@ public class Robot {
         codigo = String.valueOf(generacion) + String.valueOf(id);
         return codigo;
     }
-    
+
     @Override
-    public String toString() {
+    public String toString() {/**************TODO************/
+        //Terminar método con cadena visible al llamar a toString
         String cadena = "";
         return cadena;
     }
-    
+
+    //Girar hacia la el punto cardinal establecido
     public void girar(TipoOrientacion direccion) {
         orientacion = direccion;
     }
     
+    //Girar si no tiene parámetros lo hará en sentido agujas reloj
     public void girar(){
         switch (orientacion) {
             case NORTE:
@@ -65,16 +70,26 @@ public class Robot {
                 break;
         }
     }
-    
+
 /******************************
 ***  ACCESORES Y MUTADORES  ***
 *******************************/
     
     private void setGeneracion(char setG) {
+        //Comprueba que se ha introducido un valor válido
         if ((generacion == 'A') || (generacion == 'B') || (generacion == 'M')) {
             generacion = setG;
         } else {
             System.out.println("Error, no es válido " + setG + " Solo puede ser A,B,M");
+        }
+    }
+    
+    private void setAlias(String setAli) {
+        //Comprueba que la cadena no está vacía ni es nula
+        if ((setAli.equals("")) || (setAli == null)) {
+            System.out.println("ERROR!!! El Alias no puede ser null ni estar vacía");
+        } else {
+            alias = setAli;
         }
     }
 }
