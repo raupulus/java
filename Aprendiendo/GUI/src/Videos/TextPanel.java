@@ -9,5 +9,7 @@ import javax.swing.JPanel;
 
 //Clase principal que extiende 
 public class TextPanel extends JPanel{
-    
+    public TextPanel() {
+        
+    }
 }
