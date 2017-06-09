@@ -21,7 +21,8 @@ public class Toolbar extends JPanel {
         helloButton = new JButton("Holaaa!");
         goodbyeButton = new JButton("Ta luegooo!");
         
-        setLayout(new FlowLayout());
+        //Establecer borde hacia la izquierda
+        setLayout(new FlowLayout(FlowLayout.LEFT));
         
         add(helloButton);
         add(goodbyeButton);
