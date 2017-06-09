@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
 /**
+ * Ventana principal
  * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
  * https://github.com/fryntiz
  */
