@@ -16,7 +16,11 @@ import javax.swing.JTextArea;
 public class MainFrame extends JFrame {
     
     //Declarar Area de texto
-    private JTextArea textArea;
+    //private JTextArea textArea;
+    //NO SE PORQUE PERO CAMBIA TextAREA por textPanel:
+    private TextPanel textPanel;
+    
+    
     
     //Declarar Botón
     private JButton btn;
@@ -31,22 +35,24 @@ public class MainFrame extends JFrame {
         setLayout(new BorderLayout());
         
         //Crea el área de texto
-        textArea = new JTextArea();
+        //textArea = new JTextArea();
+        textPanel = new TextPanel();
+        
         
         //Crea el botón
-        btn = new JButton("Púlsame!");
+        btn = new JButton("Púlsame!"); 
         
         //Añade evento al botón
         btn.addActionListener(new ActionListener() {
             //Método a ejecutar cuando ocurra el evento
             public void actionPerformed(ActionEvent e) {
                 //Pintar dentro del área de texto "textArea"
-                textArea.append("Estoy escribiendo!\n");
-            }
+                //textArea.append("Estoy escribiendo!\n");
+            }  
         });
         
         //Agrega componentes al panel indicando su posición
-        add(textArea, BorderLayout.CENTER);
+        add(textPanel, BorderLayout.CENTER);
         add(btn, BorderLayout.SOUTH);
         
         //Establecer Tamaño fijo
