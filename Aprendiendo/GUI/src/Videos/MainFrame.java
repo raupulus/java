@@ -20,7 +20,7 @@ public class MainFrame extends JFrame {
     private TextPanel textPanel;
     
     //Declarar Botón
-    private JButton btn;
+    //private JButton btn;
     
     //Declarar Toolbar
     private Toolbar toolbar;
@@ -37,11 +37,15 @@ public class MainFrame extends JFrame {
         textPanel = new TextPanel();
         
         //Crea el botón
-        btn = new JButton("Púlsame!");
+        //btn = new JButton("Púlsame!");
         
         //Crea el toolbar
         toolbar = new Toolbar();
         
+        //Asigno textpanel
+        toolbar.setTextPanel(textPanel);
+        
+        /*
         //Añade evento al botón
         btn.addActionListener(new ActionListener() {
             //Método a ejecutar cuando ocurra el evento
@@ -51,11 +55,12 @@ public class MainFrame extends JFrame {
                 textPanel.appendText("Estoy escribiendo!\n");
             }  
         });
+        */
         
         //Agrega componentes al panel indicando su posición
         add(toolbar, BorderLayout.NORTH);
         add(textPanel, BorderLayout.CENTER);
-        add(btn, BorderLayout.SOUTH);
+        //add(btn, BorderLayout.SOUTH);
         
         //Establecer Tamaño fijo
         setSize(600, 500);
