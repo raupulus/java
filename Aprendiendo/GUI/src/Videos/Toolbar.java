@@ -7,15 +7,16 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
- *
- * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> -->
- * https://github.com/fryntiz
+ * @author Raúl Caro Pastorino <Fryntiz www.fryntiz.es> --> https://github.com/fryntiz
  */
 public class Toolbar extends JPanel implements ActionListener {
     
     //Creo botones
     private JButton helloButton;
     private JButton goodbyeButton;
+    
+    //Declaro TextPanel para luego poder modificarlo
+    private TextPanel textPanel;
     
     public Toolbar() {
         
@@ -31,21 +32,24 @@ public class Toolbar extends JPanel implements ActionListener {
         setLayout(new FlowLayout(FlowLayout.LEFT));
         
         add(helloButton);
-        add(goodbyeButton);
+        add(goodbyeButton);  
     }
 
     //Método para modificar el TextPanel al pulsar un boton del toolbar
     public void setTextPanel (TextPanel textpanel) {
-        
+        this.textPanel = textPanel;
     }
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        //Convierte a tipo JButon el evento que llega 
+        JButton clicked = (JButton) e.getSource();
+         
         //Muestra por la consola que un boton ha sido pulsado
-        System.out.println("Un botón ha sido pulsado");
+        System.out.println("Se ha pulsado " + clicked.getText());
         
         //Muestra que se ha pulsado un botón escrito dentro del area de texto
-        JButton clicked = (JButton) e.getSource();
-        System.out.println("Se ha pulsado " + clicked.getText());
+       textPanel.appendText(clicked.getText());
+        
     }
 }
