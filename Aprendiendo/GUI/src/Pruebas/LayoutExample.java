@@ -21,10 +21,18 @@ public class LayoutExample extends JPanel {
     }
     
     public void initComponents() {
-        
+        text1 = new JTextField("texto1", 10);
+        text1 = new JTextField("texto2", 10);
+        text1 = new JTextField("texto3", 10);
+        text1 = new JTextField("texto4", 10);
+        text1 = new JTextField("texto5", 10);
     }
     
     public void setupLayoutManager() {
-        
+        this.add(text1);
+        this.add(text2);
+        this.add(text3);
+        this.add(text4);
+        this.add(text5);
     }
 }
