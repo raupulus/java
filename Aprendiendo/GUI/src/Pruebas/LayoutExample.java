@@ -15,7 +15,16 @@ public class LayoutExample extends JPanel {
     private JTextField text4;
     private JTextField text5;
     
-    public static void main(String[] args) {
+    public LayoutExample() {
+        initComponents();
+        setupLayoutManager();
+    }
+    
+    public void initComponents() {
+        
+    }
+    
+    public void setupLayoutManager() {
         
     }
 }
