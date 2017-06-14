@@ -38,6 +38,13 @@ public class Frame extends JFrame {
     private void make_GUI() {
         
         //Crear LinkedList a partir de "List" con objetos de la clase "Animal"
-        List<Animal> ListaAnimales = new LinkedList<>();
+        List<Animal> listaAnimales = new LinkedList<>();
+        
+        //Bucle que crea tantos objeto animal como tipos según la clase
+        //enumerada "EnumTipoAnimal.java"
+        for (int i = 0; i < EnumTipoAnimal.values().length; i++) {
+            //Obtiene el nombre de la lista enumerada según el valor de "i"
+            listaAnimales.add(new Animal(EnumTipoAnimal.values()[i].name()));
+        }
     }
 }
