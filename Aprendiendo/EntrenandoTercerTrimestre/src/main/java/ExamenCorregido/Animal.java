@@ -12,7 +12,12 @@ public class Animal {
     private String nombre;
     
     //Constructor de la clase
-    public Animal() {
-        
+    public Animal(String new_name) {
+        nombre = new_name;
+    }
+    
+    //Método para consultar el nombre de cada animal
+    public String getNombre() {
+        return nombre;
     }
 }
