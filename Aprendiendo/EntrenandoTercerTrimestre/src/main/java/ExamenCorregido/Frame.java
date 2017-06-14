@@ -1,6 +1,7 @@
 package ExamenCorregido;
 
 import javax.swing.JFrame;
+import javax.swing.JTextArea;
 
 /**
  * Contiene toda la ventana y el desarrollo de esta que será llamado en un hilo
@@ -12,6 +13,9 @@ import javax.swing.JFrame;
 
 //Clase extendiendo la clase "JFrame"
 public class Frame extends JFrame {
+    
+    //Área de texto
+    private JTextArea areaTexto;
     
     //Constructor de la ventana
     public Frame(String new_nombre) {
