@@ -8,5 +8,11 @@ package ExamenCorregido;
  * https://github.com/fryntiz
  */
 public class Animal {
-
+    //Inicializado atributo nombre del animal
+    private String nombre;
+    
+    //Constructor de la clase
+    public Animal() {
+        
+    }
 }
