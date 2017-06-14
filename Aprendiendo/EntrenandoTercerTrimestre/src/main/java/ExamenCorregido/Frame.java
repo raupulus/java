@@ -24,5 +24,13 @@ public class Frame extends JFrame {
         
         //Establezco que se pueda cerrar al salir
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        //Llamar al método para construir la ventana
+        make_GUI();
+    }
+    
+    //Método que crea la interfaz gráfica
+    private void make_GUI() {
+        
     }
 }
