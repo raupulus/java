@@ -13,4 +13,12 @@ import javax.swing.JFrame;
 //Clase extendiendo la clase "JFrame"
 public class Frame extends JFrame {
     
+    //Constructor de la ventana
+    public Frame(String new_nombre) {
+        //Asigno el nombre pasado al constructor
+        super("new_nombre");
+        
+        //Establezco que se pueda cerrar al salir
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 }
