@@ -12,5 +12,15 @@ import javax.swing.JButton;
  */
 
 public class Boton extends JButton implements Comparable<Boton> {
-
+    
+    //Constructor
+    public Boton(String nombre) {
+        super(nombre);
+    }
+    
+    //Sobreescribir método "compareTo" de la clase abstracta "Comparable"
+    @Override
+    public int compareTo(Boton soyElBoton) {
+        return this.getText().compareTo(soyElBoton.getText());
+    }
 }
