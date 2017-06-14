@@ -10,7 +10,7 @@ import javax.swing.SwingUtilities;
 public class Main {
     
     //Creado el objeto Frame que contiene la ventana del programa
-    Frame frame1;
+    private static Frame frame1;
     
     //Método main que será invocado al ejecutar esta clase
     public static void main(String[] args) {
@@ -25,6 +25,6 @@ public class Main {
     }
     
     private static void start() {
-        frame1 =  = new Frame("Animales");
+        frame1 = new Frame("Animales");
     }
 }
