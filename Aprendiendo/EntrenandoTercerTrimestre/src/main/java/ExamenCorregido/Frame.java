@@ -1,5 +1,10 @@
 package ExamenCorregido;
 
+//Librerías para List y LinkedList
+import java.util.LinkedList;
+import java.util.List;
+
+//Librerías gráficas
 import javax.swing.JFrame;
 import javax.swing.JTextArea;
 
@@ -32,5 +37,7 @@ public class Frame extends JFrame {
     //Método que crea la interfaz gráfica
     private void make_GUI() {
         
+        //Crear LinkedList a partir de "List" con objetos de la clase "Animal"
+        List<Animal> ListaAnimales = new LinkedList<>();
     }
 }
