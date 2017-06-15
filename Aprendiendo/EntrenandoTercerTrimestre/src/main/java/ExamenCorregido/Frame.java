@@ -2,6 +2,7 @@ package ExamenCorregido;
 
 //Librerías para List y LinkedList
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -57,5 +58,8 @@ public class Frame extends JFrame {
             //Obtiene el nombre de cada animal del LinkedList anterior
             listaBotones.add(new Boton(listaAnimales.get(i).getNombre()));
         }
+        //Ordenar el ArrayList "listaBotones"
+        Collections.sort(listaBotones);
+        
     }
 }
