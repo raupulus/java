@@ -1,7 +1,7 @@
 package ExamenCorregido;
 
-//Librerías para List y LinkedList
-import java.awt.Dimension;
+//Librerías para Collections, List y LinkedList
+import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -11,6 +11,8 @@ import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import java.awt.Dimension;
+import javax.swing.JScrollPane;
 
 /**
  * Contiene toda la ventana y el desarrollo de esta que será llamado en un hilo
@@ -44,6 +46,7 @@ public class Frame extends JFrame {
         //Guardo en una variable la cantidad de animales distintos de la enum.
         int cantidadAnimales = EnumTipoAnimal.values().length;
         
+        
         //Crear LinkedList a partir de "List" con objetos de la clase "Animal"
         List<Animal> listaAnimales = new LinkedList<>();
         //Bucle que crea tantos objeto animal como tipos según la clase
@@ -52,6 +55,7 @@ public class Frame extends JFrame {
             //Obtiene el nombre de la lista enumerada según el valor de "i"
             listaAnimales.add(new Animal(EnumTipoAnimal.values()[i].name()));
         }
+        
         
         //Crear un ArrayList de botones
         List<Boton> listaBotones = new ArrayList<>();
@@ -63,6 +67,7 @@ public class Frame extends JFrame {
         //Ordenar el ArrayList "listaBotones"
         Collections.sort(listaBotones);
         
+        
         //Crear panel con el nombre botoneraAni
         JPanel botoneraAni = new JPanel();
         botoneraAni.setPreferredSize(new Dimension(900,40));
@@ -71,6 +76,14 @@ public class Frame extends JFrame {
             botoneraAni.add(listaBotones.get(i));
             listaBotones.get(i).setPreferredSize(new Dimension(130,30));
         }
+        
+        
+        //Crear "panelPri" como panel BorderLayout para contener otros paneles
+        JPanel panelPri = new JPanel(new BorderLayout());
+        //Crear area de texto
+        areaTexto = new JTextArea();
+        //Crear Panel que permita scroll
+        JScrollPane scroll = new JScrollPane();
         
     }
 }
