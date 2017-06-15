@@ -1,4 +1,4 @@
-package ExamenCorregido;
+package ColorearCampoTexto;
 
 /**
  * Lista de tipo enumerada donde se tomarán los valores para cada tipo de

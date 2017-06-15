@@ -1,4 +1,4 @@
-package ExamenCorregido;
+package ColorearCampoTexto;
 
 import javax.swing.SwingUtilities;
 

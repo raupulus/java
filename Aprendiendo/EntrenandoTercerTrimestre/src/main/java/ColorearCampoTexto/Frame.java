@@ -1,4 +1,4 @@
-package ExamenCorregido;
+package ColorearCampoTexto;
 
 //Librerías para Collections, List y LinkedList
 import java.util.ArrayList;

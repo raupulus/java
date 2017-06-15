@@ -1,4 +1,4 @@
-package ExamenCorregido;
+package ColorearCampoTexto;
 
 /**
  * Esta clase permite crear instancias de cada animal diferenciándolos por el
