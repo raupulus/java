@@ -1,6 +1,7 @@
 package ExamenCorregido;
 
 //Librerías para List y LinkedList
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -8,6 +9,7 @@ import java.util.List;
 
 //Librerías gráficas
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 /**
@@ -60,6 +62,10 @@ public class Frame extends JFrame {
         }
         //Ordenar el ArrayList "listaBotones"
         Collections.sort(listaBotones);
+        
+        //Crear panel con el nombre botoneraAni
+        JPanel botoneraAni = new JPanel();
+        botoneraAni.setPreferredSize(new Dimension(900,40));
         
     }
 }
