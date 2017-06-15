@@ -1,6 +1,7 @@
 package ExamenCorregido;
 
 //Librerías para List y LinkedList
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -39,12 +40,15 @@ public class Frame extends JFrame {
         
         //Crear LinkedList a partir de "List" con objetos de la clase "Animal"
         List<Animal> listaAnimales = new LinkedList<>();
-        
         //Bucle que crea tantos objeto animal como tipos según la clase
         //enumerada "EnumTipoAnimal.java"
         for (int i = 0; i < EnumTipoAnimal.values().length; i++) {
             //Obtiene el nombre de la lista enumerada según el valor de "i"
             listaAnimales.add(new Animal(EnumTipoAnimal.values()[i].name()));
         }
+        
+        //Crear un ArrayList de botones
+        List<Boton> listaBotones = new ArrayList<>();
+        
     }
 }
