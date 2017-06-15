@@ -78,12 +78,18 @@ public class Frame extends JFrame {
         }
         
         
-        //Crear "panelPri" como panel BorderLayout para contener otros paneles
+        //Crear "panelPri" como panel BorderLayout y sugerir tamaño
         JPanel panelPri = new JPanel(new BorderLayout());
+        panelPri.setPreferredSize(new Dimension(900, 400));
         //Crear area de texto
         areaTexto = new JTextArea();
-        //Crear Panel que permita scroll
+        //Crear Panel que permita scroll y establecer preferencias
         JScrollPane scroll = new JScrollPane();
+        scroll.setPreferredSize(new Dimension(900, 400));
+        scroll.setViewportView(areaTexto);
+        //Añadir al panel creado la botonera abajo y scroll en el centro
+        panelPri.add(scroll, BorderLayout.CENTER);
+        panelPri.add(botoneraAni, BorderLayout.SOUTH);
         
     }
 }
