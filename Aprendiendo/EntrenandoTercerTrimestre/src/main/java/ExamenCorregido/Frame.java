@@ -91,5 +91,14 @@ public class Frame extends JFrame {
         panelPri.add(scroll, BorderLayout.CENTER);
         panelPri.add(botoneraAni, BorderLayout.SOUTH);
         
+        
+        //Añadir oir eventos a los botones
+        
+        
+        //Añadir "panelPri" como panel de contenidos para "Frame" mediante pack()
+        this.setContentPane(panelPri);
+        this.pack();
+        //Marcar como visible
+        this.setVisible(true);
     }
 }
