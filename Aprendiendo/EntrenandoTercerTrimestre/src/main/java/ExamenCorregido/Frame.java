@@ -66,6 +66,11 @@ public class Frame extends JFrame {
         //Crear panel con el nombre botoneraAni
         JPanel botoneraAni = new JPanel();
         botoneraAni.setPreferredSize(new Dimension(900,40));
+        //Añadir botones al panel anterior
+        for (int i = 0; i < cantidadAnimales; i++) {
+            botoneraAni.add(listaBotones.get(i));
+            listaBotones.get(i).setPreferredSize(new Dimension(130,30));
+        }
         
     }
 }
