@@ -38,17 +38,24 @@ public class Frame extends JFrame {
     //Método que crea la interfaz gráfica
     private void make_GUI() {
         
+        //Guardo en una variable la cantidad de animales distintos de la enum.
+        int cantidadAnimales = EnumTipoAnimal.values().length;
+        
         //Crear LinkedList a partir de "List" con objetos de la clase "Animal"
         List<Animal> listaAnimales = new LinkedList<>();
         //Bucle que crea tantos objeto animal como tipos según la clase
         //enumerada "EnumTipoAnimal.java"
-        for (int i = 0; i < EnumTipoAnimal.values().length; i++) {
+        for (int i = 0; i < cantidadAnimales; i++) {
             //Obtiene el nombre de la lista enumerada según el valor de "i"
             listaAnimales.add(new Animal(EnumTipoAnimal.values()[i].name()));
         }
         
         //Crear un ArrayList de botones
         List<Boton> listaBotones = new ArrayList<>();
-        
+        //Por cada valor de "i" toma el nombre del animal como nombre del bóton
+        for (int i = 0; i < cantidadAnimales; i++) {
+            //Obtiene el nombre de cada animal del LinkedList anterior
+            listaBotones.add(new Boton(listaAnimales.get(i).getNombre()));
+        }
     }
 }
