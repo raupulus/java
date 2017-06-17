@@ -47,9 +47,9 @@ public class T191_ButtonDEMO extends JPanel
         b1.addActionListener(this);
         b3.addActionListener(this);
 
-        b1.setToolTipText("Click this button to disable the middle button.");
-        b2.setToolTipText("This middle button does nothing when you click it.");
-        b3.setToolTipText("Click this button to enable the middle button.");
+        b1.setToolTipText("Pulsa este botón para desabilitar el central");
+        b2.setToolTipText("Botón central, no hace nada si lo pulsas");
+        b3.setToolTipText("Pulsa este botón para habilitar el central");
 
         //Add Components to this container, using the default FlowLayout.
         add(b1);
