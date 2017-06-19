@@ -86,7 +86,7 @@ public class Frame extends JFrame {
         scroll.setViewportView(areaTexto);
         //Añadir al panel creado la botonera abajo y scroll en el centro
         panelPri.add(scroll, BorderLayout.CENTER);
-        panelPri.add(botoneraAni, BorderLayout.SOUTH);
+        panelPri.add(botoneraAni, BorderLayout.NORTH);
 
         //Añadir oir eventos a los botones
         for (int i = 0; i < cantidadAnimales; i++) {
