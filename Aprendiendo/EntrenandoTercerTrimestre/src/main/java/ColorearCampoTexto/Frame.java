@@ -45,15 +45,15 @@ public class Frame extends JFrame {
     private void make_GUI() {
 
         //Guardo en una variable la cantidad de animales distintos de la enum.
-        int cantidadAnimales = EnumTipoAnimal.values().length;
+        int cantidadAnimales = EnumColor.values().length;
 
         //Crear LinkedList a partir de "List" con objetos de la clase "Animal"
-        List<Animal> listaAnimales = new LinkedList<>();
+        List<Color> listaAnimales = new LinkedList<>();
         //Bucle que crea tantos objeto animal como tipos según la clase
         //enumerada "EnumTipoAnimal.java"
         for (int i = 0; i < cantidadAnimales; i++) {
             //Obtiene el nombre de la lista enumerada según el valor de "i"
-            listaAnimales.add(new Animal(EnumTipoAnimal.values()[i].name()));
+            listaAnimales.add(new Color(EnumColor.values()[i].name()));
         }
 
         //Crear un ArrayList de botones
@@ -86,7 +86,7 @@ public class Frame extends JFrame {
         scroll.setViewportView(areaTexto);
         //Añadir al panel creado la botonera abajo y scroll en el centro
         panelPri.add(scroll, BorderLayout.CENTER);
-        panelPri.add(botoneraAni, BorderLayout.SOUTH);
+        panelPri.add(botoneraAni, BorderLayout.NORTH);
 
         //Añadir oir eventos a los botones
         for (int i = 0; i < cantidadAnimales; i++) {
