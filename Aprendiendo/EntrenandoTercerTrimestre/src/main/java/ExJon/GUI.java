@@ -42,7 +42,7 @@ public class GUI {
         JPanel panelTexto = new JPanel();
         panelTexto.setLayout(new BorderLayout());
 
-        JTextArea textArea = new JTextArea();
+        final JTextArea textArea = new JTextArea();
         textArea.setPreferredSize(new Dimension(1000, 400));
         panelTexto.add(textArea, BorderLayout.CENTER);
 
@@ -52,7 +52,7 @@ public class GUI {
 
         while (it.hasNext()) {
 
-            Boton boton = (Boton) it.next();
+            final Boton boton = (Boton) it.next();
 
             boton.addMouseListener(new MouseListener() {
 
