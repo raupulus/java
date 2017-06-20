@@ -50,7 +50,7 @@ public class Principal {
 
         Collections.sort(listBot);
 
-        GUI gui = new GUI(listBot);
+        final GUI gui = new GUI(listBot);
 
         try {
             javax.swing.SwingUtilities.invokeLater(new Runnable() {
