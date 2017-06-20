@@ -17,7 +17,17 @@ public class Frame extends JFrame {
     private static List<Animal> listaAnimales;
 
     public Frame(String new_nombre, List new_animalesList, int longitud_lista) {
+        //Asigno el nombre pasado al constructor
+        super("new_nombre");
+
+        //Establezco que se pueda cerrar al salir
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        //Creo los botones
         crearBotones(longitud_lista);
+        
+        //Llamar al método para construir la ventana
+        make_GUI();
     }
 
     
@@ -30,5 +40,9 @@ public class Frame extends JFrame {
         }
         //Ordenar el ArrayList "listaBotones"
         Collections.sort(listaBotones);
+    }
+    
+    public void crearBotones() {
+        
     }
 }
