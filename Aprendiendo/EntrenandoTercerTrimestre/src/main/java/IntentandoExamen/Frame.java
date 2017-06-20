@@ -25,7 +25,7 @@ public class Frame extends JFrame {
 
     public Frame(String new_nombre, List new_animalesList, int longitud_lista) {
         //Asigno el nombre pasado al constructor
-        super("new_nombre");
+        super(new_nombre);
 
         //Establezco que se pueda cerrar al salir
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -55,11 +55,11 @@ public class Frame extends JFrame {
     private void make_GUI(int longitud_lista) {
         //Crear panel con el nombre botoneraAni
         JPanel botoneraAni = new JPanel();
-        botoneraAni.setPreferredSize(new Dimension(900, 40));
+        botoneraAni.setPreferredSize(new Dimension(800, 30));
         //Añadir botones al panel anterior
         for (int i = 0; i < longitud_lista; i++) {
             botoneraAni.add(listaBotones.get(i));
-            listaBotones.get(i).setPreferredSize(new Dimension(130, 30));
+            listaBotones.get(i).setPreferredSize(new Dimension(140, 20));
         }
         
         //Crear "panelPri" como panel BorderLayout y sugerir tamaño
