@@ -1,11 +1,13 @@
 package IntentandoExamen;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 /**
@@ -54,5 +56,29 @@ public class Frame extends JFrame {
             botoneraAni.add(listaBotones.get(i));
             listaBotones.get(i).setPreferredSize(new Dimension(130, 30));
         }
+        
+        //Crear "panelPri" como panel BorderLayout y sugerir tamaño
+        JPanel panelPri = new JPanel(new BorderLayout());
+        panelPri.setPreferredSize(new Dimension(900, 400));
+        //Crear area de texto
+        areaTexto = new JTextArea();
+        //Crear Panel que permita scroll y establecer preferencias
+        JScrollPane scroll = new JScrollPane();
+        scroll.setPreferredSize(new Dimension(900, 400));
+        scroll.setViewportView(areaTexto);
+        //Añadir al panel creado la botonera abajo y scroll en el centro
+        panelPri.add(scroll, BorderLayout.CENTER);
+        panelPri.add(botoneraAni, BorderLayout.SOUTH);
+
+        //Añadir oir eventos a los botones
+        for (int i = 0; i < longitud_lista; i++) {
+            listaBotones.get(i).addMouseListener(new EventoRaton());
+        }
+        
+        //Añadir "panelPri" como panel de contenidos para "Frame" mediante pack()
+        this.setContentPane(panelPri);
+        this.pack();
+        //Marcar como visible
+        this.setVisible(true);
     }
 }
