@@ -2,6 +2,8 @@ package IntentandoExamen;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -59,13 +61,16 @@ public class Frame extends JFrame {
         
         //Crear "panelPri" como panel BorderLayout y sugerir tamaño
         JPanel panelPri = new JPanel(new BorderLayout());
-        panelPri.setPreferredSize(new Dimension(900, 400));
+        panelPri.setPreferredSize(new Dimension(1000, 500));
+        
         //Crear area de texto
         areaTexto = new JTextArea();
+        
         //Crear Panel que permita scroll y establecer preferencias
         JScrollPane scroll = new JScrollPane();
         scroll.setPreferredSize(new Dimension(900, 400));
         scroll.setViewportView(areaTexto);
+        
         //Añadir al panel creado la botonera abajo y scroll en el centro
         panelPri.add(scroll, BorderLayout.CENTER);
         panelPri.add(botoneraAni, BorderLayout.SOUTH);
@@ -78,7 +83,56 @@ public class Frame extends JFrame {
         //Añadir "panelPri" como panel de contenidos para "Frame" mediante pack()
         this.setContentPane(panelPri);
         this.pack();
+        
         //Marcar como visible
         this.setVisible(true);
+    }
+    
+    //Clase que gestiona los eventos de los botones
+    private class EventoRaton extends MouseAdapter {
+
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            Boton boton = (Boton) e.getSource();
+            try {
+                switch (e.getButton()) {
+                    case 1:
+                        areaTexto.append(boton.getText() + " -> Pulsado botón Izquierdo\n");
+                        break;
+                    case 2:
+                        if (boton.getText().equals("PERRO")) {
+                            throw new IllegalStateException("Has pulsado el botón central del ratón en el botón PERRO");
+                        } else {
+                            areaTexto.append(boton.getText() + " -> Pulsado botón Central\n");
+                        }
+                        break;
+                    case 3:
+                        areaTexto.append(boton.getText() + " -> Pulsado botón Derecho\n");
+                        break;
+                    default:
+                        break;
+                }
+            } catch (IllegalStateException exc) {
+                System.err.println(exc.getMessage());
+            }
+        }
+
+        //Cuando el ratón pasa sobre el botón "PERRO"
+        @Override
+        public void mouseEntered(MouseEvent e) {
+            Boton boton = (Boton) e.getSource();
+            if (boton.getText().equals("PERRO")) {
+                areaTexto.append("Mouse sobre botón PERRO\n");
+            }
+        }
+
+        //Cuando el ratón sale del botón "PERRO"
+        @Override
+        public void mouseExited(MouseEvent e) {
+            Boton boton = (Boton) e.getSource();
+            if (boton.getText().equals("PERRO")) {
+                areaTexto.append("Mouse saliendo de botón PERRO\n");
+            }
+        }
     }
 }
