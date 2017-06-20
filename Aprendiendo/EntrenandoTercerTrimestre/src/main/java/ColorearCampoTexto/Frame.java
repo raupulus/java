@@ -110,16 +110,19 @@ public class Frame extends JFrame {
                 switch (e.getButton()) {
                     case 1:
                         areaTexto.append(boton.getText() + " -> Pulsado botón Izquierdo\n");
+                        areaTexto.setBackground(java.awt.Color.red);
                         break;
                     case 2:
-                        if (boton.getText().equals("PERRO")) {
-                            throw new IllegalStateException("Has pulsado el botón central del ratón en el botón PERRO");
+                        if (boton.getText().equals("AZUL")) {
+                            throw new IllegalStateException("Has pulsado el botón central del ratón en el botón AZUL");
                         } else {
                             areaTexto.append(boton.getText() + " -> Pulsado botón Central\n");
+                            areaTexto.setBackground(java.awt.Color.blue);
                         }
                         break;
                     case 3:
                         areaTexto.append(boton.getText() + " -> Pulsado botón Derecho\n");
+                        areaTexto.setBackground(java.awt.Color.yellow);
                         break;
                     default:
                         break;
@@ -133,8 +136,8 @@ public class Frame extends JFrame {
         @Override
         public void mouseEntered(MouseEvent e) {
             Boton boton = (Boton) e.getSource();
-            if (boton.getText().equals("PERRO")) {
-                areaTexto.append("Mouse sobre botón PERRO\n");
+            if (boton.getText().equals("AZUL")) {
+                areaTexto.append("Mouse sobre botón AZUL\n");
             }
         }
 
@@ -142,8 +145,8 @@ public class Frame extends JFrame {
         @Override
         public void mouseExited(MouseEvent e) {
             Boton boton = (Boton) e.getSource();
-            if (boton.getText().equals("PERRO")) {
-                areaTexto.append("Mouse saliendo de botón PERRO\n");
+            if (boton.getText().equals("AZUL")) {
+                areaTexto.append("Mouse saliendo de botón AZUL\n");
             }
         }
     }
