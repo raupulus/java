@@ -1,5 +1,7 @@
 package IntentandoExamen;
 
+import java.util.LinkedList;
+import java.util.List;
 import javax.swing.SwingUtilities;
 
 /**
@@ -9,6 +11,7 @@ import javax.swing.SwingUtilities;
 public class Main {
     //Creado el objeto Frame que contiene la ventana del programa
     private static Frame frame1;
+    private static List<Animal> listaAnimales;
     
     public static void main(String[] args) {
         listaAnimales();
@@ -26,11 +29,11 @@ public class Main {
     
     //Método para crear lista de animales
     public static void listaAnimales() {
-        
+        listaAnimales = new LinkedList<>();
     }
     
     //Método que inicializa la ventana
     private static void start() {
-        frame1 = new Frame("Animales");
+        frame1 = new Frame("Animales", listaAnimales);
     }
 }
