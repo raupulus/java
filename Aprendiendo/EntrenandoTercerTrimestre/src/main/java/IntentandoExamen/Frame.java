@@ -1,9 +1,11 @@
 package IntentandoExamen;
 
+import java.awt.Dimension;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 /**
@@ -14,7 +16,8 @@ import javax.swing.JTextArea;
 public class Frame extends JFrame {
 
     private JTextArea areaTexto;
-    private static List<Animal> listaAnimales;
+    private List<Animal> listaAnimales;
+    private List<Boton> listaBotones;
 
     public Frame(String new_nombre, List new_animalesList, int longitud_lista) {
         //Asigno el nombre pasado al constructor
@@ -27,12 +30,12 @@ public class Frame extends JFrame {
         crearBotones(longitud_lista);
         
         //Llamar al método para construir la ventana
-        make_GUI();
+        make_GUI(longitud_lista);
     }
 
     
-    public void crearBotones(int longitud_lista) {
-        List<Boton> listaBotones = new ArrayList<>();
+    private void crearBotones(int longitud_lista) {
+        listaBotones = new ArrayList<>();
         //Por cada valor de "i" toma el nombre del animal como nombre del bóton
         for (int i = 0; i < longitud_lista; i++) {
             //Obtiene el nombre de cada animal del LinkedList anterior
@@ -42,7 +45,14 @@ public class Frame extends JFrame {
         Collections.sort(listaBotones);
     }
     
-    public void crearBotones() {
-        
+    private void make_GUI(int longitud_lista) {
+        //Crear panel con el nombre botoneraAni
+        JPanel botoneraAni = new JPanel();
+        botoneraAni.setPreferredSize(new Dimension(900, 40));
+        //Añadir botones al panel anterior
+        for (int i = 0; i < longitud_lista; i++) {
+            botoneraAni.add(listaBotones.get(i));
+            listaBotones.get(i).setPreferredSize(new Dimension(130, 30));
+        }
     }
 }
