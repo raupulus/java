@@ -30,6 +30,9 @@ public class Frame extends JFrame {
         //Establezco que se pueda cerrar al salir
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
+        //Transfiero los objetos de la lista animales
+        listaAnimales = new_animalesList;
+        
         //Creo los botones
         crearBotones(longitud_lista);
         
